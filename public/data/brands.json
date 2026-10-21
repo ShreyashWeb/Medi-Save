@@ -1,1 +1,338 @@
-[]
+[
+  {
+    "brand_id": "dolo-650",
+    "brand_name": "Dolo 650",
+    "manufacturer": "Micro Labs Ltd",
+    "molecules": [
+      "paracetamol"
+    ],
+    "strengths": [
+      "650mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 34.15,
+    "source_url": "https://www.1mg.com/drugs/dolo-650-tablet-70640",
+    "source_date": "2026-10-20",
+    "ja_code": 511,
+    "aliases": [
+      "dolo",
+      "डोलो 650"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "crocin-500",
+    "brand_name": "Crocin 500",
+    "manufacturer": "GlaxoSmithKline Pharmaceuticals Ltd",
+    "molecules": [
+      "paracetamol"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 22.0,
+    "source_url": "https://www.1mg.com/drugs/crocin-500mg-tablet-25087",
+    "source_date": "2026-10-20",
+    "ja_code": 23,
+    "aliases": [
+      "crocin",
+      "क्रोसिन 500"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "pan-40",
+    "brand_name": "Pan 40",
+    "manufacturer": "Alkem Laboratories Ltd",
+    "molecules": [
+      "pantoprazole"
+    ],
+    "strengths": [
+      "40mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 155.0,
+    "source_url": "https://www.1mg.com/drugs/pan-40-tablet-41221",
+    "source_date": "2026-10-20",
+    "ja_code": 212,
+    "aliases": [
+      "pan 40",
+      "पैन 40"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "augmentin-625-duo",
+    "brand_name": "Augmentin 625 Duo",
+    "manufacturer": "GlaxoSmithKline Pharmaceuticals Ltd",
+    "molecules": [
+      "amoxycillin",
+      "potassium clavulanate"
+    ],
+    "strengths": [
+      "500mg",
+      "125mg"
+    ],
+    "form": "tablet",
+    "pack_count": 10,
+    "brand_mrp": 223.42,
+    "source_url": "https://www.1mg.com/drugs/augmentin-625-duo-tablet-138629",
+    "source_date": "2026-10-20",
+    "ja_code": 39,
+    "aliases": [
+      "augmentin",
+      "ऑगमेंटिन 625"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "glycomet-500",
+    "brand_name": "Glycomet 500",
+    "manufacturer": "USV Pvt Ltd",
+    "molecules": [
+      "metformin hydrochloride"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "form": "tablet",
+    "pack_count": 20,
+    "brand_mrp": 48.0,
+    "source_url": "https://www.1mg.com/drugs/glycomet-500-tablet-sr-32770",
+    "source_date": "2026-10-20",
+    "ja_code": 145,
+    "aliases": [
+      "glycomet",
+      "ग्लाइकोमेट 500"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "telma-40",
+    "brand_name": "Telma 40",
+    "manufacturer": "Glenmark Pharmaceuticals Ltd",
+    "molecules": [
+      "telmisartan"
+    ],
+    "strengths": [
+      "40mg"
+    ],
+    "form": "tablet",
+    "pack_count": 30,
+    "brand_mrp": 247.0,
+    "source_url": "https://www.1mg.com/drugs/telma-40-tablet-34079",
+    "source_date": "2026-10-20",
+    "ja_code": 300,
+    "aliases": [
+      "telma 40",
+      "टेल्मा 40"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "atorva-10",
+    "brand_name": "Atorva 10",
+    "manufacturer": "Zydus Cadila",
+    "molecules": [
+      "atorvastatin"
+    ],
+    "strengths": [
+      "10mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 110.0,
+    "source_url": "https://www.1mg.com/drugs/atorva-10-tablet-67990",
+    "source_date": "2026-10-20",
+    "ja_code": 266,
+    "aliases": [
+      "atorva 10",
+      "एटोरवा 10"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "amlong-5",
+    "brand_name": "Amlong 5",
+    "manufacturer": "Micro Labs Ltd",
+    "molecules": [
+      "amlodipine"
+    ],
+    "strengths": [
+      "5mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 44.5,
+    "source_url": "https://www.1mg.com/drugs/amlong-5-tablet-69811",
+    "source_date": "2026-10-20",
+    "ja_code": 264,
+    "aliases": [
+      "amlong 5",
+      "एमलॉन्ग 5"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "azithral-500",
+    "brand_name": "Azithral 500",
+    "manufacturer": "Alembic Pharmaceuticals Ltd",
+    "molecules": [
+      "azithromycin"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "form": "tablet",
+    "pack_count": 5,
+    "brand_mrp": 132.0,
+    "source_url": "https://www.1mg.com/drugs/azithral-500-tablet-36423",
+    "source_date": "2026-10-20",
+    "ja_code": 72,
+    "aliases": [
+      "azithral 500",
+      "एज़िथ्रल 500"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "ciplox-500",
+    "brand_name": "Ciplox 500",
+    "manufacturer": "Cipla Ltd",
+    "molecules": [
+      "ciprofloxacin hydrochloride"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "form": "tablet",
+    "pack_count": 10,
+    "brand_mrp": 43.5,
+    "source_url": "https://www.1mg.com/drugs/ciplox-500-tablet-154378",
+    "source_date": "2026-10-20",
+    "ja_code": 86,
+    "aliases": [
+      "ciplox 500",
+      "सिप्लॉक्स 500"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "rosuvas-10",
+    "brand_name": "Rosuvas 10",
+    "manufacturer": "Sun Pharma Laboratories Ltd",
+    "molecules": [
+      "rosuvastatin"
+    ],
+    "strengths": [
+      "10mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 260.0,
+    "source_url": "https://www.1mg.com/drugs/rosuvas-10-tablet-33434",
+    "source_date": "2026-10-20",
+    "ja_code": 759,
+    "aliases": [
+      "rosuvas 10",
+      "रोसुवास 10"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "omez-20",
+    "brand_name": "Omez 20",
+    "manufacturer": "Dr Reddy's Laboratories Ltd",
+    "molecules": [
+      "omeprazole"
+    ],
+    "strengths": [
+      "20mg"
+    ],
+    "form": "capsule",
+    "pack_count": 20,
+    "brand_mrp": 178.0,
+    "source_url": "https://www.1mg.com/drugs/omez-20-capsule-32486",
+    "source_date": "2026-10-20",
+    "ja_code": 207,
+    "aliases": [
+      "omez 20",
+      "ओमेज़ 20"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "hifenac-100",
+    "brand_name": "Hifenac 100",
+    "manufacturer": "Intas Pharmaceuticals Ltd",
+    "molecules": [
+      "aceclofenac"
+    ],
+    "strengths": [
+      "100mg"
+    ],
+    "form": "tablet",
+    "pack_count": 10,
+    "brand_mrp": 60.0,
+    "source_url": "https://www.1mg.com/drugs/hifenac-tablet-66774",
+    "source_date": "2026-10-20",
+    "ja_code": 2,
+    "aliases": [
+      "hifenac",
+      "हाइफेनैक 100"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "zerodol-p",
+    "brand_name": "Zerodol-P",
+    "manufacturer": "Ipca Laboratories Ltd",
+    "molecules": [
+      "aceclofenac",
+      "paracetamol"
+    ],
+    "strengths": [
+      "100mg",
+      "325mg"
+    ],
+    "form": "tablet",
+    "pack_count": 10,
+    "brand_mrp": 71.0,
+    "source_url": "https://www.1mg.com/drugs/zerodol-p-tablet-133502",
+    "source_date": "2026-10-20",
+    "ja_code": 1,
+    "aliases": [
+      "zerodol p",
+      "ज़ीरोडोल पी"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "telma-h",
+    "brand_name": "Telma-H",
+    "manufacturer": "Glenmark Pharmaceuticals Ltd",
+    "molecules": [
+      "telmisartan",
+      "hydrochlorothiazide"
+    ],
+    "strengths": [
+      "40mg",
+      "12.5mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 220.0,
+    "source_url": "https://www.1mg.com/drugs/telma-h-tablet-34086",
+    "source_date": "2026-10-20",
+    "ja_code": 298,
+    "aliases": [
+      "telma h",
+      "टेल्मा एच"
+    ],
+    "data_date": "2026-10-20"
+  }
+]
