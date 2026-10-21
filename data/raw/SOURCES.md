@@ -14,3 +14,4 @@ Record every download here. Never edit raw files by hand.
 | 2845-fb-posts-cardio-ea1e3eda2076b6367cf9a9685da62f95.pdf | NPPA Facebook posts - Cardio-vascular | UNKNOWN - to be filled | UNKNOWN - to be filled | Ceiling prices of cardiovascular formulations |
 | Compendium-Prices-2022pdf-464b22085495ff4e3f8700c0e00cf45d.pdf | NPPA Compendium of Ceiling Prices 2022 | UNKNOWN - to be filled | UNKNOWN - to be filled | Compendium of ceiling prices fixed under DPCO 2013 |
 | nlem-2022pdf-0cd1d2b28855bf30128875ab19fc5304.pdf | National List of Essential Medicines 2022 | UNKNOWN - to be filled | UNKNOWN - to be filled | Ministry of Health & Family Welfare NLEM 2022 |
+| a-year-wise-summary-of-overcharging-cases-upto-march-2026-0724fddd285a6ce2c1ef3de3f01354ea.pdf | NPPA year-wise summary of overcharging cases | UNKNOWN - to be filled | UNKNOWN - to be filled | Summary sheet of overcharging cases upto March 2026 |
