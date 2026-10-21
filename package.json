@@ -1,0 +1,34 @@
+{
+  "name": "medisave",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MediSave (दवा बचत) - Jan Aushadhi generic equivalent finder and savings calculator",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "node --experimental-strip-types tests/test_logic.ts",
+    "test:all": "node --experimental-strip-types tests/test_logic.ts && python -m pytest tests/",
+    "validate": "python scripts/validate_data.py",
+    "data:build": "python scripts/build_data.py"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.6",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.453.0",
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  }
+}
