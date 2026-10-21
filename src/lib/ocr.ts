@@ -29,7 +29,7 @@ export interface OcrResult {
 const DEFAULT_CONFIG: Required<OcrConfig> = {
   baseUrl: process.env.OLLAMA_API_BASE || 'http://localhost:11434',
   apiKey: process.env.OLLAMA_API_KEY || '',
-  geminiApiKey: process.env.GEMINI_API_KEY || '',
+  geminiApiKey: process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GEMINI_API_KEY || '',
   model: process.env.OLLAMA_MODEL || 'gemma',
   timeoutMs: 60000,
 };
