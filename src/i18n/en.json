@@ -1,0 +1,22 @@
+{
+  "app_name": "MediSave",
+  "app_tagline": "Check Jan Aushadhi generic price equivalents",
+  "search_placeholder": "Type a medicine name (e.g. Dolo 650)",
+  "search_button": "Search",
+  "photo_button": "Photo",
+  "same_molecule_heading": "Same molecule listed at this price",
+  "brand_label": "Brand MRP",
+  "generic_label": "Jan Aushadhi price",
+  "you_save": "You save",
+  "approx_label": "approx.",
+  "data_as_of": "Prices as of",
+  "notfound": "Not in our list. Please ask your pharmacist.",
+  "notlisted": "Jan Aushadhi price not listed",
+  "disclaimer": "Price information only, not medical advice. Please confirm with your doctor or pharmacist.",
+  "didyoumean": "Did you mean",
+  "add_to_list": "Add to my list",
+  "my_list": "My Prescription List",
+  "total_savings": "Total Estimated Savings",
+  "print_sheet": "Print summary",
+  "offline_notice": "Offline mode active. All prices loaded from device."
+}
