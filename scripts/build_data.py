@@ -13,6 +13,7 @@ Rule: No field may hold a price of 0.
 import sys
 import os
 import json
+import math
 import pandas as pd
 
 # Ensure repository root is on sys.path
@@ -57,31 +58,32 @@ def build_app_data(brands_csv_path: str, clean_ja_csv_path: str, output_dir: str
         sts = normalise_item_list(r.get('strengths', ''))
 
         pack_cnt = None
-        if r.get('pack_count') and str(r.get('pack_count')).strip():
+        raw_pack = str(r.get('pack_count', '')).strip()
+        if raw_pack and raw_pack.lower() not in ('nan', 'none', ''):
             try:
-                pack_cnt = int(float(str(r.get('pack_count')).strip()))
-                if pack_cnt <= 0:
-                    pack_cnt = None
+                p_val = int(float(raw_pack))
+                if p_val > 0:
+                    pack_cnt = p_val
             except (ValueError, TypeError):
                 pack_cnt = None
 
         mrp_val = None
-        if r.get('ja_mrp') and str(r.get('ja_mrp')).strip():
+        raw_mrp = str(r.get('ja_mrp', '')).strip()
+        if raw_mrp and raw_mrp.lower() not in ('nan', 'none', ''):
             try:
-                mrp_val = float(str(r.get('ja_mrp')).strip())
-                # Rule: No field may hold a price of 0
-                if mrp_val <= 0:
-                    mrp_val = None
+                val = float(raw_mrp)
+                if val > 0 and not math.isnan(val):
+                    mrp_val = val
             except (ValueError, TypeError):
                 mrp_val = None
 
         ppu_val = None
-        if r.get('price_per_unit') and str(r.get('price_per_unit')).strip():
+        raw_ppu = str(r.get('price_per_unit', '')).strip()
+        if raw_ppu and raw_ppu.lower() not in ('nan', 'none', ''):
             try:
-                ppu_val = float(str(r.get('price_per_unit')).strip())
-                # Rule: No field may hold a price of 0
-                if ppu_val <= 0:
-                    ppu_val = None
+                val = float(raw_ppu)
+                if val > 0 and not math.isnan(val):
+                    ppu_val = val
             except (ValueError, TypeError):
                 ppu_val = None
 
@@ -104,7 +106,7 @@ def build_app_data(brands_csv_path: str, clean_ja_csv_path: str, output_dir: str
 
     generics_json_path = os.path.join(output_dir, "generics.json")
     with open(generics_json_path, "w", encoding="utf-8") as f:
-        json.dump(generics_list, f, indent=2, ensure_ascii=False)
+        json.dump(generics_list, f, indent=2, ensure_ascii=False, allow_nan=False)
 
     # 2. Build public/data/brands.json
     df_brands = pd.read_csv(brands_csv_path, dtype=str)
@@ -145,7 +147,7 @@ def build_app_data(brands_csv_path: str, clean_ja_csv_path: str, output_dir: str
 
     brands_json_path = os.path.join(output_dir, "brands.json")
     with open(brands_json_path, "w", encoding="utf-8") as f:
-        json.dump(brands_list, f, indent=2, ensure_ascii=False)
+        json.dump(brands_list, f, indent=2, ensure_ascii=False, allow_nan=False)
 
     # Report sizes and counts
     generics_size = os.path.getsize(generics_json_path)

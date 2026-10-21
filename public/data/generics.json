@@ -114,7 +114,7 @@
     "pack_count": null,
     "ja_mrp": 12.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -173,7 +173,7 @@
     "pack_count": null,
     "ja_mrp": 3.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -407,7 +407,7 @@
     "pack_count": null,
     "ja_mrp": 11.34,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -445,7 +445,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -483,7 +483,7 @@
     "pack_count": null,
     "ja_mrp": 7.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -540,7 +540,7 @@
     "pack_count": null,
     "ja_mrp": 12.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -559,7 +559,7 @@
     "pack_count": null,
     "ja_mrp": 20.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -578,7 +578,7 @@
     "pack_count": null,
     "ja_mrp": 27.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -620,7 +620,7 @@
     "pack_count": null,
     "ja_mrp": 54.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -641,7 +641,7 @@
     "pack_count": null,
     "ja_mrp": 25.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -662,7 +662,7 @@
     "pack_count": null,
     "ja_mrp": 26.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -683,7 +683,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -763,7 +763,7 @@
     "pack_count": null,
     "ja_mrp": 17.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -820,7 +820,7 @@
     "pack_count": null,
     "ja_mrp": 7.22,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -839,7 +839,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -915,7 +915,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -974,7 +974,7 @@
     "pack_count": null,
     "ja_mrp": 82.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -995,7 +995,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1014,7 +1014,7 @@
     "pack_count": null,
     "ja_mrp": 47.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1035,7 +1035,7 @@
     "pack_count": null,
     "ja_mrp": 26.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1056,7 +1056,7 @@
     "pack_count": null,
     "ja_mrp": 11.34,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1077,7 +1077,7 @@
     "pack_count": null,
     "ja_mrp": 17.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1096,7 +1096,7 @@
     "pack_count": null,
     "ja_mrp": 17.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1115,7 +1115,7 @@
     "pack_count": null,
     "ja_mrp": 9.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1134,7 +1134,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1191,7 +1191,7 @@
     "pack_count": null,
     "ja_mrp": 82.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1210,7 +1210,7 @@
     "pack_count": null,
     "ja_mrp": 30.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1229,7 +1229,7 @@
     "pack_count": null,
     "ja_mrp": 51.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1250,7 +1250,7 @@
     "pack_count": null,
     "ja_mrp": 45.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1271,7 +1271,7 @@
     "pack_count": null,
     "ja_mrp": 45.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1311,7 +1311,7 @@
     "pack_count": null,
     "ja_mrp": 15.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1332,7 +1332,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1351,7 +1351,7 @@
     "pack_count": null,
     "ja_mrp": 28.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1370,7 +1370,7 @@
     "pack_count": null,
     "ja_mrp": 13.41,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1389,7 +1389,7 @@
     "pack_count": null,
     "ja_mrp": 22.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1583,7 +1583,7 @@
     "pack_count": null,
     "ja_mrp": 15.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -1604,7 +1604,7 @@
     "pack_count": null,
     "ja_mrp": 9.45,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1703,7 +1703,7 @@
     "pack_count": null,
     "ja_mrp": 5.09,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1760,7 +1760,7 @@
     "pack_count": null,
     "ja_mrp": 221.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1880,7 +1880,7 @@
     "pack_count": null,
     "ja_mrp": 114.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1975,7 +1975,7 @@
     "pack_count": null,
     "ja_mrp": 135.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -1994,7 +1994,7 @@
     "pack_count": null,
     "ja_mrp": 27.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Derma Care",
     "is_consumable": false,
     "parse_ok": true
@@ -2017,7 +2017,7 @@
     "pack_count": null,
     "ja_mrp": 20.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -2038,7 +2038,7 @@
     "pack_count": null,
     "ja_mrp": 10.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -2057,7 +2057,7 @@
     "pack_count": null,
     "ja_mrp": 23.72,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Stomatologicals",
     "is_consumable": false,
     "parse_ok": true
@@ -2076,7 +2076,7 @@
     "pack_count": null,
     "ja_mrp": 15.47,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -2095,7 +2095,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -2114,7 +2114,7 @@
     "pack_count": null,
     "ja_mrp": 51.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -2133,7 +2133,7 @@
     "pack_count": null,
     "ja_mrp": 107.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -2152,7 +2152,7 @@
     "pack_count": null,
     "ja_mrp": 15.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -2171,7 +2171,7 @@
     "pack_count": null,
     "ja_mrp": 149.53,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -2190,7 +2190,7 @@
     "pack_count": null,
     "ja_mrp": 21.66,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -2209,7 +2209,7 @@
     "pack_count": null,
     "ja_mrp": 113.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -2234,7 +2234,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Burn Relief",
     "is_consumable": false,
     "parse_ok": true
@@ -2259,7 +2259,7 @@
     "pack_count": null,
     "ja_mrp": 468.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Burn Relief",
     "is_consumable": false,
     "parse_ok": true
@@ -2411,7 +2411,7 @@
     "pack_count": null,
     "ja_mrp": 85.91,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Diabetic",
     "is_consumable": false,
     "parse_ok": true
@@ -2430,7 +2430,7 @@
     "pack_count": null,
     "ja_mrp": 91.35,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Diabetic",
     "is_consumable": false,
     "parse_ok": true
@@ -2527,7 +2527,7 @@
     "pack_count": null,
     "ja_mrp": 300.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -2546,7 +2546,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -2565,7 +2565,7 @@
     "pack_count": null,
     "ja_mrp": 160.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -2584,7 +2584,7 @@
     "pack_count": null,
     "ja_mrp": 92.77,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -2603,7 +2603,7 @@
     "pack_count": null,
     "ja_mrp": 783.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -2622,7 +2622,7 @@
     "pack_count": null,
     "ja_mrp": 225.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -2679,7 +2679,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -2698,7 +2698,7 @@
     "pack_count": null,
     "ja_mrp": 26.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Electrolytes",
     "is_consumable": false,
     "parse_ok": true
@@ -2717,7 +2717,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Electrolytes",
     "is_consumable": false,
     "parse_ok": true
@@ -2736,7 +2736,7 @@
     "pack_count": null,
     "ja_mrp": 8.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -2755,7 +2755,7 @@
     "pack_count": null,
     "ja_mrp": 7.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anthelmintic",
     "is_consumable": false,
     "parse_ok": true
@@ -2816,7 +2816,7 @@
     "pack_count": null,
     "ja_mrp": 35.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -2894,7 +2894,7 @@
     "pack_count": null,
     "ja_mrp": 12.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Emetic",
     "is_consumable": false,
     "parse_ok": true
@@ -3012,7 +3012,7 @@
     "pack_count": null,
     "ja_mrp": 57.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -3035,7 +3035,7 @@
     "pack_count": null,
     "ja_mrp": 33.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -3073,7 +3073,7 @@
     "pack_count": null,
     "ja_mrp": 2.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -3189,7 +3189,7 @@
     "pack_count": null,
     "ja_mrp": 4.54,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Emetic",
     "is_consumable": false,
     "parse_ok": true
@@ -3265,7 +3265,7 @@
     "pack_count": null,
     "ja_mrp": 23.83,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -3324,7 +3324,7 @@
     "pack_count": null,
     "ja_mrp": 3.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -3444,7 +3444,7 @@
     "pack_count": null,
     "ja_mrp": 12.8,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -3463,7 +3463,7 @@
     "pack_count": null,
     "ja_mrp": 115.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -3482,7 +3482,7 @@
     "pack_count": null,
     "ja_mrp": 150.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -3501,7 +3501,7 @@
     "pack_count": null,
     "ja_mrp": 13.41,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Histaminic",
     "is_consumable": false,
     "parse_ok": true
@@ -3695,7 +3695,7 @@
     "pack_count": null,
     "ja_mrp": 13.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Emetic",
     "is_consumable": false,
     "parse_ok": true
@@ -3714,7 +3714,7 @@
     "pack_count": null,
     "ja_mrp": 52.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -3752,7 +3752,7 @@
     "pack_count": null,
     "ja_mrp": 10.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -3790,7 +3790,7 @@
     "pack_count": null,
     "ja_mrp": 98.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -4003,7 +4003,7 @@
     "pack_count": null,
     "ja_mrp": 35.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -4022,7 +4022,7 @@
     "pack_count": null,
     "ja_mrp": 15.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -4060,7 +4060,7 @@
     "pack_count": null,
     "ja_mrp": 187.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -4079,7 +4079,7 @@
     "pack_count": null,
     "ja_mrp": 217.8,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -4098,7 +4098,7 @@
     "pack_count": null,
     "ja_mrp": 2.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Diuretic",
     "is_consumable": false,
     "parse_ok": true
@@ -4136,7 +4136,7 @@
     "pack_count": null,
     "ja_mrp": 44.24,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anticoagulant",
     "is_consumable": false,
     "parse_ok": true
@@ -4155,7 +4155,7 @@
     "pack_count": null,
     "ja_mrp": 187.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anticoagulant",
     "is_consumable": false,
     "parse_ok": true
@@ -4484,7 +4484,7 @@
     "pack_count": null,
     "ja_mrp": 17.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Malarial",
     "is_consumable": false,
     "parse_ok": true
@@ -4522,7 +4522,7 @@
     "pack_count": null,
     "ja_mrp": 22.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Urology",
     "is_consumable": false,
     "parse_ok": true
@@ -4902,7 +4902,7 @@
     "pack_count": null,
     "ja_mrp": 5.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Steroids & Hormones",
     "is_consumable": false,
     "parse_ok": true
@@ -4959,7 +4959,7 @@
     "pack_count": null,
     "ja_mrp": 2.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -4978,7 +4978,7 @@
     "pack_count": null,
     "ja_mrp": 27.23,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -4997,7 +4997,7 @@
     "pack_count": null,
     "ja_mrp": 6.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -5016,7 +5016,7 @@
     "pack_count": null,
     "ja_mrp": 5.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -5035,7 +5035,7 @@
     "pack_count": null,
     "ja_mrp": 13.62,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -5054,7 +5054,7 @@
     "pack_count": null,
     "ja_mrp": 36.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -5073,7 +5073,7 @@
     "pack_count": null,
     "ja_mrp": 17.53,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -5092,7 +5092,7 @@
     "pack_count": null,
     "ja_mrp": 20.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -5111,7 +5111,7 @@
     "pack_count": null,
     "ja_mrp": 36.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -5149,7 +5149,7 @@
     "pack_count": null,
     "ja_mrp": 96.8,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Diabetic",
     "is_consumable": false,
     "parse_ok": true
@@ -5168,7 +5168,7 @@
     "pack_count": null,
     "ja_mrp": 340.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Diabetic",
     "is_consumable": false,
     "parse_ok": true
@@ -5303,7 +5303,7 @@
     "pack_count": null,
     "ja_mrp": 21.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Malarial",
     "is_consumable": false,
     "parse_ok": true
@@ -5343,7 +5343,7 @@
     "pack_count": null,
     "ja_mrp": 309.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -5617,7 +5617,7 @@
     "pack_count": null,
     "ja_mrp": 2700.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Fungal",
     "is_consumable": false,
     "parse_ok": true
@@ -5697,7 +5697,7 @@
     "pack_count": null,
     "ja_mrp": 55.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -5716,7 +5716,7 @@
     "pack_count": null,
     "ja_mrp": 113.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -5735,7 +5735,7 @@
     "pack_count": null,
     "ja_mrp": 30.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -5912,7 +5912,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anticoagulant",
     "is_consumable": false,
     "parse_ok": true
@@ -6544,7 +6544,7 @@
     "pack_count": null,
     "ja_mrp": 932.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -6679,7 +6679,7 @@
     "pack_count": null,
     "ja_mrp": 55.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -6702,7 +6702,7 @@
     "pack_count": null,
     "ja_mrp": 27.23,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -6723,7 +6723,7 @@
     "pack_count": null,
     "ja_mrp": 16.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -6744,7 +6744,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -6763,7 +6763,7 @@
     "pack_count": null,
     "ja_mrp": 51.57,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -6843,7 +6843,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -6925,7 +6925,7 @@
     "pack_count": null,
     "ja_mrp": 72.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -6948,7 +6948,7 @@
     "pack_count": null,
     "ja_mrp": 58.78,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -7009,7 +7009,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -7169,7 +7169,7 @@
     "pack_count": null,
     "ja_mrp": 15.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -7380,7 +7380,7 @@
     "pack_count": null,
     "ja_mrp": 297.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Steroids & Hormones",
     "is_consumable": false,
     "parse_ok": true
@@ -7399,7 +7399,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Steroids & Hormones",
     "is_consumable": false,
     "parse_ok": true
@@ -7576,7 +7576,7 @@
     "pack_count": null,
     "ja_mrp": 17.96,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -7736,7 +7736,7 @@
     "pack_count": null,
     "ja_mrp": 24.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -7780,7 +7780,7 @@
     "pack_count": null,
     "ja_mrp": 9.28,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -7845,7 +7845,7 @@
     "pack_count": null,
     "ja_mrp": 21.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -7885,7 +7885,7 @@
     "pack_count": null,
     "ja_mrp": 28.36,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -7923,7 +7923,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -7963,7 +7963,7 @@
     "pack_count": null,
     "ja_mrp": 15.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8024,7 +8024,7 @@
     "pack_count": null,
     "ja_mrp": 178.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8043,7 +8043,7 @@
     "pack_count": null,
     "ja_mrp": 75.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8062,7 +8062,7 @@
     "pack_count": null,
     "ja_mrp": 12.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8100,7 +8100,7 @@
     "pack_count": null,
     "ja_mrp": 15.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8163,7 +8163,7 @@
     "pack_count": null,
     "ja_mrp": 26.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8283,7 +8283,7 @@
     "pack_count": null,
     "ja_mrp": 10.21,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -8365,7 +8365,7 @@
     "pack_count": null,
     "ja_mrp": 6.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -8388,7 +8388,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -8411,7 +8411,7 @@
     "pack_count": null,
     "ja_mrp": 7.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -8533,7 +8533,7 @@
     "pack_count": null,
     "ja_mrp": 17.53,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -8554,7 +8554,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Burn Relief",
     "is_consumable": false,
     "parse_ok": true
@@ -8577,7 +8577,7 @@
     "pack_count": null,
     "ja_mrp": 14.07,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8596,7 +8596,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -8615,7 +8615,7 @@
     "pack_count": null,
     "ja_mrp": 17.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -8663,7 +8663,7 @@
     "pack_count": null,
     "ja_mrp": 13.41,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -8747,7 +8747,7 @@
     "pack_count": null,
     "ja_mrp": 34.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -8806,7 +8806,7 @@
     "pack_count": null,
     "ja_mrp": 30.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -8831,7 +8831,7 @@
     "pack_count": null,
     "ja_mrp": 29.49,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -8879,7 +8879,7 @@
     "pack_count": null,
     "ja_mrp": 24.96,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8898,7 +8898,7 @@
     "pack_count": null,
     "ja_mrp": 16.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -8921,7 +8921,7 @@
     "pack_count": null,
     "ja_mrp": 16.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8942,7 +8942,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -8990,7 +8990,7 @@
     "pack_count": null,
     "ja_mrp": 56.72,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -9011,7 +9011,7 @@
     "pack_count": null,
     "ja_mrp": 10.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -9053,7 +9053,7 @@
     "pack_count": null,
     "ja_mrp": 45.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Enzyme Preparation",
     "is_consumable": false,
     "parse_ok": true
@@ -9074,7 +9074,7 @@
     "pack_count": null,
     "ja_mrp": 51.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -9093,7 +9093,7 @@
     "pack_count": null,
     "ja_mrp": 3.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Histaminic",
     "is_consumable": false,
     "parse_ok": true
@@ -9112,7 +9112,7 @@
     "pack_count": null,
     "ja_mrp": 61.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -9175,7 +9175,7 @@
     "pack_count": null,
     "ja_mrp": 16.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -9213,7 +9213,7 @@
     "pack_count": null,
     "ja_mrp": 45.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Stomatologicals",
     "is_consumable": false,
     "parse_ok": true
@@ -9354,7 +9354,7 @@
     "pack_count": null,
     "ja_mrp": 39.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -9373,7 +9373,7 @@
     "pack_count": null,
     "ja_mrp": 132.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -9411,7 +9411,7 @@
     "pack_count": null,
     "ja_mrp": 10.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -9430,7 +9430,7 @@
     "pack_count": null,
     "ja_mrp": 42.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -9449,7 +9449,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -9472,7 +9472,7 @@
     "pack_count": null,
     "ja_mrp": 39.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -9491,7 +9491,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -9510,7 +9510,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -9529,7 +9529,7 @@
     "pack_count": null,
     "ja_mrp": 17.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -9548,7 +9548,7 @@
     "pack_count": null,
     "ja_mrp": 33.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -9605,7 +9605,7 @@
     "pack_count": null,
     "ja_mrp": 5.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -9624,7 +9624,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -9643,7 +9643,7 @@
     "pack_count": null,
     "ja_mrp": 19.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -9723,7 +9723,7 @@
     "pack_count": null,
     "ja_mrp": 1.41,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Irrigation Fluid",
     "is_consumable": false,
     "parse_ok": true
@@ -9742,7 +9742,7 @@
     "pack_count": null,
     "ja_mrp": 1.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Irrigation Fluid",
     "is_consumable": false,
     "parse_ok": true
@@ -9761,7 +9761,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Electrolytes",
     "is_consumable": false,
     "parse_ok": true
@@ -9780,7 +9780,7 @@
     "pack_count": null,
     "ja_mrp": 15.47,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Electrolytes",
     "is_consumable": false,
     "parse_ok": true
@@ -9801,7 +9801,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Electrolytes",
     "is_consumable": false,
     "parse_ok": true
@@ -9820,7 +9820,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Electrolytes",
     "is_consumable": false,
     "parse_ok": true
@@ -10012,7 +10012,7 @@
     "pack_count": null,
     "ja_mrp": 26.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -10033,7 +10033,7 @@
     "pack_count": null,
     "ja_mrp": 12.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -10052,7 +10052,7 @@
     "pack_count": null,
     "ja_mrp": 65.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -10206,7 +10206,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -10429,7 +10429,7 @@
     "pack_count": null,
     "ja_mrp": 22.03,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -10452,7 +10452,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -10471,7 +10471,7 @@
     "pack_count": null,
     "ja_mrp": 2.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Steroids & Hormones",
     "is_consumable": false,
     "parse_ok": true
@@ -10509,7 +10509,7 @@
     "pack_count": null,
     "ja_mrp": 181.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Diabetic",
     "is_consumable": false,
     "parse_ok": true
@@ -10528,7 +10528,7 @@
     "pack_count": null,
     "ja_mrp": 1020.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -10547,7 +10547,7 @@
     "pack_count": null,
     "ja_mrp": 61.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -10669,7 +10669,7 @@
     "pack_count": null,
     "ja_mrp": 4.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -10707,7 +10707,7 @@
     "pack_count": null,
     "ja_mrp": 15.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -10766,7 +10766,7 @@
     "pack_count": null,
     "ja_mrp": 25.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -10785,7 +10785,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -10920,7 +10920,7 @@
     "pack_count": null,
     "ja_mrp": 176.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -10939,7 +10939,7 @@
     "pack_count": null,
     "ja_mrp": 204.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -10958,7 +10958,7 @@
     "pack_count": null,
     "ja_mrp": 21.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -10977,7 +10977,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -11015,7 +11015,7 @@
     "pack_count": null,
     "ja_mrp": 7.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -11034,7 +11034,7 @@
     "pack_count": null,
     "ja_mrp": 3.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -11310,7 +11310,7 @@
     "pack_count": null,
     "ja_mrp": 215.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gynaecology",
     "is_consumable": false,
     "parse_ok": true
@@ -11348,7 +11348,7 @@
     "pack_count": null,
     "ja_mrp": 20.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Steroids & Hormones",
     "is_consumable": false,
     "parse_ok": true
@@ -11424,7 +11424,7 @@
     "pack_count": null,
     "ja_mrp": 170.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Diabetic",
     "is_consumable": false,
     "parse_ok": true
@@ -11481,7 +11481,7 @@
     "pack_count": null,
     "ja_mrp": 20.42,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -11595,7 +11595,7 @@
     "pack_count": null,
     "ja_mrp": 65.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -11652,7 +11652,7 @@
     "pack_count": null,
     "ja_mrp": 10.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -11749,7 +11749,7 @@
     "pack_count": null,
     "ja_mrp": 10.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -11827,7 +11827,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -11943,7 +11943,7 @@
     "pack_count": null,
     "ja_mrp": 61.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -12057,7 +12057,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Emetic",
     "is_consumable": false,
     "parse_ok": true
@@ -12076,7 +12076,7 @@
     "pack_count": null,
     "ja_mrp": 445.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -12114,7 +12114,7 @@
     "pack_count": null,
     "ja_mrp": 22.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -12152,7 +12152,7 @@
     "pack_count": null,
     "ja_mrp": 10.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Coagulants",
     "is_consumable": false,
     "parse_ok": true
@@ -12190,7 +12190,7 @@
     "pack_count": null,
     "ja_mrp": 60.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -12228,7 +12228,7 @@
     "pack_count": null,
     "ja_mrp": 2.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Emetic",
     "is_consumable": false,
     "parse_ok": true
@@ -12304,7 +12304,7 @@
     "pack_count": null,
     "ja_mrp": 278.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Erythropoiesis",
     "is_consumable": false,
     "parse_ok": true
@@ -12323,7 +12323,7 @@
     "pack_count": null,
     "ja_mrp": 215.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Erythropoiesis",
     "is_consumable": false,
     "parse_ok": true
@@ -12517,7 +12517,7 @@
     "pack_count": null,
     "ja_mrp": 63.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -12673,7 +12673,7 @@
     "pack_count": null,
     "ja_mrp": 45.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -12753,7 +12753,7 @@
     "pack_count": null,
     "ja_mrp": 165.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Ortho",
     "is_consumable": false,
     "parse_ok": true
@@ -12890,7 +12890,7 @@
     "pack_count": null,
     "ja_mrp": 14.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -13147,7 +13147,7 @@
     "pack_count": null,
     "ja_mrp": 9.28,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -13166,7 +13166,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Steroids & Hormones",
     "is_consumable": false,
     "parse_ok": true
@@ -13223,7 +13223,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -13242,7 +13242,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -13261,7 +13261,7 @@
     "pack_count": null,
     "ja_mrp": 11.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13280,7 +13280,7 @@
     "pack_count": null,
     "ja_mrp": 386.72,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13299,7 +13299,7 @@
     "pack_count": null,
     "ja_mrp": 1600.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13318,7 +13318,7 @@
     "pack_count": null,
     "ja_mrp": 35.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13375,7 +13375,7 @@
     "pack_count": null,
     "ja_mrp": 6.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -13413,7 +13413,7 @@
     "pack_count": null,
     "ja_mrp": 159.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13432,7 +13432,7 @@
     "pack_count": null,
     "ja_mrp": 21.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anticoagulant",
     "is_consumable": false,
     "parse_ok": true
@@ -13451,7 +13451,7 @@
     "pack_count": null,
     "ja_mrp": 1687.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13470,7 +13470,7 @@
     "pack_count": null,
     "ja_mrp": 2531.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13527,7 +13527,7 @@
     "pack_count": null,
     "ja_mrp": 759.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13546,7 +13546,7 @@
     "pack_count": null,
     "ja_mrp": 2165.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -13704,7 +13704,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Steroids & Hormones",
     "is_consumable": false,
     "parse_ok": true
@@ -13763,7 +13763,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -13902,7 +13902,7 @@
     "pack_count": null,
     "ja_mrp": 33.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -13927,7 +13927,7 @@
     "pack_count": null,
     "ja_mrp": 18.57,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -14304,7 +14304,7 @@
     "pack_count": null,
     "ja_mrp": 129.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -14342,7 +14342,7 @@
     "pack_count": null,
     "ja_mrp": 9.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gynaecology",
     "is_consumable": false,
     "parse_ok": true
@@ -14401,7 +14401,7 @@
     "pack_count": null,
     "ja_mrp": 268.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -14420,7 +14420,7 @@
     "pack_count": null,
     "ja_mrp": 154.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -14679,7 +14679,7 @@
     "pack_count": null,
     "ja_mrp": 56.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Fungal",
     "is_consumable": false,
     "parse_ok": true
@@ -14698,7 +14698,7 @@
     "pack_count": null,
     "ja_mrp": 750.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -14780,7 +14780,7 @@
     "pack_count": null,
     "ja_mrp": 618.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -14822,7 +14822,7 @@
     "pack_count": null,
     "ja_mrp": 9.28,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gynaecology",
     "is_consumable": false,
     "parse_ok": true
@@ -14841,7 +14841,7 @@
     "pack_count": null,
     "ja_mrp": 25.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -14879,7 +14879,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -14940,7 +14940,7 @@
     "pack_count": null,
     "ja_mrp": 62.29,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Nutraceuticals",
     "is_consumable": false,
     "parse_ok": true
@@ -14959,7 +14959,7 @@
     "pack_count": null,
     "ja_mrp": 26.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Nutraceuticals",
     "is_consumable": false,
     "parse_ok": true
@@ -14997,7 +14997,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anthelmintic",
     "is_consumable": false,
     "parse_ok": true
@@ -15054,7 +15054,7 @@
     "pack_count": null,
     "ja_mrp": 79.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -15077,7 +15077,7 @@
     "pack_count": null,
     "ja_mrp": 33.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -15096,7 +15096,7 @@
     "pack_count": null,
     "ja_mrp": 16.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -15134,7 +15134,7 @@
     "pack_count": null,
     "ja_mrp": 24.96,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Fungal",
     "is_consumable": false,
     "parse_ok": true
@@ -15153,7 +15153,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Electrolytes",
     "is_consumable": false,
     "parse_ok": true
@@ -15654,7 +15654,7 @@
     "pack_count": null,
     "ja_mrp": 51.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Fungal",
     "is_consumable": false,
     "parse_ok": true
@@ -15675,7 +15675,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -15696,7 +15696,7 @@
     "pack_count": null,
     "ja_mrp": 36.09,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -15961,7 +15961,7 @@
     "pack_count": null,
     "ja_mrp": 20.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -15982,7 +15982,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16003,7 +16003,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16083,7 +16083,7 @@
     "pack_count": null,
     "ja_mrp": 15.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16121,7 +16121,7 @@
     "pack_count": null,
     "ja_mrp": 159.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -16161,7 +16161,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -16180,7 +16180,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -16335,7 +16335,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -16354,7 +16354,7 @@
     "pack_count": null,
     "ja_mrp": 30.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -16373,7 +16373,7 @@
     "pack_count": null,
     "ja_mrp": 20.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -16394,7 +16394,7 @@
     "pack_count": null,
     "ja_mrp": 60.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -16415,7 +16415,7 @@
     "pack_count": null,
     "ja_mrp": 107.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -16434,7 +16434,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -16455,7 +16455,7 @@
     "pack_count": null,
     "ja_mrp": 22.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -16474,7 +16474,7 @@
     "pack_count": null,
     "ja_mrp": 56.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -16512,7 +16512,7 @@
     "pack_count": null,
     "ja_mrp": 187.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -16689,7 +16689,7 @@
     "pack_count": null,
     "ja_mrp": 10.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -16754,7 +16754,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16794,7 +16794,7 @@
     "pack_count": null,
     "ja_mrp": 13.41,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16815,7 +16815,7 @@
     "pack_count": null,
     "ja_mrp": 26.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16836,7 +16836,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16857,7 +16857,7 @@
     "pack_count": null,
     "ja_mrp": 30.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16878,7 +16878,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16901,7 +16901,7 @@
     "pack_count": null,
     "ja_mrp": 20.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16943,7 +16943,7 @@
     "pack_count": null,
     "ja_mrp": 112.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -16962,7 +16962,7 @@
     "pack_count": null,
     "ja_mrp": 27.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -17067,7 +17067,7 @@
     "pack_count": null,
     "ja_mrp": 51.57,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -17208,7 +17208,7 @@
     "pack_count": null,
     "ja_mrp": 150.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -17227,7 +17227,7 @@
     "pack_count": null,
     "ja_mrp": 103.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -17507,7 +17507,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Histaminic",
     "is_consumable": false,
     "parse_ok": true
@@ -17591,7 +17591,7 @@
     "pack_count": null,
     "ja_mrp": 15.47,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -17612,7 +17612,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -17654,7 +17654,7 @@
     "pack_count": null,
     "ja_mrp": 33.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -17824,7 +17824,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -17885,7 +17885,7 @@
     "pack_count": null,
     "ja_mrp": 23.72,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -17906,7 +17906,7 @@
     "pack_count": null,
     "ja_mrp": 515.47,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18030,7 +18030,7 @@
     "pack_count": null,
     "ja_mrp": 93.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -18051,7 +18051,7 @@
     "pack_count": null,
     "ja_mrp": 187.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -18167,7 +18167,7 @@
     "pack_count": null,
     "ja_mrp": 38.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18188,7 +18188,7 @@
     "pack_count": null,
     "ja_mrp": 58.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18230,7 +18230,7 @@
     "pack_count": null,
     "ja_mrp": 25.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18251,7 +18251,7 @@
     "pack_count": null,
     "ja_mrp": 70.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18270,7 +18270,7 @@
     "pack_count": null,
     "ja_mrp": 5.34,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18354,7 +18354,7 @@
     "pack_count": null,
     "ja_mrp": 39.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -18440,7 +18440,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18459,7 +18459,7 @@
     "pack_count": null,
     "ja_mrp": 30.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Mosquito Repellent",
     "is_consumable": false,
     "parse_ok": true
@@ -18545,7 +18545,7 @@
     "pack_count": null,
     "ja_mrp": 17.53,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -18869,7 +18869,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -18888,7 +18888,7 @@
     "pack_count": null,
     "ja_mrp": 13.41,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -18911,7 +18911,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18934,7 +18934,7 @@
     "pack_count": null,
     "ja_mrp": 22.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -18978,7 +18978,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -19062,7 +19062,7 @@
     "pack_count": null,
     "ja_mrp": 12.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -19085,7 +19085,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -19108,7 +19108,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -19146,7 +19146,7 @@
     "pack_count": null,
     "ja_mrp": 41.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -19325,7 +19325,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -19569,7 +19569,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -19630,7 +19630,7 @@
     "pack_count": null,
     "ja_mrp": 22.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -19653,7 +19653,7 @@
     "pack_count": null,
     "ja_mrp": 42.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -19788,7 +19788,7 @@
     "pack_count": null,
     "ja_mrp": 51.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -19849,7 +19849,7 @@
     "pack_count": null,
     "ja_mrp": 93.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -19998,7 +19998,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -20055,7 +20055,7 @@
     "pack_count": null,
     "ja_mrp": 206.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -20171,7 +20171,7 @@
     "pack_count": null,
     "ja_mrp": 159.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -20293,7 +20293,7 @@
     "pack_count": null,
     "ja_mrp": 25.78,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -20381,7 +20381,7 @@
     "pack_count": null,
     "ja_mrp": 200.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Ortho",
     "is_consumable": false,
     "parse_ok": true
@@ -20402,7 +20402,7 @@
     "pack_count": null,
     "ja_mrp": 3.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -20556,7 +20556,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Urology",
     "is_consumable": false,
     "parse_ok": true
@@ -20577,7 +20577,7 @@
     "pack_count": null,
     "ja_mrp": 51.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Urology",
     "is_consumable": false,
     "parse_ok": true
@@ -20615,7 +20615,7 @@
     "pack_count": null,
     "ja_mrp": 42.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Urology",
     "is_consumable": false,
     "parse_ok": true
@@ -20712,7 +20712,7 @@
     "pack_count": null,
     "ja_mrp": 51.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Nephrology",
     "is_consumable": false,
     "parse_ok": true
@@ -20929,7 +20929,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -20948,7 +20948,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -20967,7 +20967,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -20988,7 +20988,7 @@
     "pack_count": null,
     "ja_mrp": 42.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -21009,7 +21009,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -21049,7 +21049,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -21070,7 +21070,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -21089,7 +21089,7 @@
     "pack_count": null,
     "ja_mrp": 26.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -21108,7 +21108,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -21129,7 +21129,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -21148,7 +21148,7 @@
     "pack_count": null,
     "ja_mrp": 52.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -21167,7 +21167,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Malarial",
     "is_consumable": false,
     "parse_ok": true
@@ -21186,7 +21186,7 @@
     "pack_count": null,
     "ja_mrp": 9.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Malarial",
     "is_consumable": false,
     "parse_ok": true
@@ -21205,7 +21205,7 @@
     "pack_count": null,
     "ja_mrp": 42.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Malarial",
     "is_consumable": false,
     "parse_ok": true
@@ -21785,7 +21785,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -22243,7 +22243,7 @@
     "pack_count": null,
     "ja_mrp": 7.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -22344,7 +22344,7 @@
     "pack_count": null,
     "ja_mrp": 50.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Derma Care",
     "is_consumable": false,
     "parse_ok": true
@@ -22523,7 +22523,7 @@
     "pack_count": null,
     "ja_mrp": 30.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -22603,7 +22603,7 @@
     "pack_count": null,
     "ja_mrp": 58.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -22643,7 +22643,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -22683,7 +22683,7 @@
     "pack_count": null,
     "ja_mrp": 51.56,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -22702,7 +22702,7 @@
     "pack_count": null,
     "ja_mrp": 93.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -22761,7 +22761,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -22782,7 +22782,7 @@
     "pack_count": null,
     "ja_mrp": 84.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -22826,7 +22826,7 @@
     "pack_count": null,
     "ja_mrp": 48.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -22866,7 +22866,7 @@
     "pack_count": null,
     "ja_mrp": 45.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gynaecology",
     "is_consumable": false,
     "parse_ok": true
@@ -22885,7 +22885,7 @@
     "pack_count": null,
     "ja_mrp": 113.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gynaecology",
     "is_consumable": false,
     "parse_ok": true
@@ -23007,7 +23007,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Enzyme Preparation",
     "is_consumable": false,
     "parse_ok": true
@@ -23045,7 +23045,7 @@
     "pack_count": null,
     "ja_mrp": 4.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -23064,7 +23064,7 @@
     "pack_count": null,
     "ja_mrp": 5.16,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -23083,7 +23083,7 @@
     "pack_count": null,
     "ja_mrp": 5.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -23239,7 +23239,7 @@
     "pack_count": null,
     "ja_mrp": 159.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -23374,7 +23374,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -23416,7 +23416,7 @@
     "pack_count": null,
     "ja_mrp": 60.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Nephrology",
     "is_consumable": false,
     "parse_ok": true
@@ -23754,7 +23754,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -23777,7 +23777,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -23800,7 +23800,7 @@
     "pack_count": null,
     "ja_mrp": 9.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -23819,7 +23819,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -23897,7 +23897,7 @@
     "pack_count": null,
     "ja_mrp": 16.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -24000,7 +24000,7 @@
     "pack_count": null,
     "ja_mrp": 20.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Derma Care",
     "is_consumable": false,
     "parse_ok": true
@@ -24019,7 +24019,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -24263,7 +24263,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -24307,7 +24307,7 @@
     "pack_count": null,
     "ja_mrp": 79.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -24661,7 +24661,7 @@
     "pack_count": null,
     "ja_mrp": 12.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -24680,7 +24680,7 @@
     "pack_count": null,
     "ja_mrp": 105.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -24855,7 +24855,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -25188,7 +25188,7 @@
     "pack_count": null,
     "ja_mrp": 154.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -25207,7 +25207,7 @@
     "pack_count": null,
     "ja_mrp": 124.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -25384,7 +25384,7 @@
     "pack_count": null,
     "ja_mrp": 134.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-fungal",
     "is_consumable": false,
     "parse_ok": true
@@ -25641,7 +25641,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -26079,7 +26079,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -26102,7 +26102,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -26123,7 +26123,7 @@
     "pack_count": null,
     "ja_mrp": 212.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -26142,7 +26142,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gynaecology",
     "is_consumable": false,
     "parse_ok": true
@@ -26161,7 +26161,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gynaecology",
     "is_consumable": false,
     "parse_ok": true
@@ -26363,7 +26363,7 @@
     "pack_count": null,
     "ja_mrp": 103.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Cardiovascular System (CVS)",
     "is_consumable": false,
     "parse_ok": true
@@ -26401,7 +26401,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -26420,7 +26420,7 @@
     "pack_count": null,
     "ja_mrp": 3750.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -26439,7 +26439,7 @@
     "pack_count": null,
     "ja_mrp": 10968.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -26458,7 +26458,7 @@
     "pack_count": null,
     "ja_mrp": 15.47,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -26481,7 +26481,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -26624,7 +26624,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Ortho",
     "is_consumable": false,
     "parse_ok": true
@@ -26683,7 +26683,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Derma Care",
     "is_consumable": false,
     "parse_ok": true
@@ -26901,7 +26901,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -27084,7 +27084,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -27166,7 +27166,7 @@
     "pack_count": null,
     "ja_mrp": 14.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -27206,7 +27206,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -27227,7 +27227,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Opthalmic/Otic",
     "is_consumable": false,
     "parse_ok": true
@@ -27386,7 +27386,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -28147,7 +28147,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Derma Care",
     "is_consumable": false,
     "parse_ok": true
@@ -28267,7 +28267,7 @@
     "pack_count": null,
     "ja_mrp": 665.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -28313,7 +28313,7 @@
     "pack_count": null,
     "ja_mrp": 1171.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -28332,7 +28332,7 @@
     "pack_count": null,
     "ja_mrp": 93.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -28477,7 +28477,7 @@
     "pack_count": null,
     "ja_mrp": 70.31,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -28593,7 +28593,7 @@
     "pack_count": null,
     "ja_mrp": 79.69,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -28612,7 +28612,7 @@
     "pack_count": null,
     "ja_mrp": 30.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -28631,7 +28631,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-fungal",
     "is_consumable": false,
     "parse_ok": true
@@ -28650,7 +28650,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anthelmintic",
     "is_consumable": false,
     "parse_ok": true
@@ -28844,7 +28844,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -28998,7 +28998,7 @@
     "pack_count": null,
     "ja_mrp": 65.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -29017,7 +29017,7 @@
     "pack_count": null,
     "ja_mrp": 140.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -29691,7 +29691,7 @@
     "pack_count": null,
     "ja_mrp": 46.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -29813,7 +29813,7 @@
     "pack_count": null,
     "ja_mrp": 12.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -29853,7 +29853,7 @@
     "pack_count": null,
     "ja_mrp": 56.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -29920,7 +29920,7 @@
     "pack_count": null,
     "ja_mrp": 37.5,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Stomatologicals",
     "is_consumable": false,
     "parse_ok": true
@@ -29939,7 +29939,7 @@
     "pack_count": null,
     "ja_mrp": 42.19,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-fungal",
     "is_consumable": false,
     "parse_ok": true
@@ -30200,7 +30200,7 @@
     "pack_count": null,
     "ja_mrp": 28.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Steroids & Hormones",
     "is_consumable": false,
     "parse_ok": true
@@ -30223,7 +30223,7 @@
     "pack_count": null,
     "ja_mrp": 100.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -30284,7 +30284,7 @@
     "pack_count": null,
     "ja_mrp": 9.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -30404,7 +30404,7 @@
     "pack_count": null,
     "ja_mrp": 93.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -30425,7 +30425,7 @@
     "pack_count": null,
     "ja_mrp": 44.77,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Hemorrhoids & Anal fissures",
     "is_consumable": false,
     "parse_ok": true
@@ -30444,7 +30444,7 @@
     "pack_count": null,
     "ja_mrp": 421.88,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -30488,7 +30488,7 @@
     "pack_count": null,
     "ja_mrp": 60.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -30507,7 +30507,7 @@
     "pack_count": null,
     "ja_mrp": 18.75,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Histaminic",
     "is_consumable": false,
     "parse_ok": true
@@ -30526,7 +30526,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Histaminic",
     "is_consumable": false,
     "parse_ok": true
@@ -30545,7 +30545,7 @@
     "pack_count": null,
     "ja_mrp": 11.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory",
     "is_consumable": false,
     "parse_ok": true
@@ -30625,7 +30625,7 @@
     "pack_count": null,
     "ja_mrp": 9.38,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anthelmintic",
     "is_consumable": false,
     "parse_ok": true
@@ -30644,7 +30644,7 @@
     "pack_count": null,
     "ja_mrp": 26.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Fungal",
     "is_consumable": false,
     "parse_ok": true
@@ -30665,7 +30665,7 @@
     "pack_count": null,
     "ja_mrp": 23.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Supplement/Vitamin/Mineral",
     "is_consumable": false,
     "parse_ok": true
@@ -30728,7 +30728,7 @@
     "pack_count": null,
     "ja_mrp": 60.94,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -30747,7 +30747,7 @@
     "pack_count": null,
     "ja_mrp": 56.25,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Respiratory",
     "is_consumable": false,
     "parse_ok": true
@@ -30768,7 +30768,7 @@
     "pack_count": null,
     "ja_mrp": 75.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anaesthetics",
     "is_consumable": false,
     "parse_ok": true
@@ -30791,7 +30791,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Hemorrhoids & Anal Fissures",
     "is_consumable": false,
     "parse_ok": true
@@ -30873,7 +30873,7 @@
     "pack_count": null,
     "ja_mrp": 75.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -30932,7 +30932,7 @@
     "pack_count": null,
     "ja_mrp": 89.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -30951,7 +30951,7 @@
     "pack_count": null,
     "ja_mrp": 13.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
@@ -31029,7 +31029,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -31050,7 +31050,7 @@
     "pack_count": null,
     "ja_mrp": 32.81,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Stomatologicals",
     "is_consumable": false,
     "parse_ok": true
@@ -31254,7 +31254,7 @@
     "pack_count": null,
     "ja_mrp": 328.13,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Dermatology/Topical/External",
     "is_consumable": false,
     "parse_ok": true
@@ -31589,7 +31589,7 @@
     "pack_count": null,
     "ja_mrp": 30.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -31770,7 +31770,7 @@
     "pack_count": null,
     "ja_mrp": 98.44,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -31789,7 +31789,7 @@
     "pack_count": null,
     "ja_mrp": 140.63,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antiseptic/Disinfectants",
     "is_consumable": false,
     "parse_ok": true
@@ -32021,7 +32021,7 @@
     "pack_count": null,
     "ja_mrp": 74.06,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Gastrointestinal (GIT)",
     "is_consumable": false,
     "parse_ok": true
@@ -32078,7 +32078,7 @@
     "pack_count": null,
     "ja_mrp": 12000.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -32097,7 +32097,7 @@
     "pack_count": null,
     "ja_mrp": 80.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -32116,7 +32116,7 @@
     "pack_count": null,
     "ja_mrp": 140.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Oncology",
     "is_consumable": false,
     "parse_ok": true
@@ -32682,7 +32682,7 @@
     "pack_count": null,
     "ja_mrp": 80.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Anti-Diuretic",
     "is_consumable": false,
     "parse_ok": true
@@ -33349,7 +33349,7 @@
     "pack_count": null,
     "ja_mrp": 150.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Antibiotics",
     "is_consumable": false,
     "parse_ok": true
@@ -33410,7 +33410,7 @@
     "pack_count": null,
     "ja_mrp": 50.0,
     "price_listed": true,
-    "price_per_unit": NaN,
+    "price_per_unit": null,
     "group": "Central Nervous System (CNS)",
     "is_consumable": false,
     "parse_ok": true
