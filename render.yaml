@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: medisave
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        value: https://gckeoffdfjkqpdnfidxy.supabase.co
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        value: sb_publishable_nPHMbiIeBoOho5NJfOqVNQ_EVf7suS3
+      - key: OLLAMA_API_BASE
+        value: http://localhost:11434
+      - key: OLLAMA_MODEL
+        value: gemma

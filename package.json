@@ -2,6 +2,7 @@
   "name": "medisave",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "MediSave (दवा बचत) - Jan Aushadhi generic equivalent finder and savings calculator",
   "scripts": {
     "dev": "next dev",
