@@ -5,18 +5,18 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "MediSave • Same Medicine. A Fraction of the Price.",
   description:
-    "Find verified Jan Aushadhi generic equivalents and see regulated prices before you buy.",
+    "Find verified Jan Aushadhi generic equivalents, compare regulated prices, and scan prescriptions with Gemma 4 OCR.",
   openGraph: {
     title: "MediSave • Same Medicine. A Fraction of the Price.",
     description:
-      "Find verified Jan Aushadhi generic equivalents and see regulated prices before you buy.",
+      "Find verified Jan Aushadhi generic equivalents, compare regulated prices, and scan prescriptions with Gemma 4 OCR.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "MediSave • Same Medicine. A Fraction of the Price.",
     description:
-      "Find verified Jan Aushadhi generic equivalents and see regulated prices before you buy.",
+      "Find verified Jan Aushadhi generic equivalents, compare regulated prices, and scan prescriptions with Gemma 4 OCR.",
   },
 };
 
@@ -60,65 +60,629 @@ export default function RootLayout({
           src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
           strategy="beforeInteractive"
         />
-        {/* BudgetRx inline app script */}
-        <Script id="budgetrx-app" strategy="afterInteractive">{`
-const MEDISAVE_DATA = [{"brand": "Dolo 650", "molecule": "Paracetamol", "strength": "650 mg", "form": "Tablet", "pack_size": "15", "mrp": 34.0, "ja": 10.5, "saving_pct": 69}, {"brand": "Crocin 650", "molecule": "Paracetamol", "strength": "650 mg", "form": "Tablet", "pack_size": "15", "mrp": 33.5, "ja": 10.5, "saving_pct": 69}, {"brand": "Calpol 500", "molecule": "Paracetamol", "strength": "500 mg", "form": "Tablet", "pack_size": "15", "mrp": 18.0, "ja": 7.0, "saving_pct": 61}, {"brand": "Augmentin 625 Duo", "molecule": "Amoxicillin and Clavulanic Acid", "strength": "500 mg + 125 mg", "form": "Tablet", "pack_size": "10", "mrp": 204.0, "ja": 52.0, "saving_pct": 75}, {"brand": "Clavam 625", "molecule": "Amoxicillin and Clavulanic Acid", "strength": "500 mg + 125 mg", "form": "Tablet", "pack_size": "10", "mrp": 201.0, "ja": 52.0, "saving_pct": 74}, {"brand": "Moxikind-CV 625", "molecule": "Amoxicillin and Clavulanic Acid", "strength": "500 mg + 125 mg", "form": "Tablet", "pack_size": "10", "mrp": 180.0, "ja": 52.0, "saving_pct": 71}, {"brand": "Pan 40", "molecule": "Pantoprazole", "strength": "40 mg", "form": "Tablet", "pack_size": "15", "mrp": 155.0, "ja": 15.0, "saving_pct": 90}, {"brand": "Pantocid 40", "molecule": "Pantoprazole", "strength": "40 mg", "form": "Tablet", "pack_size": "15", "mrp": 160.0, "ja": 15.0, "saving_pct": 91}, {"brand": "Pan-D", "molecule": "Pantoprazole + Domperidone", "strength": "40 mg + 30 mg", "form": "Capsule", "pack_size": "15", "mrp": 199.0, "ja": 28.0, "saving_pct": 86}, {"brand": "Pantop-DSR", "molecule": "Pantoprazole + Domperidone", "strength": "40 mg + 30 mg", "form": "Capsule", "pack_size": "10", "mrp": 145.0, "ja": 19.0, "saving_pct": 87}, {"brand": "Omez 20", "molecule": "Omeprazole", "strength": "20 mg", "form": "Capsule", "pack_size": "20", "mrp": 68.0, "ja": 9.0, "saving_pct": 87}, {"brand": "Razo 20", "molecule": "Rabeprazole", "strength": "20 mg", "form": "Tablet", "pack_size": "15", "mrp": 148.0, "ja": 16.5, "saving_pct": 89}, {"brand": "Atorva 10", "molecule": "Atorvastatin", "strength": "10 mg", "form": "Tablet", "pack_size": "15", "mrp": 98.0, "ja": 12.0, "saving_pct": 88}, {"brand": "Atorlip 20", "molecule": "Atorvastatin", "strength": "20 mg", "form": "Tablet", "pack_size": "15", "mrp": 185.0, "ja": 22.0, "saving_pct": 88}, {"brand": "Storvas 10", "molecule": "Atorvastatin", "strength": "10 mg", "form": "Tablet", "pack_size": "15", "mrp": 95.0, "ja": 12.0, "saving_pct": 87}, {"brand": "Rosuvas 10", "molecule": "Rosuvastatin", "strength": "10 mg", "form": "Tablet", "pack_size": "15", "mrp": 198.0, "ja": 25.0, "saving_pct": 87}, {"brand": "Rozavel 10", "molecule": "Rosuvastatin", "strength": "10 mg", "form": "Tablet", "pack_size": "10", "mrp": 140.0, "ja": 17.0, "saving_pct": 88}, {"brand": "Glycomet 500", "molecule": "Metformin", "strength": "500 mg", "form": "Tablet", "pack_size": "20", "mrp": 24.0, "ja": 7.0, "saving_pct": 71}, {"brand": "Glycomet-GP 1", "molecule": "Metformin + Glimepiride", "strength": "500 mg + 1 mg", "form": "Tablet", "pack_size": "15", "mrp": 85.0, "ja": 15.0, "saving_pct": 82}, {"brand": "Glycomet-GP 2", "molecule": "Metformin + Glimepiride", "strength": "500 mg + 2 mg", "form": "Tablet", "pack_size": "15", "mrp": 118.0, "ja": 19.0, "saving_pct": 84}, {"brand": "Jalra-M 50/500", "molecule": "Vildagliptin + Metformin", "strength": "50 mg + 500 mg", "form": "Tablet", "pack_size": "15", "mrp": 310.0, "ja": 42.0, "saving_pct": 86}, {"brand": "Telma 40", "molecule": "Telmisartan", "strength": "40 mg", "form": "Tablet", "pack_size": "15", "mrp": 138.0, "ja": 14.0, "saving_pct": 90}, {"brand": "Telmikind 40", "molecule": "Telmisartan", "strength": "40 mg", "form": "Tablet", "pack_size": "10", "mrp": 65.0, "ja": 9.5, "saving_pct": 85}, {"brand": "Telma-H", "molecule": "Telmisartan + Hydrochlorothiazide", "strength": "40 mg + 12.5 mg", "form": "Tablet", "pack_size": "15", "mrp": 188.0, "ja": 21.0, "saving_pct": 89}, {"brand": "Telma-AM", "molecule": "Telmisartan + Amlodipine", "strength": "40 mg + 5 mg", "form": "Tablet", "pack_size": "15", "mrp": 192.0, "ja": 22.0, "saving_pct": 89}, {"brand": "Amlokind 5", "molecule": "Amlodipine", "strength": "5 mg", "form": "Tablet", "pack_size": "15", "mrp": 35.0, "ja": 5.5, "saving_pct": 84}, {"brand": "Norvasc 5", "molecule": "Amlodipine", "strength": "5 mg", "form": "Tablet", "pack_size": "14", "mrp": 75.0, "ja": 5.0, "saving_pct": 93}, {"brand": "Azee 500", "molecule": "Azithromycin", "strength": "500 mg", "form": "Tablet", "pack_size": "5", "mrp": 132.0, "ja": 38.0, "saving_pct": 71}, {"brand": "Azithral 500", "molecule": "Azithromycin", "strength": "500 mg", "form": "Tablet", "pack_size": "5", "mrp": 130.0, "ja": 38.0, "saving_pct": 71}, {"brand": "Zithrox 500", "molecule": "Azithromycin", "strength": "500 mg", "form": "Tablet", "pack_size": "5", "mrp": 128.0, "ja": 38.0, "saving_pct": 70}, {"brand": "Montair-LC", "molecule": "Montelukast + Levocetirizine", "strength": "10 mg + 5 mg", "form": "Tablet", "pack_size": "10", "mrp": 198.0, "ja": 32.0, "saving_pct": 84}, {"brand": "Montek-LC", "molecule": "Montelukast + Levocetirizine", "strength": "10 mg + 5 mg", "form": "Tablet", "pack_size": "10", "mrp": 190.0, "ja": 32.0, "saving_pct": 83}, {"brand": "Cetzine 10", "molecule": "Cetirizine", "strength": "10 mg", "form": "Tablet", "pack_size": "10", "mrp": 22.0, "ja": 4.5, "saving_pct": 80}, {"brand": "Allegra 120", "molecule": "Fexofenadine", "strength": "120 mg", "form": "Tablet", "pack_size": "10", "mrp": 175.0, "ja": 29.0, "saving_pct": 83}, {"brand": "Combiflam", "molecule": "Ibuprofen + Paracetamol", "strength": "400 mg + 325 mg", "form": "Tablet", "pack_size": "20", "mrp": 46.0, "ja": 12.0, "saving_pct": 74}, {"brand": "Zerodol-P", "molecule": "Aceclofenac + Paracetamol", "strength": "100 mg + 325 mg", "form": "Tablet", "pack_size": "10", "mrp": 68.0, "ja": 14.0, "saving_pct": 79}, {"brand": "Shelcal 500", "molecule": "Calcium + Vitamin D3", "strength": "500 mg + 250 IU", "form": "Tablet", "pack_size": "15", "mrp": 135.0, "ja": 25.0, "saving_pct": 81}, {"brand": "Cipcal 500", "molecule": "Calcium + Vitamin D3", "strength": "500 mg + 250 IU", "form": "Tablet", "pack_size": "15", "mrp": 120.0, "ja": 25.0, "saving_pct": 79}, {"brand": "Thyronorm 50", "molecule": "Thyroxine Sodium", "strength": "50 mcg", "form": "Tablet", "pack_size": "120", "mrp": 180.0, "ja": 45.0, "saving_pct": 75}, {"brand": "Eltroxin 50", "molecule": "Thyroxine Sodium", "strength": "50 mcg", "form": "Tablet", "pack_size": "120", "mrp": 175.0, "ja": 45.0, "saving_pct": 74}];
+        {/* MediSave Full Integration Script */}
+        <Script id="medisave-app" strategy="afterInteractive">{`
+(function() {
+  // Prescription basket state in localStorage
+  let basket = JSON.parse(localStorage.getItem('medisave_basket') || '[]');
+  let currentUser = JSON.parse(localStorage.getItem('medisave_user') || 'null');
+  let currentToken = localStorage.getItem('medisave_token') || null;
 
-function initMediSaveSearch() {
-  if (typeof window.$ === 'undefined') {
-    setTimeout(initMediSaveSearch, 50);
-    return;
+  function saveBasket() {
+    localStorage.setItem('medisave_basket', JSON.stringify(basket));
+    updateBasketBadge();
+    syncBasketToCloud();
   }
 
-  $('#drug-form').submit(function(e) { e.preventDefault(); });
+  function updateBasketBadge() {
+    const count = basket.length;
+    const badge = document.getElementById('basket-count-badge');
+    if (badge) badge.textContent = count;
+  }
 
-  $('input#drug-search').on('input keyup', function() {
-    const q = $(this).val().trim().toLowerCase();
-    const container = $('#autofill-container');
-    container.empty();
+  async function syncBasketToCloud() {
+    if (!currentToken || basket.length === 0) return;
+    try {
+      for (const item of basket) {
+        if (!item.synced) {
+          await fetch('/api/prescriptions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + currentToken
+            },
+            body: JSON.stringify({
+              brand_id: item.brand_name.toLowerCase().replace(/\\s+/g, '-'),
+              brand_name: item.brand_name,
+              generic_name: item.generic_name,
+              ja_code: item.ja_code || 0,
+              pack_count: item.pack_count || 10,
+              brand_mrp: item.brand_mrp || 0,
+              generic_equivalent_price: item.generic_price || 0,
+              saving_amount: item.saving_amount || 0,
+              molecules: item.molecules || [],
+              strengths: item.strengths || [],
+              form: item.form || 'tablet',
+              data_date: new Date().toISOString().slice(0, 10)
+            })
+          });
+          item.synced = true;
+        }
+      }
+      localStorage.setItem('medisave_basket', JSON.stringify(basket));
+    } catch (e) {
+      console.warn('Cloud prescription sync deferred:', e);
+    }
+  }
 
-    if (q.length < 2) return;
-
-    const results = MEDISAVE_DATA.filter(m =>
-      m.brand.toLowerCase().includes(q) ||
-      m.molecule.toLowerCase().includes(q) ||
-      m.strength.toLowerCase().includes(q)
-    ).slice(0, 8);
-
-    if (results.length === 0) {
-      container.append('<div style="padding:14px; color:#575279; font-size:14px; background:#FFFFFF; border-radius:12px; margin-top:8px; border:1px solid #E4E5DD;">Not found in our data, ask your pharmacist or doctor.</div>');
+  function initUI() {
+    if (typeof window.$ === 'undefined') {
+      setTimeout(initUI, 50);
       return;
     }
 
-    results.forEach(drug => {
-      const clone = $('#autofill-entry').clone();
-      clone.css('display', 'flex');
-      clone.find('#autofill-value').html('<strong>' + drug.brand + '</strong> <span style="font-size:13px; color:#575279;">(' + drug.molecule + ' ' + drug.strength + ')</span>');
-      clone.find('.autofill-button_text').html('<span style="color:#1FAE6B; font-weight:800; font-size:14px;">₹' + drug.ja + '</span> <span style="text-decoration:line-through; color:#575279; font-size:12px;">₹' + drug.mrp + '</span> <span style="background:#A6D63A; color:#1B0A66; padding:2px 8px; border-radius:999px; font-weight:800; font-size:11px; margin-left:6px;">Save ' + drug.saving_pct + '%</span>');
-      clone.find('#autofill-package-size').text(drug.pack_size);
-      clone.find('#autofill-package-size-label').text(drug.form + 's');
+    const $ = window.$;
 
-      clone.click(function() {
-        alert('Selected: ' + drug.brand + '
-Active Molecule: ' + drug.molecule + ' (' + drug.strength + ')
-Brand MRP: ₹' + drug.mrp + '
-Jan Aushadhi Price: ₹' + drug.ja + ' (' + drug.saving_pct + '% Savings)
+    // 1. Inject Camera & Action Buttons if not already present
+    if ($('#btn-camera-scan').length === 0) {
+      const cameraBtnHtml = \`
+        <div style="display:flex; align-items:center; gap:8px; margin-top:10px; justify-content:center; flex-wrap:wrap;">
+          <button id="btn-camera-scan" type="button" style="background:#1B0A66; color:#ffffff; border:none; padding:10px 20px; border-radius:999px; font-weight:700; font-size:14px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; box-shadow:0 4px 12px rgba(27,10,102,0.25); transition:all 0.2s;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A6D63A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Scan Prescription (Gemma 4 OCR)
+          </button>
+          <button id="btn-open-basket" type="button" style="background:#FFFFFF; color:#1B0A66; border:1.5px solid #1B0A66; padding:9px 18px; border-radius:999px; font-weight:700; font-size:14px; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            My List (<span id="basket-count-badge">\${basket.length}</span>)
+          </button>
+          <button id="btn-open-kendra" type="button" style="background:#EBF7EE; color:#1FAE6B; border:1.5px solid #1FAE6B; padding:9px 18px; border-radius:999px; font-weight:700; font-size:14px; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Find Kendras
+          </button>
+          <input type="file" id="camera-file-input" accept="image/*" capture="environment" style="display:none;" />
+        </div>
+      \`;
+      $('#drug-form').after(cameraBtnHtml);
+    }
 
-Price and molecule information only, not medical advice. Confirm with your doctor or pharmacist.');
+    // Update navbar login button if user is already signed in
+    function updateAuthNav() {
+      if (currentUser && currentUser.email) {
+        $('#open-login-btn').html(\`
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          \${currentUser.email.split('@')[0]}
+        \`);
+        $('#open-login-mobile-btn').text(currentUser.email.split('@')[0]);
+      }
+    }
+    updateAuthNav();
+
+    // 2. Real-time Search Autocomplete against /api/search
+    let searchTimeout = null;
+    $('#drug-form').submit(function(e) { e.preventDefault(); });
+
+    $('input#drug-search').on('input keyup', function() {
+      const q = $(this).val().trim();
+      const container = $('#autofill-container');
+
+      if (q.length < 2) {
+        container.empty();
+        return;
+      }
+
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(async function() {
+        try {
+          const res = await fetch('/api/search?q=' + encodeURIComponent(q) + '&limit=8');
+          const data = await res.json();
+          container.empty();
+
+          if (!data.results || data.results.length === 0) {
+            container.append('<div style="padding:14px; color:#575279; font-size:14px; background:#FFFFFF; border-radius:12px; margin-top:8px; border:1px solid #E4E5DD;">Not found in catalog. Ask your pharmacist or Kendra for the generic molecule.</div>');
+            return;
+          }
+
+          data.results.forEach(drug => {
+            const isBrand = drug.type === 'brand';
+            const clone = $('#autofill-entry').clone();
+            clone.css('display', 'flex');
+
+            const moleculeSubtitle = drug.molecules && drug.molecules.length > 0
+              ? ' (' + drug.molecules.join(' + ') + ' ' + (drug.strengths || []).join(' + ') + ')'
+              : '';
+
+            clone.find('#autofill-value').html('<strong>' + drug.brand_name + '</strong> <span style="font-size:13px; color:#575279;">' + moleculeSubtitle + '</span>');
+
+            if (isBrand && drug.generic_price) {
+              clone.find('.autofill-button_text').html(
+                '<span style="color:#1FAE6B; font-weight:800; font-size:14px;">₹' + drug.generic_price + '</span> ' +
+                '<span style="text-decoration:line-through; color:#575279; font-size:12px;">₹' + drug.brand_mrp + '</span> ' +
+                '<span style="background:#A6D63A; color:#1B0A66; padding:2px 8px; border-radius:999px; font-weight:800; font-size:11px; margin-left:6px;">Save ' + (drug.saving_pct || 0) + '%</span>'
+              );
+            } else if (drug.generic_price) {
+              clone.find('.autofill-button_text').html('<span style="color:#1FAE6B; font-weight:800; font-size:14px;">Jan Aushadhi ₹' + drug.generic_price + '</span>');
+            } else {
+              clone.find('.autofill-button_text').html('<span style="color:#1B0A66; font-size:13px;">View Generic</span>');
+            }
+
+            clone.find('#autofill-package-size').text(drug.pack_count || '10');
+            clone.find('#autofill-package-size-label').text((drug.form || 'tablet') + 's');
+
+            clone.click(function() {
+              openMedicineDetailModal(drug);
+            });
+
+            container.append(clone);
+          });
+        } catch (err) {
+          console.warn('Search query error:', err);
+        }
+      }, 200);
+    });
+
+    // 3. Medicine Details Modal
+    window.openMedicineDetailModal = function(drug) {
+      let modal = document.getElementById('detail-modal');
+      if (!modal) {
+        $('body').append(\`
+          <div id="detail-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(18, 6, 70, 0.65); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:20px;">
+            <div style="background:#FFFFFF; width:100%; max-width:500px; border-radius:24px; padding:32px; box-shadow:0 24px 60px rgba(18,6,70,0.3); position:relative; color:#1B0A66;">
+              <button id="close-detail-btn" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:#575279;">✕</button>
+              <div id="detail-content"></div>
+            </div>
+          </div>
+        \`);
+        modal = document.getElementById('detail-modal');
+        $('#close-detail-btn').click(function() { modal.style.display = 'none'; });
+        $('#detail-modal').click(function(e) { if (e.target === modal) modal.style.display = 'none'; });
+      }
+
+      const savingHeadline = drug.saving_pct
+        ? \`<div style="background:#EBF7EE; border:1.5px solid #1FAE6B; border-radius:14px; padding:14px; margin:16px 0; display:flex; justify-content:space-between; align-items:center;">
+             <div>
+               <div style="font-size:12px; font-weight:700; color:#1FAE6B; text-transform:uppercase;">Verified Government Savings</div>
+               <div style="font-size:22px; font-weight:800; color:#1B0A66;">Save ₹\${drug.saving_amount} (\${drug.saving_pct}%)</div>
+             </div>
+             <div style="text-align:right;">
+               <div style="font-size:12px; color:#575279; text-decoration:line-through;">Commercial ₹\${drug.brand_mrp}</div>
+               <div style="font-size:18px; font-weight:800; color:#1FAE6B;">Jan Aushadhi ₹\${drug.generic_price}</div>
+             </div>
+           </div>\`
+        : \`<div style="background:#F7F8F2; border-radius:14px; padding:14px; margin:16px 0;">
+             <div style="font-size:14px; font-weight:700; color:#1B0A66;">Official Jan Aushadhi Generic</div>
+             <div style="font-size:22px; font-weight:800; color:#1FAE6B;">₹\${drug.generic_price} (Regulated Price)</div>
+           </div>\`;
+
+      $('#detail-content').html(\`
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+          <span style="background:#1B0A66; color:#A6D63A; padding:3px 10px; border-radius:999px; font-weight:800; font-size:11px; text-transform:uppercase;">
+            \${drug.type === 'brand' ? 'Commercial Brand' : 'Generic Product'}
+          </span>
+          <span style="font-size:13px; color:#575279;">PMBI Code #\${drug.ja_code || 'N/A'}</span>
+        </div>
+        <h3 style="font-size:24px; font-weight:800; margin:0 0 6px 0; color:#1B0A66;">\${drug.brand_name}</h3>
+        <p style="font-size:14px; color:#575279; margin:0 0 14px 0;">
+          <strong>Active Chemical:</strong> \${(drug.molecules || []).join(' + ')} \${(drug.strengths || []).join(' + ')} • \${drug.pack_count} \${drug.form || 'tablet'}s
+        </p>
+
+        \${savingHeadline}
+
+        <div style="font-size:12px; color:#575279; background:#F7F8F2; border-radius:10px; padding:12px; margin-bottom:20px; line-height:1.5;">
+          <strong>Bioequivalence Guarantee:</strong> Both medicines contain the exact same active pharmaceutical ingredient, therapeutic action, and safety profile in accordance with Central Drugs Standard Control Organisation (CDSCO) standards.
+        </div>
+
+        <div style="display:flex; gap:10px;">
+          <button id="btn-add-to-basket-modal" style="flex:1; background:#1FAE6B; color:#ffffff; font-weight:700; font-size:15px; padding:12px; border:none; border-radius:999px; cursor:pointer;">
+            + Add to My List
+          </button>
+          <button id="btn-locate-from-modal" style="background:#1B0A66; color:#ffffff; font-weight:700; font-size:15px; padding:12px 18px; border:none; border-radius:999px; cursor:pointer;">
+            Find Kendra
+          </button>
+        </div>
+      \`);
+
+      $('#btn-add-to-basket-modal').click(function() {
+        basket.push(drug);
+        saveBasket();
+        alert(\`Added \${drug.brand_name} to your prescription list!\`);
+        modal.style.display = 'none';
       });
 
-      container.append(clone);
-    });
-  });
-}
+      $('#btn-locate-from-modal').click(function() {
+        modal.style.display = 'none';
+        openKendraModal();
+      });
 
-if (typeof window !== 'undefined') {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMediSaveSearch);
-  } else {
-    initMediSaveSearch();
+      modal.style.display = 'flex';
+    };
+
+    // 4. Camera OCR Scan Handler (Gemma 4 via /api/ocr)
+    $('#btn-camera-scan').click(function() {
+      $('#camera-file-input').click();
+    });
+
+    $('#camera-file-input').on('change', async function(e) {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+
+      // Downscale image via canvas to save bandwidth (< 1280px)
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const img = new Image();
+        img.onload = async function() {
+          const maxDim = 1280;
+          let w = img.width;
+          let h = img.height;
+          if (w > maxDim || h > maxDim) {
+            if (w > h) {
+              h = Math.round((h * maxDim) / w);
+              w = maxDim;
+            } else {
+              w = Math.round((w * maxDim) / h);
+              h = maxDim;
+            }
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+          const base64Only = dataUrl.split(',')[1];
+
+          // Show loading modal
+          showOcrLoadingModal();
+
+          try {
+            const res = await fetch('/api/ocr', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ imageBase64: base64Only })
+            });
+            const data = await res.json();
+            hideOcrLoadingModal();
+
+            if (data.ok && data.names && data.names.length > 0) {
+              openOcrConfirmModal(data.names, data.model_used);
+            } else {
+              alert(data.warning || 'No clear medicine names could be detected. Please type the name directly in search.');
+            }
+          } catch (err) {
+            hideOcrLoadingModal();
+            alert('Error contacting OCR perception service. Please type your medicine name directly.');
+          }
+        };
+        img.src = evt.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function showOcrLoadingModal() {
+      let loader = document.getElementById('ocr-loader-modal');
+      if (!loader) {
+        $('body').append(\`
+          <div id="ocr-loader-modal" style="display:none; position:fixed; inset:0; z-index:999999; background:rgba(18, 6, 70, 0.7); backdrop-filter:blur(6px); align-items:center; justify-content:center; color:#ffffff; text-align:center; padding:20px;">
+            <div style="background:#FFFFFF; color:#1B0A66; padding:32px 40px; border-radius:24px; box-shadow:0 24px 60px rgba(0,0,0,0.3); max-width:380px;">
+              <div style="font-size:32px; margin-bottom:12px;">🔍</div>
+              <h3 style="font-size:20px; font-weight:800; margin:0 0 8px 0;">Reading with Gemma 4 Vision</h3>
+              <p style="font-size:13px; color:#575279; margin:0; line-height:1.5;">Extracting medicine brand names & active molecules from your photo. Running in-memory with strict patient privacy.</p>
+            </div>
+          </div>
+        \`);
+        loader = document.getElementById('ocr-loader-modal');
+      }
+      loader.style.display = 'flex';
+    }
+
+    function hideOcrLoadingModal() {
+      const loader = document.getElementById('ocr-loader-modal');
+      if (loader) loader.style.display = 'none';
+    }
+
+    function openOcrConfirmModal(names, modelUsed) {
+      let confirmModal = document.getElementById('ocr-confirm-modal');
+      if (!confirmModal) {
+        $('body').append(\`
+          <div id="ocr-confirm-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(18, 6, 70, 0.65); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:20px;">
+            <div style="background:#FFFFFF; width:100%; max-width:460px; border-radius:24px; padding:32px; box-shadow:0 24px 60px rgba(18,6,70,0.3); position:relative; color:#1B0A66;">
+              <button id="close-confirm-btn" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:#575279;">✕</button>
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                <span style="background:#1FAE6B; color:#ffffff; padding:2px 8px; border-radius:999px; font-size:11px; font-weight:800;">VERIFIED OCR</span>
+                <span style="font-size:12px; color:#575279;">\${modelUsed || 'Gemma 4'}</span>
+              </div>
+              <h3 style="font-size:22px; font-weight:800; margin:0 0 6px 0;">Detected Prescription Items</h3>
+              <p style="font-size:13px; color:#575279; margin-bottom:16px;">Verify or edit detected medicine text before searching Jan Aushadhi generic equivalents:</p>
+              <div id="ocr-items-inputs"></div>
+              <button id="btn-run-ocr-search" style="width:100%; margin-top:16px; background:#1FAE6B; color:#ffffff; font-weight:700; font-size:15px; padding:12px; border:none; border-radius:999px; cursor:pointer;">
+                Find Generic Equivalents & Savings →
+              </button>
+            </div>
+          </div>
+        \`);
+        confirmModal = document.getElementById('ocr-confirm-modal');
+        $('#close-confirm-btn').click(function() { confirmModal.style.display = 'none'; });
+      }
+
+      const container = $('#ocr-items-inputs');
+      container.empty();
+      names.forEach((name, idx) => {
+        container.append(\`
+          <div style="margin-bottom:10px;">
+            <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#575279;">Medicine #\${idx + 1}</label>
+            <input type="text" class="ocr-edit-input" value="\${name}" style="width:100%; padding:10px 14px; border:1.5px solid #E4E5DD; border-radius:10px; font-size:14px; font-weight:600; color:#1B0A66; outline:none;" />
+          </div>
+        \`);
+      });
+
+      $('#btn-run-ocr-search').off('click').on('click', function() {
+        const firstVal = $('.ocr-edit-input').first().val();
+        confirmModal.style.display = 'none';
+        if (firstVal) {
+          $('input#drug-search').val(firstVal).trigger('keyup');
+          $('html, body').animate({ scrollTop: $('#drug-search').offset().top - 100 }, 400);
+        }
+      });
+
+      confirmModal.style.display = 'flex';
+    }
+
+    // 5. Prescription Basket Modal ("My List")
+    $('#btn-open-basket').click(function() {
+      openBasketModal();
+    });
+
+    window.openBasketModal = function() {
+      let modal = document.getElementById('basket-modal');
+      if (!modal) {
+        $('body').append(\`
+          <div id="basket-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(18, 6, 70, 0.65); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:20px;">
+            <div style="background:#FFFFFF; width:100%; max-width:540px; border-radius:24px; padding:32px; box-shadow:0 24px 60px rgba(18,6,70,0.3); position:relative; color:#1B0A66; max-height:90vh; overflow-y:auto;">
+              <button id="close-basket-btn" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:#575279;">✕</button>
+              <h3 style="font-size:22px; font-weight:800; margin:0 0 6px 0;">My Prescription Basket</h3>
+              <p style="font-size:13px; color:#575279; margin:0 0 16px 0;">Print this slip and present it at any Jan Aushadhi Kendra to purchase generic bio-equivalents.</p>
+              <div id="basket-items-list" style="margin-bottom:16px;"></div>
+              <div id="basket-summary" style="background:#F7F8F2; border-radius:14px; padding:16px; margin-bottom:20px;"></div>
+              <div style="display:flex; gap:10px;">
+                <button id="btn-print-basket" style="flex:1; background:#1B0A66; color:#ffffff; font-weight:700; font-size:14px; padding:12px; border:none; border-radius:999px; cursor:pointer;">
+                  🖨️ Print Prescription Slip
+                </button>
+                <button id="btn-clear-basket" style="background:#FFF0F0; color:#E53E3E; font-weight:700; font-size:14px; padding:12px 18px; border:none; border-radius:999px; cursor:pointer;">
+                  Clear
+                </button>
+              </div>
+            </div>
+          </div>
+        \`);
+        modal = document.getElementById('basket-modal');
+        $('#close-basket-btn').click(function() { modal.style.display = 'none'; });
+        $('#btn-clear-basket').click(function() {
+          basket = [];
+          saveBasket();
+          renderBasketItems();
+        });
+        $('#btn-print-basket').click(function() {
+          window.print();
+        });
+      }
+
+      renderBasketItems();
+      modal.style.display = 'flex';
+    };
+
+    function renderBasketItems() {
+      const container = $('#basket-items-list');
+      const summary = $('#basket-summary');
+      container.empty();
+
+      if (basket.length === 0) {
+        container.html('<div style="text-align:center; padding:30px 0; color:#575279; font-size:14px;">Your prescription list is empty.<br/>Search any medicine above and click "+ Add to My List".</div>');
+        summary.hide();
+        return;
+      }
+
+      summary.show();
+      let totalBrand = 0;
+      let totalGeneric = 0;
+
+      basket.forEach((item, idx) => {
+        const brandPrice = parseFloat(item.brand_mrp) || 0;
+        const genericPrice = parseFloat(item.generic_price) || 0;
+        totalBrand += brandPrice;
+        totalGeneric += genericPrice;
+
+        container.append(\`
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #E4E5DD;">
+            <div>
+              <div style="font-weight:700; font-size:14px; color:#1B0A66;">\${item.brand_name}</div>
+              <div style="font-size:12px; color:#575279;">→ \${item.generic_name} (\${item.pack_count || 10} \${item.form || 'tablet'}s)</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-weight:800; font-size:15px; color:#1FAE6B;">₹\${genericPrice}</div>
+              \${brandPrice ? '<div style="font-size:11px; color:#575279; text-decoration:line-through;">₹' + brandPrice + '</div>' : ''}
+              <button class="btn-remove-basket-item" data-idx="\${idx}" style="background:none; border:none; color:#E53E3E; font-size:11px; cursor:pointer; padding:0; text-decoration:underline;">Remove</button>
+            </div>
+          </div>
+        \`);
+      });
+
+      const totalSaving = Math.max(0, Math.round((totalBrand - totalGeneric) * 100) / 100);
+      const totalSavingPct = totalBrand > 0 ? Math.round((totalSaving / totalBrand) * 100) : 0;
+
+      summary.html(\`
+        <div style="display:flex; justify-content:space-between; font-size:13px; color:#575279; margin-bottom:6px;">
+          <span>Commercial Brands Total:</span>
+          <span>₹\${totalBrand.toFixed(2)}</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:13px; color:#575279; margin-bottom:10px;">
+          <span>Jan Aushadhi Generic Total:</span>
+          <span style="font-weight:700; color:#1FAE6B;">₹\${totalGeneric.toFixed(2)}</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:800; color:#1B0A66; border-top:1.5px solid #E4E5DD; padding-top:8px;">
+          <span>Total Patient Savings:</span>
+          <span style="color:#1FAE6B;">₹\${totalSaving.toFixed(2)} (\${totalSavingPct}% saved)</span>
+        </div>
+      \`);
+
+      $('.btn-remove-basket-item').click(function() {
+        const i = parseInt($(this).data('idx'), 10);
+        basket.splice(i, 1);
+        saveBasket();
+        renderBasketItems();
+      });
+    }
+
+    // 6. Nearest Kendra Locator Modal
+    $('#btn-open-kendra').click(function() {
+      openKendraModal();
+    });
+
+    window.openKendraModal = function() {
+      let modal = document.getElementById('kendra-modal');
+      if (!modal) {
+        $('body').append(\`
+          <div id="kendra-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(18, 6, 70, 0.65); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:20px;">
+            <div style="background:#FFFFFF; width:100%; max-width:540px; border-radius:24px; padding:32px; box-shadow:0 24px 60px rgba(18,6,70,0.3); position:relative; color:#1B0A66; max-height:85vh; overflow-y:auto;">
+              <button id="close-kendra-btn" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:#575279;">✕</button>
+              <h3 style="font-size:22px; font-weight:800; margin:0 0 6px 0;">Find Jan Aushadhi Kendra</h3>
+              <p style="font-size:13px; color:#575279; margin:0 0 16px 0;">Locate your nearest PMBJP government Kendra store:</p>
+              <div style="display:flex; gap:8px; margin-bottom:16px;">
+                <input type="text" id="kendra-search-input" placeholder="Search city or pincode (e.g. Delhi, Mumbai, 110029)..." style="flex:1; padding:10px 14px; border:1.5px solid #E4E5DD; border-radius:10px; font-size:14px; outline:none;" />
+                <button id="btn-gps-locate" style="background:#1B0A66; color:#ffffff; font-weight:700; font-size:13px; padding:10px 14px; border:none; border-radius:10px; cursor:pointer;">
+                  📍 GPS
+                </button>
+              </div>
+              <div id="kendra-results-list"></div>
+            </div>
+          </div>
+        \`);
+        modal = document.getElementById('kendra-modal');
+        $('#close-kendra-btn').click(function() { modal.style.display = 'none'; });
+
+        $('#kendra-search-input').on('input', function() {
+          fetchKendras({ q: $(this).val().trim() });
+        });
+
+        $('#btn-gps-locate').click(function() {
+          if (navigator.geolocation) {
+            $('#btn-gps-locate').text('Locating...');
+            navigator.geolocation.getCurrentPosition(
+              function(pos) {
+                $('#btn-gps-locate').text('📍 GPS');
+                fetchKendras({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+              },
+              function() {
+                $('#btn-gps-locate').text('📍 GPS');
+                alert('GPS location permission denied. Please enter your city or pincode.');
+              }
+            );
+          }
+        });
+      }
+
+      fetchKendras({});
+      modal.style.display = 'flex';
+    };
+
+    async function fetchKendras(params) {
+      const qs = new URLSearchParams(params).toString();
+      try {
+        const res = await fetch('/api/kendras' + (qs ? '?' + qs : ''));
+        const data = await res.json();
+        const container = $('#kendra-results-list');
+        container.empty();
+
+        if (!data.results || data.results.length === 0) {
+          container.html('<div style="color:#575279; font-size:13px; text-align:center; padding:20px;">No Kendras found for this query. Try a nearby city.</div>');
+          return;
+        }
+
+        data.results.forEach(k => {
+          const distBadge = k.distance_km !== null
+            ? \`<span style="background:#EBF7EE; color:#1FAE6B; font-weight:800; font-size:11px; padding:2px 8px; border-radius:999px;">\${k.distance_km} km away</span>\`
+            : '';
+
+          container.append(\`
+            <div style="border:1.5px solid #E4E5DD; border-radius:12px; padding:14px; margin-bottom:10px;">
+              <div style="display:flex; justify-content:space-between; align-items:start; margin-bottom:4px;">
+                <div style="font-weight:700; font-size:15px; color:#1B0A66;">\${k.name}</div>
+                \${distBadge}
+              </div>
+              <div style="font-size:13px; color:#575279; margin-bottom:6px;">\${k.address}, \${k.city}, \${k.state} - \${k.pincode}</div>
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#575279;">
+                <span>📞 \${k.phone}</span>
+                <span>⏰ \${k.timings}</span>
+              </div>
+            </div>
+          \`);
+        });
+      } catch (e) {
+        console.warn('Kendra fetch error:', e);
+      }
+    }
+
+    // 7. Supabase Auth Form Integration
+    $('#auth-form').off('submit').on('submit', async function(e) {
+      e.preventDefault();
+      const emailInput = $(this).find('input[type="text"]').val().trim();
+      const passInput = $(this).find('input[type="password"]').val().trim();
+      const submitBtn = $(this).find('button[type="submit"]');
+
+      submitBtn.text('Signing in...').prop('disabled', true);
+
+      try {
+        const res = await fetch('/api/auth', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'signin_password',
+            email: emailInput,
+            password: passInput
+          })
+        });
+
+        const data = await res.json();
+        submitBtn.text('Sign In to MediSave').prop('disabled', false);
+
+        if (data.ok && data.session) {
+          currentUser = data.session.user;
+          currentToken = data.session.access_token;
+          localStorage.setItem('medisave_user', JSON.stringify(currentUser));
+          localStorage.setItem('medisave_token', currentToken);
+          alert('Signed in successfully! Your prescriptions will now automatically sync to your account.');
+          document.getElementById('auth-modal').style.display = 'none';
+          updateAuthNav();
+          syncBasketToCloud();
+        } else {
+          // If password login fails, try OTP sign-in
+          const otpRes = await fetch('/api/auth', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'send_otp', email: emailInput })
+          });
+          const otpData = await otpRes.json();
+          if (otpData.ok) {
+            alert('A login OTP / magic link has been sent to ' + emailInput + '. Please check your inbox.');
+            document.getElementById('auth-modal').style.display = 'none';
+          } else {
+            alert(data.error || 'Login failed. Please check credentials or register.');
+          }
+        }
+      } catch (err) {
+        submitBtn.text('Sign In to MediSave').prop('disabled', false);
+        alert('Network error connecting to authentication service.');
+      }
+    });
+
   }
-}
+
+  if (typeof window !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initUI);
+    } else {
+      initUI();
+    }
+  }
+})();
 `}</Script>
         {/* Webflow JS */}
         <Script

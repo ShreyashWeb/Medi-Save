@@ -9,3 +9,5 @@ __pycache__/
 .venv/
 *.log
 coverage/
+data/raw/indian_medicine_data.csv
+scratch/

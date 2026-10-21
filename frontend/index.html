@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" content="#0d9488"/>
+  <meta name="description" content="MediSave — The Prescription You Cannot Read. Make the cost of medicine visible before you pay. Find the cheapest same-molecule Jan Aushadhi generic for any branded medicine."/>
+
+  <title>MediSave — Same-Molecule Generic Medicine Price Discovery</title>
+
+  <link rel="manifest" href="/manifest.json"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png"/>
+  <link rel="apple-touch-icon" href="/icons/icon-192.png"/>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+
+  <!-- =========================================================
+       LIQUID GLASS TRANSLUCENT NAVBAR
+       ========================================================= -->
+  <header class="liquid-glass-nav" role="banner">
+    <div class="nav-container">
+      <a href="/" class="brand-logo-link" aria-label="MediSave Home">
+        <div class="brand-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M2 12h20"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Medi<span>Save</span></div>
+          <div class="brand-tagline">Generic Medicine Price Discovery</div>
+        </div>
+      </a>
+
+      <nav class="nav-menu" role="navigation">
+        <a href="#how-it-works" class="nav-link">How it Works</a>
+        <a href="#kendras-section" class="nav-link">Find Kendras</a>
+        <a href="#faq-section" class="nav-link">FAQs</a>
+
+        <div class="offline-status-badge" title="Offline-ready with bundled local dataset">
+          <span id="network-status-dot" class="status-dot"></span>
+          <span id="network-status-text">Checking status...</span>
+        </div>
+
+        <button id="btn-open-basket" class="prescription-counter-btn" aria-label="View Prescription Slip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Prescription Slip
+          <span id="basket-count-badge" class="basket-count-badge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         HERO SECTION & SEARCH BAR
+         ========================================================= -->
+    <section class="hero-section">
+      <div class="hero-pill-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Pradhan Mantri Bhartiya Janaushadhi &amp; NPPA Regulated Data
+      </div>
+
+      <h1 class="hero-title">
+        The Prescription You Cannot Read.<br>
+        <span>See the price before you pay.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Find the cheapest same-molecule generic equivalent for any branded medicine. Type a brand name or photograph your prescription strip.
+      </p>
+
+      <!-- Search Card -->
+      <div class="search-box-card">
+        <div class="search-icon-wrapper">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+
+        <input
+          id="main-search-input"
+          class="main-search-input"
+          type="text"
+          placeholder="Search brand or molecule (e.g. Dolo 650, Augmentin, Pan 40)..."
+          autocomplete="off"
+          aria-label="Search medicine name"
+        />
+
+        <div class="search-actions-group">
+          <!-- Hidden Camera File Input -->
+          <input type="file" id="camera-file-input" accept="image/*" capture="environment" style="display:none;" />
+
+          <button id="btn-camera-scan" class="icon-btn-action" title="Photograph strip or prescription" aria-label="Camera Scan">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+          </button>
+
+          <button id="btn-barcode-scan" class="icon-btn-action" title="Scan or enter medicine barcode" aria-label="Barcode Scan">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 5v14M8 5v14M12 5v14M17 5v14M21 5v14"/>
+            </svg>
+          </button>
+
+          <button id="btn-main-search" class="btn-primary-search">Find Generic</button>
+        </div>
+
+        <!-- Live Autocomplete Dropdown -->
+        <div id="autocomplete-dropdown" class="autocomplete-dropdown" role="listbox"></div>
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div class="quick-chips-container">
+        <span class="chip-label">Popular Searches:</span>
+        <button class="suggestion-chip" data-query="Dolo 650">Dolo 650</button>
+        <button class="suggestion-chip" data-query="Augmentin 625 Duo">Augmentin 625</button>
+        <button class="suggestion-chip" data-query="Pan 40">Pan 40</button>
+        <button class="suggestion-chip" data-query="Atorva 10">Atorva 10</button>
+        <button class="suggestion-chip" data-query="Glycomet 500">Glycomet 500</button>
+        <button class="suggestion-chip" data-query="Azee 500">Azee 500</button>
+        <button class="suggestion-chip" data-query="Montair-LC">Montair-LC</button>
+      </div>
+
+      <!-- Gemma 4 Explainer Badge -->
+      <div>
+        <button id="gemma-explainer-badge" class="gemma-explainer-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Powered by Gemma 4 (Open Weights, Local) — What Gemma did / didn't do
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         RESULTS AREA (DYNAMIC INJECTION)
+         ========================================================= -->
+    <section id="results-area" class="results-container" aria-live="polite"></section>
+
+    <!-- =========================================================
+         POPULAR SAVINGS CARDS SECTION
+         ========================================================= -->
+    <section class="savings-section">
+      <div class="section-head-center">
+        <h2 class="section-title">Verified Price Facts on Popular Medicines</h2>
+        <p class="section-desc">See the actual maximum retail price difference between branded formulations and identical Jan Aushadhi generic molecules.</p>
+      </div>
+
+      <div class="cards-carousel-grid">
+        <!-- Card 1 -->
+        <div class="savings-card" data-query="Dolo 650">
+          <div class="card-top-row">
+            <div class="pill-icon-svg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+            </div>
+            <span class="saving-tag-pct">Save 69%</span>
+          </div>
+          <div class="card-brand-title">Dolo 650</div>
+          <div class="card-generic-mol">Paracetamol 650 mg (Tablet)</div>
+          <div class="price-strike-group">
+            <span class="og-strike">₹33.60</span>
+            <span class="ja-highlight-price">₹10.50</span>
+          </div>
+          <small style="color: #64748b; font-size: 0.78rem;">PMBJP Generic: JA0001</small>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="savings-card" data-query="Augmentin 625 Duo">
+          <div class="card-top-row">
+            <div class="pill-icon-svg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+            </div>
+            <span class="saving-tag-pct">Save 75%</span>
+          </div>
+          <div class="card-brand-title">Augmentin 625 Duo</div>
+          <div class="card-generic-mol">Amoxicillin + Clavulanate (Tablet)</div>
+          <div class="price-strike-group">
+            <span class="og-strike">₹204.00</span>
+            <span class="ja-highlight-price">₹52.00</span>
+          </div>
+          <small style="color: #64748b; font-size: 0.78rem;">PMBJP Generic: JA0003</small>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="savings-card" data-query="Pan 40">
+          <div class="card-top-row">
+            <div class="pill-icon-svg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+            </div>
+            <span class="saving-tag-pct">Save 90%</span>
+          </div>
+          <div class="card-brand-title">Pan 40</div>
+          <div class="card-generic-mol">Pantoprazole 40 mg (Tablet)</div>
+          <div class="price-strike-group">
+            <span class="og-strike">₹155.00</span>
+            <span class="ja-highlight-price">₹15.00</span>
+          </div>
+          <small style="color: #64748b; font-size: 0.78rem;">PMBJP Generic: JA0004</small>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="savings-card" data-query="Atorva 10">
+          <div class="card-top-row">
+            <div class="pill-icon-svg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+            </div>
+            <span class="saving-tag-pct">Save 88%</span>
+          </div>
+          <div class="card-brand-title">Atorva 10</div>
+          <div class="card-generic-mol">Atorvastatin 10 mg (Tablet)</div>
+          <div class="price-strike-group">
+            <span class="og-strike">₹98.00</span>
+            <span class="ja-highlight-price">₹12.00</span>
+          </div>
+          <small style="color: #64748b; font-size: 0.78rem;">PMBJP Generic: JA0006</small>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="savings-card" data-query="Azee 500">
+          <div class="card-top-row">
+            <div class="pill-icon-svg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+            </div>
+            <span class="saving-tag-pct">Save 71%</span>
+          </div>
+          <div class="card-brand-title">Azee 500</div>
+          <div class="card-generic-mol">Azithromycin 500 mg (Tablet)</div>
+          <div class="price-strike-group">
+            <span class="og-strike">₹132.00</span>
+            <span class="ja-highlight-price">₹38.00</span>
+          </div>
+          <small style="color: #64748b; font-size: 0.78rem;">PMBJP Generic: JA0016</small>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="savings-card" data-query="Montair-LC">
+          <div class="card-top-row">
+            <div class="pill-icon-svg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+            </div>
+            <span class="saving-tag-pct">Save 84%</span>
+          </div>
+          <div class="card-brand-title">Montair-LC</div>
+          <div class="card-generic-mol">Montelukast + Levocetirizine</div>
+          <div class="price-strike-group">
+            <span class="og-strike">₹198.00</span>
+            <span class="ja-highlight-price">₹32.00</span>
+          </div>
+          <small style="color: #64748b; font-size: 0.78rem;">PMBJP Generic: JA0018</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HOW IT WORKS (3 STEPS)
+         ========================================================= -->
+    <section id="how-it-works" class="hiw-section">
+      <div class="section-head-center">
+        <h2 class="section-title">How MediSave Works</h2>
+        <p class="section-desc">Empowering patients at the pharmacy counter before paying inflated brand markups.</p>
+      </div>
+
+      <div class="hiw-grid">
+        <div class="hiw-step-card">
+          <div class="hiw-step-num">1</div>
+          <h3 class="hiw-step-title">Type or Photograph</h3>
+          <p class="hiw-step-desc">Enter the brand name on your prescription or snap a photo of the medicine strip using your phone camera.</p>
+        </div>
+
+        <div class="hiw-step-card">
+          <div class="hiw-step-num">2</div>
+          <h3 class="hiw-step-title">Verify &amp; Compare</h3>
+          <p class="hiw-step-desc">Confirm the active molecule and unit strength against our verified database of Jan Aushadhi generic medicines.</p>
+        </div>
+
+        <div class="hiw-step-card">
+          <div class="hiw-step-num">3</div>
+          <h3 class="hiw-step-title">Hand to Pharmacist</h3>
+          <p class="hiw-step-desc">Print or show your prescription slip across the counter to request the generic equivalent with physician consent.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         NEAREST KENDRA LOCATOR
+         ========================================================= -->
+    <section id="kendras-section" class="kendra-section">
+      <div class="section-head-center">
+        <h2 class="section-title">Find Your Nearest Jan Aushadhi Kendra</h2>
+        <p class="section-desc">Over 10,000+ government Kendra pharmacies across India dispense approved same-molecule generics.</p>
+      </div>
+
+      <div class="kendra-controls-bar">
+        <select id="kendra-city-select" class="kendra-city-select" aria-label="Select City">
+          <option value="all">All Major Cities</option>
+          <option value="New Delhi">New Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Pune">Pune</option>
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Patna">Patna</option>
+          <option value="Noida">Noida</option>
+          <option value="Gurugram">Gurugram</option>
+        </select>
+
+        <button id="btn-gps-locate" class="btn-locate-gps">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          Use My Current GPS Location
+        </button>
+      </div>
+
+      <div id="kendras-grid" class="kendras-grid"></div>
+    </section>
+
+    <!-- =========================================================
+         FAQ ACCORDION
+         ========================================================= -->
+    <section id="faq-section" class="faq-section">
+      <div class="section-head-center">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Facts regarding generic medicines, pricing regulations, and data safety.</p>
+      </div>
+
+      <div class="faq-accordion-item">
+        <button class="faq-question-btn">
+          <span>What is a Jan Aushadhi generic medicine?</span>
+          <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer-content">
+          Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP) is an initiative by the Department of Pharmaceuticals, Government of India. It provides quality generic medicines with the exact same active pharmaceutical ingredient (API), potency, safety, and bio-equivalence as expensive branded medicines, manufactured under strict WHO-GMP compliance.
+        </div>
+      </div>
+
+      <div class="faq-accordion-item">
+        <button class="faq-question-btn">
+          <span>Why are Jan Aushadhi generic medicines so much cheaper?</span>
+          <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer-content">
+          Branded medicines carry heavy commercial marketing costs, medical representative commissions, brand licensing fees, and retailer margins. Jan Aushadhi medicines are procured directly from certified manufacturers in bulk by the government and distributed without advertising overhead, passing 50% to 90% savings directly to patients.
+        </div>
+      </div>
+
+      <div class="faq-accordion-item">
+        <button class="faq-question-btn">
+          <span>What role does Gemma 4 play in MediSave?</span>
+          <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer-content">
+          Gemma 4 is used strictly for optical perception: reading text off medicine strips, packaging, or printed prescription images into structured JSON. Gemma is NEVER allowed to invent drug facts, dosages, prices, or advice. Every price and molecule fact shown comes exclusively from our verified government dataset.
+        </div>
+      </div>
+
+      <div class="faq-accordion-item">
+        <button class="faq-question-btn">
+          <span>Can I use MediSave when I have no internet connection?</span>
+          <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer-content">
+          Yes! MediSave is an offline-first Progressive Web App (PWA). The entire curated dataset of medicines, generic equivalents, and Kendra stores is cached in your browser by our Service Worker. You can search, compare, and print prescription slips even with mobile data completely switched off.
+        </div>
+      </div>
+
+      <div class="faq-accordion-item">
+        <button class="faq-question-btn">
+          <span>Does MediSave give medical advice?</span>
+          <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer-content">
+          No. MediSave is strictly an economic price and chemical identity discovery tool. We state regulatory price facts. We never say "switch to", "better", or "recommended". You must always consult your prescribing physician or licensed pharmacist before altering any prescribed medication.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       MODAL 1: CONFIRM WHAT WE READ (OCR/CAMERA)
+       ========================================================= -->
+  <div id="modal-confirm-ocr" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 class="modal-title">Confirm What We Read</h3>
+        <button id="btn-close-confirm" class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1rem;">
+        Gemma 4 extracted the text below from your photo. Please verify or edit the name and strength before matching with our certified dataset.
+      </p>
+
+      <form id="form-confirm-ocr">
+        <div class="confirm-item-box">
+          <div class="form-group-confirm">
+            <label for="confirm-brand-input">Detected Brand / Trade Name</label>
+            <input type="text" id="confirm-brand-input" required />
+          </div>
+
+          <div class="form-group-confirm">
+            <label for="confirm-molecule-input">Active Molecule (Optional)</label>
+            <input type="text" id="confirm-molecule-input" />
+          </div>
+
+          <div class="form-group-confirm">
+            <label for="confirm-strength-input">Strength / Potency</label>
+            <input type="text" id="confirm-strength-input" placeholder="e.g. 650 mg, 500 mg, 40 mg" />
+          </div>
+
+          <div class="confidence-bar-wrapper">
+            <span>OCR Confidence: <strong id="confirm-confidence-val">88%</strong></span>
+            <div class="conf-track">
+              <div id="confirm-confidence-bar" class="conf-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary-search" style="width: 100%;">Confirm &amp; Lookup Generic</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MODAL 2: WHOLE PRESCRIPTION SLIP & PRINT HANDOVER
+       ========================================================= -->
+  <div id="modal-prescription" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width: 780px;">
+      <div class="modal-head">
+        <div>
+          <h3 class="modal-title">Prescription Savings Summary</h3>
+          <small style="color: #64748b;">Ready to hand over to the pharmacist at the counter</small>
+        </div>
+        <button id="btn-close-basket" class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <!-- Visible only on print / counter slip -->
+      <div class="print-slip-header" style="display: none;">
+        <h2>MediSave — Pharmacist Generic Dispensing Request</h2>
+        <p>Date: <script>document.write(new Date().toLocaleDateString('en-IN'))</script> | Ref: Self-Prescription Cost Audit</p>
+      </div>
+
+      <div class="print-pharmacist-note" style="display: none;">
+        <strong>NOTE TO LICENSED PHARMACIST:</strong> The patient requests generic substitution with the bio-equivalent Jan Aushadhi generic of identical active molecule, strength, and pharmaceutical form, subject to physician concurrence.
+      </div>
+
+      <table class="prescription-basket-table">
+        <thead>
+          <tr>
+            <th>Prescribed Medicine</th>
+            <th>Qty</th>
+            <th>Brand Cost</th>
+            <th>Generic Equivalent</th>
+            <th>Estimated Saving</th>
+          </tr>
+        </thead>
+        <tbody id="basket-items-tbody"></tbody>
+      </table>
+
+      <div class="basket-totals-summary">
+        <div class="basket-totals-row">
+          <span>Total Branded MRP:</span>
+          <strong id="basket-total-brand">₹0.00</strong>
+        </div>
+        <div class="basket-totals-row">
+          <span>Equivalent Jan Aushadhi Price:</span>
+          <strong id="basket-total-generic" style="color: #047857;">₹0.00</strong>
+        </div>
+        <div class="basket-totals-row grand-total">
+          <span>Estimated Total Saved:</span>
+          <span><span id="basket-total-saving">₹0.00</span> (<span id="basket-total-pct">0%</span>)</span>
+        </div>
+      </div>
+
+      <div class="safety-disclaimer-bar" style="margin-bottom: 1.25rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        <span>Price and molecule information only, not medical advice. Confirm any change with your doctor or pharmacist.</span>
+      </div>
+
+      <button id="btn-print-slip" class="btn-primary-search btn-print-slip" style="width: 100%;">
+        🖨️ Print One-Page Counter Sheet
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MODAL 3: GEMMA 4 TECHNICAL DISCLOSURE
+       ========================================================= -->
+  <div id="modal-gemma-explainer" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 class="modal-title">Gemma 4 Open-Weights Architecture</h3>
+        <button id="btn-close-gemma" class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;">
+        MediSave integrates <strong>Gemma 4</strong> (Google DeepMind open-weights model) running locally via Ollama with zero external cloud telemetry.
+      </p>
+
+      <div class="gemma-card-grid">
+        <div class="gemma-box-did">
+          <h4>What Gemma 4 Does:</h4>
+          <ul>
+            <li>Reads visual text off blurred medicine strips and printed prescriptions.</li>
+            <li>Extracts trade names, strengths (e.g. 650mg), and forms.</li>
+            <li>Runs with temperature 0.0 and strict JSON schema output.</li>
+          </ul>
+        </div>
+
+        <div class="gemma-box-didnt">
+          <h4>What Gemma 4 NEVER Does:</h4>
+          <ul>
+            <li>Never generates medical, clinical, or dosage advice.</li>
+            <li>Never invents, predicts, or interpolates drug prices.</li>
+            <li>Every displayed fact must trace to our verified government database.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="font-size: 0.8rem; color: #64748b; background: #f8fafc; padding: 0.75rem; border-radius: 8px;">
+        <strong>Privacy Commitment:</strong> Prescription photos are processed in volatile RAM only and are immediately discarded. No images or patient details are ever written to disk or transmitted to third-party APIs.
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="footer-main" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>MediSave</h3>
+        <p class="footer-sub">
+          An offline-first civic healthcare platform built for the DEV Hacktoberfest "Best Use of Gemma 4" track.
+          Making medicine costs transparent and accessible across India.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Data &amp; Regulation</h4>
+        <ul>
+          <li><a href="http://janaushadhi.gov.in" target="_blank" rel="noopener">Jan Aushadhi (PMBJP)</a></li>
+          <li><a href="https://www.nppaindia.nic.in" target="_blank" rel="noopener">NPPA Price Ceilings</a></li>
+          <li><a href="https://pubchem.ncbi.nlm.nih.gov" target="_blank" rel="noopener">PubChem Chemical Data</a></li>
+          <li><a href="/data/DATA.md">Data Provenance (DATA.md)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Open Source &amp; Safety</h4>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub Repository</a></li>
+          <li><a href="/LICENSE">Apache 2.0 License</a></li>
+          <li><a href="#faq-section">Medical Safety Policy</a></li>
+          <li><a href="/DEPLOY.md">Deployment Guide</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        <strong>Mandatory Disclaimer:</strong> Price and molecule information only, not medical advice. Confirm any change with your doctor or pharmacist.<br>
+        MediSave &copy; 2026. Built with open weights Gemma 4 &amp; public datasets.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/offline-matcher.js"></script>
+  <script src="/js/camera.js"></script>
+  <script src="/js/barcode.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

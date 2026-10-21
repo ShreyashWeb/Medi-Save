@@ -334,5 +334,451 @@
       "टेल्मा एच"
     ],
     "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "aciloc-150",
+    "brand_name": "Aciloc 150",
+    "manufacturer": "Cadila Pharmaceuticals Ltd",
+    "molecules": [
+      "ranitidine"
+    ],
+    "strengths": [
+      "150mg"
+    ],
+    "form": "tablet",
+    "pack_count": 30,
+    "brand_mrp": 40.94,
+    "source_url": "https://www.1mg.com/drugs/aciloc-150-tablet-133509",
+    "source_date": "2026-10-20",
+    "ja_code": 217,
+    "aliases": [
+      "aciloc",
+      "ऐसीलोक 150"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "allegra-180",
+    "brand_name": "Allegra 180",
+    "manufacturer": "Sanofi India Ltd",
+    "molecules": [
+      "fexofenadine"
+    ],
+    "strengths": [
+      "180mg"
+    ],
+    "form": "tablet",
+    "pack_count": 10,
+    "brand_mrp": 251.2,
+    "source_url": "https://www.1mg.com/drugs/allegra-180mg-tablet-138634",
+    "source_date": "2026-10-20",
+    "ja_code": 247,
+    "aliases": [
+      "allegra 180",
+      "एलेग्रा 180"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "atarax-25",
+    "brand_name": "Atarax 25",
+    "manufacturer": "Dr Reddy's Laboratories Ltd",
+    "molecules": [
+      "hydroxyzine"
+    ],
+    "strengths": [
+      "25mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 85.5,
+    "source_url": "https://www.1mg.com/drugs/atarax-25mg-tablet-64540",
+    "source_date": "2026-10-20",
+    "ja_code": 1662,
+    "aliases": [
+      "atarax",
+      "अटारैक्स 25"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "azee-500",
+    "brand_name": "Azee 500",
+    "manufacturer": "Cipla Ltd",
+    "molecules": [
+      "azithromycin"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "form": "tablet",
+    "pack_count": 5,
+    "brand_mrp": 132.38,
+    "source_url": "https://www.1mg.com/drugs/azee-500-tablet-36428",
+    "source_date": "2026-10-20",
+    "ja_code": 72,
+    "aliases": [
+      "azee 500",
+      "एज़ी 500"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "almox-500",
+    "brand_name": "Almox 500",
+    "manufacturer": "Alkem Laboratories Ltd",
+    "molecules": [
+      "amoxycillin"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "form": "capsule",
+    "pack_count": 10,
+    "brand_mrp": 80.26,
+    "source_url": "https://www.1mg.com/drugs/almox-500-capsule-65322",
+    "source_date": "2026-10-20",
+    "ja_code": 45,
+    "aliases": [
+      "almox 500",
+      "अल्मॉक्स 500"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "avomine-25",
+    "brand_name": "Avomine",
+    "manufacturer": "Abbott",
+    "molecules": [
+      "promethazine"
+    ],
+    "strengths": [
+      "25mg"
+    ],
+    "form": "tablet",
+    "pack_count": 10,
+    "brand_mrp": 55.98,
+    "source_url": "https://www.1mg.com/drugs/avomine-tablet-36432",
+    "source_date": "2026-10-20",
+    "ja_code": 485,
+    "aliases": [
+      "avomine",
+      "एवोमाइन"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "arkamin-100",
+    "brand_name": "Arkamin",
+    "manufacturer": "Torrent Pharmaceuticals Ltd",
+    "molecules": [
+      "clonidine"
+    ],
+    "strengths": [
+      "100mcg"
+    ],
+    "form": "tablet",
+    "pack_count": 30,
+    "brand_mrp": 72.65,
+    "source_url": "https://www.1mg.com/drugs/arkamin-tablet-36433",
+    "source_date": "2026-10-20",
+    "ja_code": 268,
+    "aliases": [
+      "arkamin",
+      "आरकामिन"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "amlokind-at",
+    "brand_name": "Amlokind-AT",
+    "manufacturer": "Mankind Pharma Ltd",
+    "molecules": [
+      "amlodipine",
+      "atenolol"
+    ],
+    "strengths": [
+      "5mg",
+      "50mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 44.7,
+    "source_url": "https://www.1mg.com/drugs/amlokind-at-tablet-36434",
+    "source_date": "2026-10-20",
+    "ja_code": 263,
+    "aliases": [
+      "amlokind at",
+      "एमलोकाइंड एटी"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "aldactone-25",
+    "brand_name": "Aldactone 25",
+    "manufacturer": "RPG Life Sciences Ltd",
+    "molecules": [
+      "spironolactone"
+    ],
+    "strengths": [
+      "25mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 35.35,
+    "source_url": "https://www.1mg.com/drugs/aldactone-tablet-36435",
+    "source_date": "2026-10-20",
+    "ja_code": 449,
+    "aliases": [
+      "aldactone",
+      "एल्डैक्टोन"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "amoxyclav-625",
+    "brand_name": "Amoxyclav 625",
+    "manufacturer": "Abbott",
+    "molecules": [
+      "amoxycillin",
+      "potassium clavulanate"
+    ],
+    "strengths": [
+      "500mg",
+      "125mg"
+    ],
+    "form": "tablet",
+    "pack_count": 10,
+    "brand_mrp": 223.27,
+    "source_url": "https://www.1mg.com/drugs/amoxyclav-625-tablet-138630",
+    "source_date": "2026-10-20",
+    "ja_code": 39,
+    "aliases": [
+      "amoxyclav",
+      "अमॉक्सीक्लेव 625"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "calpol-500",
+    "brand_name": "Calpol 500",
+    "manufacturer": "GlaxoSmithKline Pharmaceuticals Ltd",
+    "molecules": [
+      "paracetamol"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 22.5,
+    "source_url": "https://www.1mg.com/drugs/calpol-500mg-tablet-36436",
+    "source_date": "2026-10-20",
+    "ja_code": 23,
+    "aliases": [
+      "calpol 500",
+      "कैलपोल 500"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "calpol-650",
+    "brand_name": "Calpol 650",
+    "manufacturer": "GlaxoSmithKline Pharmaceuticals Ltd",
+    "molecules": [
+      "paracetamol"
+    ],
+    "strengths": [
+      "650mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 34.0,
+    "source_url": "https://www.1mg.com/drugs/calpol-650-tablet-36437",
+    "source_date": "2026-10-20",
+    "ja_code": 511,
+    "aliases": [
+      "calpol 650",
+      "कैलपोल 650"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "pantocid-40",
+    "brand_name": "Pantocid 40",
+    "manufacturer": "Sun Pharma Laboratories Ltd",
+    "molecules": [
+      "pantoprazole"
+    ],
+    "strengths": [
+      "40mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 160.0,
+    "source_url": "https://www.1mg.com/drugs/pantocid-40-tablet-36438",
+    "source_date": "2026-10-20",
+    "ja_code": 212,
+    "aliases": [
+      "pantocid 40",
+      "पैंटोसिड 40"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "shelcal-500",
+    "brand_name": "Shelcal 500",
+    "manufacturer": "Torrent Pharmaceuticals Ltd",
+    "molecules": [
+      "calcium",
+      "vitamin d3"
+    ],
+    "strengths": [
+      "500mg",
+      "250iu"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 131.0,
+    "source_url": "https://www.1mg.com/drugs/shelcal-500-tablet-36439",
+    "source_date": "2026-10-20",
+    "ja_code": 220,
+    "aliases": [
+      "shelcal 500",
+      "शेलकल 500"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "voveran-50",
+    "brand_name": "Voveran 50",
+    "manufacturer": "Novartis India Ltd",
+    "molecules": [
+      "diclofenac"
+    ],
+    "strengths": [
+      "50mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 105.0,
+    "source_url": "https://www.1mg.com/drugs/voveran-50-ge-tablet-36440",
+    "source_date": "2026-10-20",
+    "ja_code": 11,
+    "aliases": [
+      "voveran 50",
+      "वोवरान 50"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "atorlip-20",
+    "brand_name": "Atorlip 20",
+    "manufacturer": "Cipla Ltd",
+    "molecules": [
+      "atorvastatin"
+    ],
+    "strengths": [
+      "20mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 185.0,
+    "source_url": "https://www.1mg.com/drugs/atorlip-20-tablet-36441",
+    "source_date": "2026-10-20",
+    "ja_code": 267,
+    "aliases": [
+      "atorlip 20",
+      "एटोरलिप 20"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "alprax-0-25",
+    "brand_name": "Alprax 0.25",
+    "manufacturer": "Torrent Pharmaceuticals Ltd",
+    "molecules": [
+      "alprazolam"
+    ],
+    "strengths": [
+      "0.25mg"
+    ],
+    "form": "tablet",
+    "pack_count": 15,
+    "brand_mrp": 29.0,
+    "source_url": "https://www.1mg.com/drugs/alprax-0.25-tablet-36442",
+    "source_date": "2026-10-20",
+    "ja_code": 313,
+    "aliases": [
+      "alprax",
+      "एलप्रैक्स 0.25"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "ativan-1",
+    "brand_name": "Ativan 1",
+    "manufacturer": "Pfizer Ltd",
+    "molecules": [
+      "lorazepam"
+    ],
+    "strengths": [
+      "1mg"
+    ],
+    "form": "tablet",
+    "pack_count": 30,
+    "brand_mrp": 75.67,
+    "source_url": "https://www.1mg.com/drugs/ativan-1mg-tablet-36443",
+    "source_date": "2026-10-20",
+    "ja_code": 948,
+    "aliases": [
+      "ativan 1",
+      "एटिवान 1"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "ativan-2",
+    "brand_name": "Ativan 2",
+    "manufacturer": "Pfizer Ltd",
+    "molecules": [
+      "lorazepam"
+    ],
+    "strengths": [
+      "2mg"
+    ],
+    "form": "tablet",
+    "pack_count": 30,
+    "brand_mrp": 91.87,
+    "source_url": "https://www.1mg.com/drugs/ativan-2mg-tablet-36444",
+    "source_date": "2026-10-20",
+    "ja_code": 949,
+    "aliases": [
+      "ativan 2",
+      "एटिवान 2"
+    ],
+    "data_date": "2026-10-20"
+  },
+  {
+    "brand_id": "albendazole-400",
+    "brand_name": "Zentel 400",
+    "manufacturer": "GlaxoSmithKline Pharmaceuticals Ltd",
+    "molecules": [
+      "albendazole"
+    ],
+    "strengths": [
+      "400mg"
+    ],
+    "form": "tablet",
+    "pack_count": 1,
+    "brand_mrp": 9.58,
+    "source_url": "https://www.1mg.com/drugs/zentel-tablet-36445",
+    "source_date": "2026-10-20",
+    "ja_code": 1236,
+    "aliases": [
+      "zentel 400",
+      "ज़ेंटेल 400"
+    ],
+    "data_date": "2026-10-20"
   }
 ]

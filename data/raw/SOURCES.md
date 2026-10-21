@@ -16,3 +16,4 @@ Record every download here. Never edit raw files by hand.
 | nlem-2022pdf-0cd1d2b28855bf30128875ab19fc5304.pdf | National List of Essential Medicines 2022 | https://nppa.gov.in/en | 2026-10-20 | Ministry of Health & Family Welfare NLEM 2022 |
 | a-year-wise-summary-of-overcharging-cases-upto-march-2026-0724fddd285a6ce2c1ef3de3f01354ea.pdf | NPPA year-wise summary of overcharging cases | https://nppa.gov.in/en | 2026-10-20 | Summary sheet of overcharging cases upto March 2026 |
 | b-status-of-overcharging-cases-upto-march-2026-a14044926da64a8d44a8e9ca865f78d1.pdf | NPPA detailed status of overcharging cases | https://nppa.gov.in/en | 2026-10-20 | Detailed sheet of overcharging cases upto March 2026 |
+| indian_medicine_data.csv | 1mg Scraped Indian Commercial Medicines Catalog | https://www.1mg.com/ | 2026-10-20 | 253,973 commercial branded formulation retail prices and compositions |

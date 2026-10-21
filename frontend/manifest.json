@@ -1,0 +1,21 @@
+{
+  "name": "MediSave — Generic Medicine Price Discovery",
+  "short_name": "MediSave",
+  "description": "See the cost of medicine before you pay. Find the cheapest same-molecule Jan Aushadhi generic for any branded prescription.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0d9488",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

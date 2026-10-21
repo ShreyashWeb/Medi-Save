@@ -3,13 +3,16 @@ import { extractMedicineNamesFromPhoto, checkOcrAvailability } from '../../../li
 
 /**
  * GET /api/ocr
- * Health check to verify if Ollama Gemma service is reachable.
- * Used by UI to determine whether to show or hide the camera button.
+ * Health check to verify if Gemma vision service is reachable.
  */
 export async function GET() {
   try {
     const available = await checkOcrAvailability();
-    return NextResponse.json({ available });
+    return NextResponse.json({
+      available,
+      model: process.env.GOOGLE_AI_STUDIO_API_KEY ? 'gemma-4-26b-a4b-it' : 'ollama-gemma',
+      provider: process.env.GOOGLE_AI_STUDIO_API_KEY ? 'Google AI Studio' : 'Ollama Local',
+    });
   } catch {
     return NextResponse.json({ available: false }, { status: 200 });
   }
@@ -17,30 +20,66 @@ export async function GET() {
 
 /**
  * POST /api/ocr
- * Secure server-side proxy for Gemma photo OCR via Ollama.
- * Keeps OLLAMA_API_KEY and backend URL protected from browser exposure.
- *
- * Payload: { imageBase64: string }
- * Response: { ok: boolean, names: string[], error?: string }
+ * Accepts either:
+ * 1. JSON: { imageBase64: string }
+ * 2. Multipart FormData: file: File (image/jpeg, png, webp)
  */
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const { imageBase64 } = body;
+    let base64Data = '';
+    const contentType = req.headers.get('content-type') || '';
 
-    if (!imageBase64 || typeof imageBase64 !== 'string') {
+    if (contentType.includes('multipart/form-data')) {
+      const formData = await req.formData();
+      const file = formData.get('file') as File | null;
+      if (!file) {
+        return NextResponse.json(
+          { ok: false, names: [], items: [], error: 'No file uploaded in form data' },
+          { status: 400 }
+        );
+      }
+      const buffer = Buffer.from(await file.arrayBuffer());
+      base64Data = buffer.toString('base64');
+    } else {
+      const body = await req.json().catch(() => ({}));
+      base64Data = body.imageBase64 || '';
+    }
+
+    if (!base64Data) {
       return NextResponse.json(
-        { ok: false, names: [], error: 'imageBase64 string is required.' },
+        { ok: false, names: [], items: [], error: 'Image data is required (imageBase64 or file)' },
         { status: 400 }
       );
     }
 
-    const result = await extractMedicineNamesFromPhoto(imageBase64);
-    return NextResponse.json(result, { status: result.ok ? 200 : 502 });
+    const result = await extractMedicineNamesFromPhoto(base64Data);
+
+    const items = result.names.map((name) => ({
+      brand_name: name,
+      molecule: '',
+      strength: '',
+      form: '',
+      raw_text: name,
+    }));
+
+    return NextResponse.json(
+      {
+        ok: result.ok,
+        success: result.ok,
+        names: result.names,
+        items,
+        model_used: 'Gemma 4 (Google AI Studio)',
+        error: result.error,
+        warning: result.ok && result.names.length === 0
+          ? 'No clear medicine names detected in the photo. Please verify lighting or enter medicine name manually.'
+          : undefined,
+      },
+      { status: result.ok ? 200 : 502 }
+    );
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { ok: false, names: [], error: `Server error during OCR: ${msg}` },
+      { ok: false, success: false, names: [], items: [], error: `Server error during OCR: ${msg}` },
       { status: 500 }
     );
   }

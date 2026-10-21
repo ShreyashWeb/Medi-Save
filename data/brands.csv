@@ -1,16 +1,36 @@
 brand_id,brand_name,manufacturer,molecules,strengths,form,pack_count,brand_mrp,source_url,source_date,ja_code,aliases
 dolo-650,Dolo 650,Micro Labs Ltd,paracetamol,650mg,tablet,15,34.15,https://www.1mg.com/drugs/dolo-650-tablet-70640,2026-10-20,511,dolo;डोलो 650
-crocin-500,Crocin 500,GlaxoSmithKline Pharmaceuticals Ltd,paracetamol,500mg,tablet,15,22.00,https://www.1mg.com/drugs/crocin-500mg-tablet-25087,2026-10-20,23,crocin;क्रोसिन 500
-pan-40,Pan 40,Alkem Laboratories Ltd,pantoprazole,40mg,tablet,15,155.00,https://www.1mg.com/drugs/pan-40-tablet-41221,2026-10-20,212,pan 40;पैन 40
+crocin-500,Crocin 500,GlaxoSmithKline Pharmaceuticals Ltd,paracetamol,500mg,tablet,15,22.0,https://www.1mg.com/drugs/crocin-500mg-tablet-25087,2026-10-20,23,crocin;क्रोसिन 500
+pan-40,Pan 40,Alkem Laboratories Ltd,pantoprazole,40mg,tablet,15,155.0,https://www.1mg.com/drugs/pan-40-tablet-41221,2026-10-20,212,pan 40;पैन 40
 augmentin-625-duo,Augmentin 625 Duo,GlaxoSmithKline Pharmaceuticals Ltd,amoxycillin;potassium clavulanate,500mg;125mg,tablet,10,223.42,https://www.1mg.com/drugs/augmentin-625-duo-tablet-138629,2026-10-20,39,augmentin;ऑगमेंटिन 625
-glycomet-500,Glycomet 500,USV Pvt Ltd,metformin hydrochloride,500mg,tablet,20,48.00,https://www.1mg.com/drugs/glycomet-500-tablet-sr-32770,2026-10-20,145,glycomet;ग्लाइकोमेट 500
-telma-40,Telma 40,Glenmark Pharmaceuticals Ltd,telmisartan,40mg,tablet,30,247.00,https://www.1mg.com/drugs/telma-40-tablet-34079,2026-10-20,300,telma 40;टेल्मा 40
-atorva-10,Atorva 10,Zydus Cadila,atorvastatin,10mg,tablet,15,110.00,https://www.1mg.com/drugs/atorva-10-tablet-67990,2026-10-20,266,atorva 10;एटोरवा 10
-amlong-5,Amlong 5,Micro Labs Ltd,amlodipine,5mg,tablet,15,44.50,https://www.1mg.com/drugs/amlong-5-tablet-69811,2026-10-20,264,amlong 5;एमलॉन्ग 5
-azithral-500,Azithral 500,Alembic Pharmaceuticals Ltd,azithromycin,500mg,tablet,5,132.00,https://www.1mg.com/drugs/azithral-500-tablet-36423,2026-10-20,72,azithral 500;एज़िथ्रल 500
-ciplox-500,Ciplox 500,Cipla Ltd,ciprofloxacin hydrochloride,500mg,tablet,10,43.50,https://www.1mg.com/drugs/ciplox-500-tablet-154378,2026-10-20,86,ciplox 500;सिप्लॉक्स 500
-rosuvas-10,Rosuvas 10,Sun Pharma Laboratories Ltd,rosuvastatin,10mg,tablet,15,260.00,https://www.1mg.com/drugs/rosuvas-10-tablet-33434,2026-10-20,759,rosuvas 10;रोसुवास 10
-omez-20,Omez 20,Dr Reddy's Laboratories Ltd,omeprazole,20mg,capsule,20,178.00,https://www.1mg.com/drugs/omez-20-capsule-32486,2026-10-20,207,omez 20;ओमेज़ 20
-hifenac-100,Hifenac 100,Intas Pharmaceuticals Ltd,aceclofenac,100mg,tablet,10,60.00,https://www.1mg.com/drugs/hifenac-tablet-66774,2026-10-20,2,hifenac;हाइफेनैक 100
-zerodol-p,Zerodol-P,Ipca Laboratories Ltd,aceclofenac;paracetamol,100mg;325mg,tablet,10,71.00,https://www.1mg.com/drugs/zerodol-p-tablet-133502,2026-10-20,1,zerodol p;ज़ीरोडोल पी
-telma-h,Telma-H,Glenmark Pharmaceuticals Ltd,telmisartan;hydrochlorothiazide,40mg;12.5mg,tablet,15,220.00,https://www.1mg.com/drugs/telma-h-tablet-34086,2026-10-20,298,telma h;टेल्मा एच
+glycomet-500,Glycomet 500,USV Pvt Ltd,metformin hydrochloride,500mg,tablet,20,48.0,https://www.1mg.com/drugs/glycomet-500-tablet-sr-32770,2026-10-20,145,glycomet;ग्लाइकोमेट 500
+telma-40,Telma 40,Glenmark Pharmaceuticals Ltd,telmisartan,40mg,tablet,30,247.0,https://www.1mg.com/drugs/telma-40-tablet-34079,2026-10-20,300,telma 40;टेल्मा 40
+atorva-10,Atorva 10,Zydus Cadila,atorvastatin,10mg,tablet,15,110.0,https://www.1mg.com/drugs/atorva-10-tablet-67990,2026-10-20,266,atorva 10;एटोरवा 10
+amlong-5,Amlong 5,Micro Labs Ltd,amlodipine,5mg,tablet,15,44.5,https://www.1mg.com/drugs/amlong-5-tablet-69811,2026-10-20,264,amlong 5;एमलॉन्ग 5
+azithral-500,Azithral 500,Alembic Pharmaceuticals Ltd,azithromycin,500mg,tablet,5,132.0,https://www.1mg.com/drugs/azithral-500-tablet-36423,2026-10-20,72,azithral 500;एज़िथ्रल 500
+ciplox-500,Ciplox 500,Cipla Ltd,ciprofloxacin hydrochloride,500mg,tablet,10,43.5,https://www.1mg.com/drugs/ciplox-500-tablet-154378,2026-10-20,86,ciplox 500;सिप्लॉक्स 500
+rosuvas-10,Rosuvas 10,Sun Pharma Laboratories Ltd,rosuvastatin,10mg,tablet,15,260.0,https://www.1mg.com/drugs/rosuvas-10-tablet-33434,2026-10-20,759,rosuvas 10;रोसुवास 10
+omez-20,Omez 20,Dr Reddy's Laboratories Ltd,omeprazole,20mg,capsule,20,178.0,https://www.1mg.com/drugs/omez-20-capsule-32486,2026-10-20,207,omez 20;ओमेज़ 20
+hifenac-100,Hifenac 100,Intas Pharmaceuticals Ltd,aceclofenac,100mg,tablet,10,60.0,https://www.1mg.com/drugs/hifenac-tablet-66774,2026-10-20,2,hifenac;हाइफेनैक 100
+zerodol-p,Zerodol-P,Ipca Laboratories Ltd,aceclofenac;paracetamol,100mg;325mg,tablet,10,71.0,https://www.1mg.com/drugs/zerodol-p-tablet-133502,2026-10-20,1,zerodol p;ज़ीरोडोल पी
+telma-h,Telma-H,Glenmark Pharmaceuticals Ltd,telmisartan;hydrochlorothiazide,40mg;12.5mg,tablet,15,220.0,https://www.1mg.com/drugs/telma-h-tablet-34086,2026-10-20,298,telma h;टेल्मा एच
+aciloc-150,Aciloc 150,Cadila Pharmaceuticals Ltd,ranitidine,150mg,tablet,30,40.94,https://www.1mg.com/drugs/aciloc-150-tablet-133509,2026-10-20,217,aciloc;ऐसीलोक 150
+allegra-180,Allegra 180,Sanofi India Ltd,fexofenadine,180mg,tablet,10,251.2,https://www.1mg.com/drugs/allegra-180mg-tablet-138634,2026-10-20,247,allegra 180;एलेग्रा 180
+atarax-25,Atarax 25,Dr Reddy's Laboratories Ltd,hydroxyzine,25mg,tablet,15,85.5,https://www.1mg.com/drugs/atarax-25mg-tablet-64540,2026-10-20,1662,atarax;अटारैक्स 25
+azee-500,Azee 500,Cipla Ltd,azithromycin,500mg,tablet,5,132.38,https://www.1mg.com/drugs/azee-500-tablet-36428,2026-10-20,72,azee 500;एज़ी 500
+almox-500,Almox 500,Alkem Laboratories Ltd,amoxycillin,500mg,capsule,10,80.26,https://www.1mg.com/drugs/almox-500-capsule-65322,2026-10-20,45,almox 500;अल्मॉक्स 500
+avomine-25,Avomine,Abbott,promethazine,25mg,tablet,10,55.98,https://www.1mg.com/drugs/avomine-tablet-36432,2026-10-20,485,avomine;एवोमाइन
+arkamin-100,Arkamin,Torrent Pharmaceuticals Ltd,clonidine,100mcg,tablet,30,72.65,https://www.1mg.com/drugs/arkamin-tablet-36433,2026-10-20,268,arkamin;आरकामिन
+amlokind-at,Amlokind-AT,Mankind Pharma Ltd,amlodipine;atenolol,5mg;50mg,tablet,15,44.7,https://www.1mg.com/drugs/amlokind-at-tablet-36434,2026-10-20,263,amlokind at;एमलोकाइंड एटी
+aldactone-25,Aldactone 25,RPG Life Sciences Ltd,spironolactone,25mg,tablet,15,35.35,https://www.1mg.com/drugs/aldactone-tablet-36435,2026-10-20,449,aldactone;एल्डैक्टोन
+amoxyclav-625,Amoxyclav 625,Abbott,amoxycillin;potassium clavulanate,500mg;125mg,tablet,10,223.27,https://www.1mg.com/drugs/amoxyclav-625-tablet-138630,2026-10-20,39,amoxyclav;अमॉक्सीक्लेव 625
+calpol-500,Calpol 500,GlaxoSmithKline Pharmaceuticals Ltd,paracetamol,500mg,tablet,15,22.5,https://www.1mg.com/drugs/calpol-500mg-tablet-36436,2026-10-20,23,calpol 500;कैलपोल 500
+calpol-650,Calpol 650,GlaxoSmithKline Pharmaceuticals Ltd,paracetamol,650mg,tablet,15,34.0,https://www.1mg.com/drugs/calpol-650-tablet-36437,2026-10-20,511,calpol 650;कैलपोल 650
+pantocid-40,Pantocid 40,Sun Pharma Laboratories Ltd,pantoprazole,40mg,tablet,15,160.0,https://www.1mg.com/drugs/pantocid-40-tablet-36438,2026-10-20,212,pantocid 40;पैंटोसिड 40
+shelcal-500,Shelcal 500,Torrent Pharmaceuticals Ltd,calcium;vitamin d3,500mg;250iu,tablet,15,131.0,https://www.1mg.com/drugs/shelcal-500-tablet-36439,2026-10-20,220,shelcal 500;शेलकल 500
+voveran-50,Voveran 50,Novartis India Ltd,diclofenac,50mg,tablet,15,105.0,https://www.1mg.com/drugs/voveran-50-ge-tablet-36440,2026-10-20,11,voveran 50;वोवरान 50
+atorlip-20,Atorlip 20,Cipla Ltd,atorvastatin,20mg,tablet,15,185.0,https://www.1mg.com/drugs/atorlip-20-tablet-36441,2026-10-20,267,atorlip 20;एटोरलिप 20
+alprax-0-25,Alprax 0.25,Torrent Pharmaceuticals Ltd,alprazolam,0.25mg,tablet,15,29.0,https://www.1mg.com/drugs/alprax-0.25-tablet-36442,2026-10-20,313,alprax;एलप्रैक्स 0.25
+ativan-1,Ativan 1,Pfizer Ltd,lorazepam,1mg,tablet,30,75.67,https://www.1mg.com/drugs/ativan-1mg-tablet-36443,2026-10-20,948,ativan 1;एटिवान 1
+ativan-2,Ativan 2,Pfizer Ltd,lorazepam,2mg,tablet,30,91.87,https://www.1mg.com/drugs/ativan-2mg-tablet-36444,2026-10-20,949,ativan 2;एटिवान 2
+albendazole-400,Zentel 400,GlaxoSmithKline Pharmaceuticals Ltd,albendazole,400mg,tablet,1,9.58,https://www.1mg.com/drugs/zentel-tablet-36445,2026-10-20,1236,zentel 400;ज़ेंटेल 400
