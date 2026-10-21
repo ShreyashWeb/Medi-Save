@@ -183,10 +183,10 @@ async function extractViaGoogleAI(
   timeoutMs: number
 ): Promise<OcrResult> {
   const modelsToTry = [
+    'gemma-4-26b-a4b-it',
+    'gemma-4-31b-it',
     'gemini-3.5-flash-lite',
-    'gemini-2.5-flash',
     'gemini-flash-latest',
-    'gemini-3.8-flash',
   ];
 
   const mimeType = detectMimeType(cleanBase64);
