@@ -12,3 +12,4 @@ Record every download here. Never edit raw files by hand.
 | 2845-fb-posts-anti-hiv-834be8c8fdb7b0dce18e87266ca05512.pdf | NPPA Facebook posts - Anti-HIV | UNKNOWN - to be filled | UNKNOWN - to be filled | Ceiling prices of anti-HIV formulations |
 | 2845-fb-posts-anti-tb-4767550580d2ed15f1877932bd47e39a.pdf | NPPA Facebook posts - Anti-TB | UNKNOWN - to be filled | UNKNOWN - to be filled | Ceiling prices of anti-TB formulations |
 | 2845-fb-posts-cardio-ea1e3eda2076b6367cf9a9685da62f95.pdf | NPPA Facebook posts - Cardio-vascular | UNKNOWN - to be filled | UNKNOWN - to be filled | Ceiling prices of cardiovascular formulations |
+| Compendium-Prices-2022pdf-464b22085495ff4e3f8700c0e00cf45d.pdf | NPPA Compendium of Ceiling Prices 2022 | UNKNOWN - to be filled | UNKNOWN - to be filled | Compendium of ceiling prices fixed under DPCO 2013 |
