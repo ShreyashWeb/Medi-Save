@@ -8,3 +8,4 @@ Record every download here. Never edit raw files by hand.
 | All Drugs Ceiling Prices.csv | NPPA ceiling prices (CSV) | UNKNOWN - to be filled | UNKNOWN - to be filled | per unit, before GST |
 | All Drugs Ceiling Prices.pdf | NPPA ceiling prices (PDF) | UNKNOWN - to be filled | UNKNOWN - to be filled | per unit, before GST |
 | 2845-fb-posts-anti-cancer-e3f335bfae6294a35741b326d91a26a5.pdf | NPPA Facebook posts - Anti-cancer | UNKNOWN - to be filled | UNKNOWN - to be filled | Ceiling prices of anti-cancer formulations |
+| 2845-fb-posts-anti-diabetes-a2491c25ce7e20c9200884e1f92cf68a.pdf | NPPA Facebook posts - Anti-diabetic | UNKNOWN - to be filled | UNKNOWN - to be filled | Ceiling prices of anti-diabetic formulations |
