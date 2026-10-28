@@ -60,6 +60,34 @@ export default function RootLayout({
           src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
           strategy="beforeInteractive"
         />
+        {/* Webflow Safety Guard */}
+        <Script id="wf-shim" strategy="beforeInteractive">{`
+          window.Webflow = window.Webflow || [];
+          (function() {
+            var _wf = window.Webflow;
+            try {
+              Object.defineProperty(window, 'Webflow', {
+                configurable: true,
+                enumerable: true,
+                get: function() { return _wf; },
+                set: function(v) {
+                  _wf = v;
+                  if (_wf && typeof _wf.define === 'function') {
+                    var origDefine = _wf.define;
+                    _wf.define = function(name, fn, options) {
+                      if (typeof fn !== 'function') return {};
+                      try {
+                        return origDefine.call(this, name, fn, options);
+                      } catch(e) {
+                        return {};
+                      }
+                    };
+                  }
+                }
+              });
+            } catch(e) {}
+          })();
+        `}</Script>
         {/* MediSave Full Integration Script */}
         <Script id="medisave-app" strategy="afterInteractive">{`
 (function() {
@@ -226,11 +254,35 @@ export default function RootLayout({
         let transcript = event.results[0][0].transcript.trim();
         console.log('Voice recognized:', transcript);
 
-        // Smart mapping for colloquial Hindi & English health terms
-        const lower = transcript.toLowerCase();
-        let searchQuery = transcript;
+        // 1. Clean conversational prefixes and punctuation
+        let cleaned = transcript
+          .replace(/^[,\.\?!;:]+|[,\.\?!;:]+$/g, '')
+          .replace(/^(explain(\s+me)?(\s+about)?|tell\s+me\s+about|what\s+is(\s+the\s+price\s+of)?|price\s+of|cost\s+of|search\s+for|find\s+me|find|show\s+me|dawa\s+for|dawai\s+for|medicine\s+for|give\s+me|i\s+need|i\s+want)\s+/i, '')
+          .trim();
 
-        if (lower.includes('sugar') || lower.includes('diabetes')) {
+        // 2. Phonetic & common speech-to-text corrections for Indian medicines
+        const lower = cleaned.toLowerCase();
+        let searchQuery = cleaned;
+
+        if (/^(the\s+)?(doll?ar|dolor|dolo|dollo)(\s+650)?$/i.test(lower) || lower.includes('dollar') || lower.includes('dolor')) {
+          searchQuery = 'Dolo 650';
+        } else if (/^(crocin|crosin|crossin)/i.test(lower)) {
+          searchQuery = 'Crocin';
+        } else if (/^(calpol|call\s*pol)/i.test(lower)) {
+          searchQuery = 'Calpol';
+        } else if (/^(augmentin|oxmentin|agmentin)/i.test(lower)) {
+          searchQuery = 'Augmentin 625 Duo';
+        } else if (/^(pan(\s+|-)?d|pandy|pandey)/i.test(lower)) {
+          searchQuery = 'Pan-D';
+        } else if (/^(shelcal|shell(\s+)?cal)/i.test(lower)) {
+          searchQuery = 'Shelcal 500';
+        } else if (/^(allegra|a\s+legra)/i.test(lower)) {
+          searchQuery = 'Allegra';
+        } else if (/^(combiflam|combi\s+flam)/i.test(lower)) {
+          searchQuery = 'Combiflam';
+        } else if (/^(azithral|azithro|azithromycin|azee)/i.test(lower)) {
+          searchQuery = 'Azithral';
+        } else if (lower.includes('sugar') || lower.includes('diabetes')) {
           searchQuery = 'Metformin';
         } else if (lower.includes('blood pressure') || lower.includes('bp') || lower.includes('high pressure')) {
           searchQuery = 'Telmisartan';
@@ -238,7 +290,7 @@ export default function RootLayout({
           searchQuery = 'Paracetamol';
         } else if (lower.includes('gas') || lower.includes('acidity') || lower.includes('pet')) {
           searchQuery = 'Pantoprazole';
-        } else if (lower.includes('allergy') || lower.includes('khujli') || lower.includes('cough')) {
+        } else if (lower.includes('allergy') || lower.includes('khujli') || lower.includes('cough') || lower.includes('sardi')) {
           searchQuery = 'Cetirizine';
         } else if (lower.includes('cholesterol') || lower.includes('heart')) {
           searchQuery = 'Atorvastatin';
@@ -276,7 +328,10 @@ export default function RootLayout({
       recognition.onerror = function(event) {
         micBtns.removeClass('is-listening');
         toast.hide();
-        console.warn('Speech recognition error:', event.error);
+        // Ignore standard lifecycle terminations (silence or user abort)
+        if (event.error !== 'no-speech' && event.error !== 'aborted') {
+          console.warn('Speech recognition notice:', event.error);
+        }
       };
 
       recognition.onend = function() {
@@ -910,7 +965,7 @@ export default function RootLayout({
         {/* Webflow JS */}
         <Script
           src="https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/js/budgetrx.ba14818d5.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </head>
       <body suppressHydrationWarning>{children}</body>
