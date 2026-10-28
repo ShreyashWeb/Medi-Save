@@ -465,26 +465,54 @@ export default function RootLayout({
 
     // 2. Real-time Search Autocomplete against /api/search
     let searchTimeout = null;
+    let searchRequestId = 0;
     $('#drug-form').submit(function(e) { e.preventDefault(); });
 
-    $('input#drug-search').on('input keyup', function() {
-      const q = $(this).val().trim();
+    function clearSearchDropdown() {
+      clearTimeout(searchTimeout);
+      $('#autofill-container').empty();
+    }
+
+    $('input#drug-search').on('input keyup change', function() {
+      const currentVal = $(this).val();
+      const q = (currentVal || '').trim();
       const container = $('#autofill-container');
 
-      if (q.length < 2) {
+      clearTimeout(searchTimeout);
+
+      // If user cleared the input or query is empty / < 2 characters, immediately wipe dropdown
+      if (!q || q.length < 2) {
         container.empty();
         return;
       }
 
-      clearTimeout(searchTimeout);
+      const thisRequestId = ++searchRequestId;
+
       searchTimeout = setTimeout(async function() {
+        // Double check input hasn't been emptied or changed before making the network request
+        const liveVal = ($('input#drug-search').val() || '').trim();
+        if (liveVal.length < 2 || liveVal !== q) {
+          container.empty();
+          return;
+        }
+
         try {
           const res = await fetch('/api/search?q=' + encodeURIComponent(q) + '&limit=8');
           const data = await res.json();
+
+          // If the user has changed the input or cleared it while fetch was in-flight, discard results
+          const currentInput = ($('input#drug-search').val() || '').trim();
+          if (thisRequestId !== searchRequestId || currentInput.length < 2 || currentInput !== q) {
+            container.empty();
+            return;
+          }
+
           container.empty();
 
           if (!data.results || data.results.length === 0) {
-            container.append('<div style="padding:14px; color:#575279; font-size:14px; background:#FFFFFF; border-radius:12px; margin-top:8px; border:1px solid #E4E5DD;">Not found in catalog. Ask your pharmacist or Kendra for the generic molecule.</div>');
+            if (currentInput.length >= 2 && currentInput === q) {
+              container.append('<div style="padding:14px; color:#575279; font-size:14px; background:#FFFFFF; border-radius:12px; margin-top:8px; border:1px solid #E4E5DD; box-shadow:0 4px 14px rgba(0,0,0,0.06);">Not found in catalog. Ask your pharmacist or Kendra for the generic molecule.</div>');
+            }
             return;
           }
 
@@ -515,6 +543,7 @@ export default function RootLayout({
             clone.find('#autofill-package-size-label').text((drug.form || 'tablet') + 's');
 
             clone.click(function() {
+              container.empty();
               openMedicineDetailModal(drug);
             });
 
@@ -524,6 +553,21 @@ export default function RootLayout({
           console.warn('Search query error:', err);
         }
       }, 200);
+    });
+
+    // Dismiss search dropdown on clicking outside
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('#drug-form, #autofill-container, #drug-search').length) {
+        $('#autofill-container').empty();
+      }
+    });
+
+    // Dismiss on Escape key
+    $('input#drug-search').on('keydown', function(e) {
+      if (e.key === 'Escape') {
+        clearSearchDropdown();
+        $(this).val('').blur();
+      }
     });
 
     // 3. Medicine Details Modal
