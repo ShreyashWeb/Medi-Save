@@ -111,3 +111,103 @@ input[type="file"]:focus-visible {
 .padding-horizontal { padding-top: 0rem !important; padding-bottom: 0rem !important; }
 .margin-vertical { margin-right: 0rem !important; margin-left: 0rem !important; }
 .padding-vertical { padding-right: 0rem !important; padding-left: 0rem !important; }
+
+/* ========================================================
+   ELEVENLABS VOICE ASSISTANT & ACCESSIBILITY STYLES
+   ======================================================== */
+
+.voice-search-btn {
+  background: #EBF7EE;
+  border: 1.5px solid #1FAE6B;
+  color: #1FAE6B;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(31, 174, 107, 0.15);
+  flex-shrink: 0;
+}
+
+.voice-search-btn:hover {
+  background: #1FAE6B;
+  color: #FFFFFF;
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(31, 174, 107, 0.3);
+}
+
+.voice-search-btn.is-listening {
+  background: #FF3B30 !important;
+  color: #FFFFFF !important;
+  border-color: #FF3B30 !important;
+  animation: voice-pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes voice-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
+  70% { transform: scale(1.12); box-shadow: 0 0 0 12px rgba(255, 59, 48, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
+}
+
+/* Floating Voice Assistant FAB for Non-writers & Accessibility */
+.voice-assistant-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9998;
+  background: linear-gradient(135deg, #1B0A66 0%, #291285 100%);
+  color: #FFFFFF;
+  border: 2px solid #A6D63A;
+  border-radius: 999px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 750;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(27, 10, 102, 0.35);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.voice-assistant-fab:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(27, 10, 102, 0.45);
+  border-color: #1FAE6B;
+}
+
+.voice-assistant-fab.is-listening {
+  background: linear-gradient(135deg, #FF3B30 0%, #c41c12 100%) !important;
+  border-color: #FFFFFF !important;
+  animation: voice-pulse 1.4s infinite ease-in-out;
+}
+
+.btn-speak-tts {
+  background: rgba(31, 174, 107, 0.1);
+  border: 1px solid rgba(31, 174, 107, 0.3);
+  color: #1FAE6B;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.btn-speak-tts:hover {
+  background: #1FAE6B;
+  color: #FFFFFF;
+}
+
+.btn-speak-tts.speaking {
+  background: #1B0A66;
+  color: #A6D63A;
+  border-color: #A6D63A;
+}

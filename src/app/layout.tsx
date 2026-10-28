@@ -123,6 +123,175 @@ export default function RootLayout({
 
     const $ = window.$;
 
+    // --- ELEVENLABS & ACCESSIBILITY VOICE ASSISTANT ---
+    let activeAudio = null;
+
+    window.speakText = async function(text, btnElement) {
+      if (activeAudio) {
+        activeAudio.pause();
+        activeAudio = null;
+      }
+      if (typeof window !== 'undefined' && window.speechSynthesis && window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+      }
+
+      if (btnElement) {
+        $(btnElement).addClass('speaking').find('span').text('Speaking...');
+      }
+
+      function resetBtn() {
+        if (btnElement) {
+          $(btnElement).removeClass('speaking').find('span').text('Listen / सुनें (Voice AI)');
+        }
+      }
+
+      try {
+        const res = await fetch('/api/tts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: text })
+        });
+
+        const contentType = res.headers.get('content-type') || '';
+        if (res.ok && contentType.includes('audio/mpeg')) {
+          const blob = await res.blob();
+          const url = URL.createObjectURL(blob);
+          activeAudio = new Audio(url);
+          activeAudio.onended = function() {
+            resetBtn();
+            URL.revokeObjectURL(url);
+            activeAudio = null;
+          };
+          activeAudio.onerror = function() {
+            fallbackBrowserSpeech(text, resetBtn);
+          };
+          await activeAudio.play();
+          return;
+        }
+      } catch (err) {
+        console.warn('ElevenLabs API fetch error, using Web Speech fallback:', err);
+      }
+
+      fallbackBrowserSpeech(text, resetBtn);
+    };
+
+    function fallbackBrowserSpeech(text, onEnd) {
+      if (!('speechSynthesis' in window)) {
+        if (onEnd) onEnd();
+        return;
+      }
+      const cleanText = text.replace(/[₹•]/g, ' rupees ');
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.rate = 0.95;
+      utterance.pitch = 1.0;
+      utterance.lang = 'en-IN';
+      utterance.onend = onEnd;
+      utterance.onerror = onEnd;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Voice Input for Non-writers & Accessibility
+    window.startVoiceSearch = function() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert('Voice recognition is not supported in this browser. Please use Chrome, Edge, or Safari.');
+        return;
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'en-IN';
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      const micBtns = $('.voice-search-btn, .voice-assistant-fab, #btn-voice-search-action');
+      micBtns.addClass('is-listening');
+
+      let toast = $('#voice-toast');
+      if (toast.length === 0) {
+        $('body').append(\`
+          <div id="voice-toast" style="position:fixed; top:24px; left:50%; transform:translateX(-50%); z-index:999999; background:#1B0A66; color:#ffffff; padding:12px 24px; border-radius:999px; box-shadow:0 8px 30px rgba(0,0,0,0.3); display:flex; align-items:center; gap:12px; font-weight:700; font-size:14px; border:2px solid #A6D63A;">
+            <span style="display:inline-block; width:10px; height:10px; background:#FF3B30; border-radius:50%; animation:voice-pulse 1s infinite;"></span>
+            <span>Listening... बोलिए (e.g. "Dolo 650", "Augmentin", "Sugar ki dawai")</span>
+          </div>
+        \`);
+        toast = $('#voice-toast');
+      } else {
+        toast.show();
+      }
+
+      recognition.onresult = async function(event) {
+        micBtns.removeClass('is-listening');
+        toast.hide();
+
+        let transcript = event.results[0][0].transcript.trim();
+        console.log('Voice recognized:', transcript);
+
+        // Smart mapping for colloquial Hindi & English health terms
+        const lower = transcript.toLowerCase();
+        let searchQuery = transcript;
+
+        if (lower.includes('sugar') || lower.includes('diabetes')) {
+          searchQuery = 'Metformin';
+        } else if (lower.includes('blood pressure') || lower.includes('bp') || lower.includes('high pressure')) {
+          searchQuery = 'Telmisartan';
+        } else if (lower.includes('fever') || lower.includes('bukhar') || lower.includes('dard') || lower.includes('headache')) {
+          searchQuery = 'Paracetamol';
+        } else if (lower.includes('gas') || lower.includes('acidity') || lower.includes('pet')) {
+          searchQuery = 'Pantoprazole';
+        } else if (lower.includes('allergy') || lower.includes('khujli') || lower.includes('cough')) {
+          searchQuery = 'Cetirizine';
+        } else if (lower.includes('cholesterol') || lower.includes('heart')) {
+          searchQuery = 'Atorvastatin';
+        }
+
+        $('input#drug-search').val(searchQuery).trigger('input');
+
+        const searchInput = document.getElementById('drug-search');
+        if (searchInput) {
+          searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          searchInput.focus();
+        }
+
+        // Announce top matching medicine aloud using Voice AI
+        try {
+          const res = await fetch('/api/search?q=' + encodeURIComponent(searchQuery) + '&limit=1');
+          const data = await res.json();
+          if (data.results && data.results.length > 0) {
+            const topDrug = data.results[0];
+            let announcement = '';
+            if (topDrug.saving_pct) {
+              announcement = \`Found generic alternative for \${topDrug.brand_name}. Official Jan Aushadhi price is \${topDrug.generic_price} rupees, saving you \${topDrug.saving_pct} percent.\`;
+            } else {
+              announcement = \`Found \${topDrug.brand_name} at Jan Aushadhi price of \${topDrug.generic_price} rupees.\`;
+            }
+            window.speakText(announcement);
+          } else {
+            window.speakText(\`Searched for \${searchQuery}. Please see available options on screen.\`);
+          }
+        } catch (e) {
+          console.warn('Voice announcement fetch error:', e);
+        }
+      };
+
+      recognition.onerror = function(event) {
+        micBtns.removeClass('is-listening');
+        toast.hide();
+        console.warn('Speech recognition error:', event.error);
+      };
+
+      recognition.onend = function() {
+        micBtns.removeClass('is-listening');
+        toast.hide();
+      };
+
+      try {
+        recognition.start();
+      } catch (err) {
+        micBtns.removeClass('is-listening');
+        toast.hide();
+      }
+    };
+
     // 1. Inject Camera & Action Buttons if not already present
     if ($('#btn-camera-scan').length === 0) {
       const cameraBtnHtml = \`
@@ -130,6 +299,10 @@ export default function RootLayout({
           <button id="btn-camera-scan" type="button" style="background:#1B0A66; color:#ffffff; border:none; padding:10px 20px; border-radius:999px; font-weight:700; font-size:14px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; box-shadow:0 4px 12px rgba(27,10,102,0.25); transition:all 0.2s;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A6D63A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
             Scan Prescription (Gemma 4 OCR)
+          </button>
+          <button id="btn-voice-search-action" type="button" style="background:#EBF7EE; color:#1FAE6B; border:1.5px solid #1FAE6B; padding:9px 18px; border-radius:999px; font-weight:700; font-size:14px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(31,174,107,0.15);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            Voice Assistant (बोलकर खोजें)
           </button>
           <button id="btn-open-basket" type="button" style="background:#FFFFFF; color:#1B0A66; border:1.5px solid #1B0A66; padding:9px 18px; border-radius:999px; font-weight:700; font-size:14px; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -143,6 +316,43 @@ export default function RootLayout({
         </div>
       \`;
       $('#drug-form').after(cameraBtnHtml);
+      $('#btn-voice-search-action').on('click', window.startVoiceSearch);
+    }
+
+    // Inject Microphone icon directly into search bar
+    if ($('#btn-mic-search').length === 0) {
+      const searchForm = $('form#wf-form-drug-form');
+      if (searchForm.length > 0) {
+        searchForm.css('position', 'relative');
+        searchForm.append(\`
+          <button id="btn-mic-search" class="voice-search-btn" type="button" title="Speak to Search (बोलकर दवा खोजें)" style="position:absolute; right:10px; top:50%; transform:translateY(-50%);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+          </button>
+        \`);
+        $('input#drug-search').css('padding-right', '56px');
+        $('#btn-mic-search').on('click', window.startVoiceSearch);
+      }
+    }
+
+    // Inject Pinned Floating Voice Assistant FAB for people who cannot write
+    if ($('#voice-assistant-fab').length === 0) {
+      $('body').append(\`
+        <button id="voice-assistant-fab" class="voice-assistant-fab" type="button" title="Speak to Search Medicine / बोलकर दवा खोजें (ElevenLabs Accessibility)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A6D63A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+          <span>Voice Assistant / बोलें</span>
+        </button>
+      \`);
+      $('#voice-assistant-fab').on('click', window.startVoiceSearch);
     }
 
     // Update navbar login button if user is already signed in
@@ -254,11 +464,17 @@ export default function RootLayout({
            </div>\`;
 
       $('#detail-content').html(\`
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
-          <span style="background:#1B0A66; color:#A6D63A; padding:3px 10px; border-radius:999px; font-weight:800; font-size:11px; text-transform:uppercase;">
-            \${drug.type === 'brand' ? 'Commercial Brand' : 'Generic Product'}
-          </span>
-          <span style="font-size:13px; color:#575279;">PMBI Code #\${drug.ja_code || 'N/A'}</span>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="background:#1B0A66; color:#A6D63A; padding:3px 10px; border-radius:999px; font-weight:800; font-size:11px; text-transform:uppercase;">
+              \${drug.type === 'brand' ? 'Commercial Brand' : 'Generic Product'}
+            </span>
+            <span style="font-size:13px; color:#575279;">PMBI Code #\${drug.ja_code || 'N/A'}</span>
+          </div>
+          <button id="btn-speak-modal" class="btn-speak-tts" type="button" title="Listen Aloud with Voice AI">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <span>Listen / सुनें (Voice AI)</span>
+          </button>
         </div>
         <h3 style="font-size:24px; font-weight:800; margin:0 0 6px 0; color:#1B0A66;">\${drug.brand_name}</h3>
         <p style="font-size:14px; color:#575279; margin:0 0 14px 0;">
@@ -280,6 +496,13 @@ export default function RootLayout({
           </button>
         </div>
       \`);
+
+      $('#btn-speak-modal').click(function() {
+        const textToSpeak = drug.saving_pct
+          ? \`Medicine \${drug.brand_name}. Active molecule: \${(drug.molecules || []).join(' ')}. Commercial price is ₹\${drug.brand_mrp}. Official Jan Aushadhi generic equivalent is ₹\${drug.generic_price}. You save \${drug.saving_pct} percent.\`
+          : \`Medicine \${drug.brand_name}. Active chemical: \${(drug.molecules || []).join(' ')}. Jan Aushadhi generic price is ₹\${drug.generic_price}.\`;
+        window.speakText(textToSpeak, this);
+      });
 
       $('#btn-add-to-basket-modal').click(function() {
         basket.push(drug);
