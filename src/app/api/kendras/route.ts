@@ -18,7 +18,7 @@ interface Kendra {
 let cachedKendras: Kendra[] | null = null;
 
 function loadKendras(): Kendra[] {
-  if (!cachedKendras) {
+  if (!cachedKendras || process.env.NODE_ENV === 'development') {
     try {
       const p = path.join(process.cwd(), 'data', 'kendras.json');
       const raw = fs.readFileSync(p, 'utf-8');
@@ -50,7 +50,7 @@ export async function GET(req: NextRequest) {
   const latStr = searchParams.get('lat');
   const lngStr = searchParams.get('lng');
   const q = (searchParams.get('q') || '').trim().toLowerCase();
-  const limit = Math.min(50, Math.max(1, parseInt(searchParams.get('limit') || '10', 10)));
+  const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50', 10)));
 
   const kendras = loadKendras();
 
@@ -64,17 +64,21 @@ export async function GET(req: NextRequest) {
         ...k,
         distance_km: haversineDistance(lat, lng, k.lat, k.lng),
       }));
+      if (q) {
+        const tokens = q.split(/\s+/).filter(Boolean);
+        results = results.filter((k) => {
+          const target = `${k.name} ${k.address} ${k.city} ${k.state} ${k.pincode}`.toLowerCase();
+          return tokens.every((t) => target.includes(t));
+        });
+      }
       results.sort((a, b) => (a.distance_km || 0) - (b.distance_km || 0));
     }
   } else if (q) {
-    results = results.filter(
-      (k) =>
-        k.city.toLowerCase().includes(q) ||
-        k.state.toLowerCase().includes(q) ||
-        k.pincode.includes(q) ||
-        k.address.toLowerCase().includes(q) ||
-        k.name.toLowerCase().includes(q)
-    );
+    const tokens = q.split(/\s+/).filter(Boolean);
+    results = results.filter((k) => {
+      const target = `${k.name} ${k.address} ${k.city} ${k.state} ${k.pincode}`.toLowerCase();
+      return tokens.every((t) => target.includes(t));
+    });
   }
 
   return NextResponse.json({

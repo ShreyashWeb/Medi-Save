@@ -159,7 +159,7 @@ export default function Navbar() {
   const handleOpenKendras = (e: React.MouseEvent) => {
     e.preventDefault();
     if (typeof window !== "undefined" && typeof (window as any).openKendraModal === "function") {
-      (window as any).openKendraModal();
+      (window as any).openKendraModal('Lucknow');
     } else {
       const modal = document.getElementById("kendra-modal");
       if (modal) modal.style.display = "flex";

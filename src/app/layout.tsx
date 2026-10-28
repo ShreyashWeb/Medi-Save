@@ -267,6 +267,27 @@ export default function RootLayout({
         const lower = (cleaned || transcript).toLowerCase();
         let searchQuery = cleaned || transcript;
 
+        // Check if query is asking for a Jan Aushadhi Kendra or store location
+        if (lower.includes('kendra') || lower.includes('kendras') || lower.includes('store') || lower.includes('pharmacy') || lower.includes('pmbjp') || lower.includes('lucknow')) {
+          var loc = 'Lucknow';
+          if (lower.includes('hazratganj')) loc = 'Hazratganj';
+          else if (lower.includes('gomti')) loc = 'Gomti Nagar';
+          else if (lower.includes('chowk') || lower.includes('kgmu')) loc = 'Chowk';
+          else if (lower.includes('indira nagar') || lower.includes('munshipulia')) loc = 'Indira Nagar';
+          else if (lower.includes('aliganj')) loc = 'Aliganj';
+          else if (lower.includes('alambagh')) loc = 'Alambagh';
+          else if (lower.includes('charbagh')) loc = 'Charbagh';
+          else if (lower.includes('sgpgi')) loc = 'SGPGI';
+          else if (lower.includes('delhi')) loc = 'Delhi';
+          else if (lower.includes('mumbai')) loc = 'Mumbai';
+
+          if (typeof window.openKendraModal === 'function') {
+            window.openKendraModal(loc);
+          }
+          window.speakText('Opening Jan Aushadhi Kendra locator for ' + loc + '. Here are verified government stores.');
+          return;
+        }
+
         if (lower.includes('dolo') || lower.includes('dollar') || lower.includes('dolor') || lower.includes('dollo')) {
           searchQuery = 'Dolo 650';
         } else if (lower.includes('crocin') || lower.includes('crosin') || lower.includes('crossin')) {
@@ -831,25 +852,45 @@ export default function RootLayout({
 
     // 6. Nearest Kendra Locator Modal
     $('#btn-open-kendra').click(function() {
-      openKendraModal();
+      openKendraModal('Lucknow');
     });
 
-    window.openKendraModal = function() {
+    window.openKendraModal = function(initialQuery) {
+      const q = typeof initialQuery === 'string' ? initialQuery : 'Lucknow';
       let modal = document.getElementById('kendra-modal');
       if (!modal) {
         $('body').append(\`
-          <div id="kendra-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(18, 6, 70, 0.65); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:20px;">
-            <div style="background:#FFFFFF; width:100%; max-width:540px; border-radius:24px; padding:32px; box-shadow:0 24px 60px rgba(18,6,70,0.3); position:relative; color:#1B0A66; max-height:85vh; overflow-y:auto;">
-              <button id="close-kendra-btn" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:#575279;">✕</button>
-              <h3 style="font-size:22px; font-weight:800; margin:0 0 6px 0;">Find Jan Aushadhi Kendra</h3>
-              <p style="font-size:13px; color:#575279; margin:0 0 16px 0;">Locate your nearest PMBJP government Kendra store:</p>
-              <div style="display:flex; gap:8px; margin-bottom:16px;">
-                <input type="text" id="kendra-search-input" placeholder="Search city or pincode (e.g. Delhi, Mumbai, 110029)..." style="flex:1; padding:10px 14px; border:1.5px solid #E4E5DD; border-radius:10px; font-size:14px; outline:none;" />
-                <button id="btn-gps-locate" style="background:#1B0A66; color:#ffffff; font-weight:700; font-size:13px; padding:10px 14px; border:none; border-radius:10px; cursor:pointer;">
+          <div id="kendra-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(11, 43, 29, 0.72); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:16px;">
+            <div style="background:#FFFFFF; width:100%; max-width:580px; border-radius:24px; padding:28px; box-shadow:0 24px 60px rgba(11,43,29,0.35); position:relative; color:#1B0A66; max-height:88vh; display:flex; flex-direction:column;">
+              <button id="close-kendra-btn" style="position:absolute; top:20px; right:20px; background:#f1f5f9; border:none; width:32px; height:32px; border-radius:50%; font-size:16px; cursor:pointer; color:#475569; display:flex; align-items:center; justify-content:center; font-weight:700;">✕</button>
+              
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <span style="background:#e8f5e9; color:#0b3b24; font-size:11px; font-weight:800; padding:3px 9px; border-radius:999px; text-transform:uppercase; letter-spacing:0.5px; border:1px solid #c8e6c9;">PMBJP Govt Verified</span>
+              </div>
+              <h3 style="font-size:22px; font-weight:800; margin:0 0 4px 0; color:#0b3b24;">Find Jan Aushadhi Kendra</h3>
+              <p style="font-size:13px; color:#575279; margin:0 0 14px 0;">Find official Pradhan Mantri Bhartiya Janaushadhi Kendras in Lucknow and across India:</p>
+              
+              <div style="display:flex; gap:8px; margin-bottom:10px;">
+                <input type="text" id="kendra-search-input" placeholder="Search Lucknow area or pincode (e.g. Hazratganj, Gomti Nagar, 226001)..." style="flex:1; padding:11px 14px; border:1.5px solid #d1d5db; border-radius:12px; font-size:14px; outline:none;" />
+                <button id="btn-gps-locate" style="background:#0b3b24; color:#ffffff; font-weight:700; font-size:13px; padding:11px 16px; border:none; border-radius:12px; cursor:pointer; display:flex; align-items:center; gap:4px; white-space:nowrap;">
                   📍 GPS
                 </button>
               </div>
-              <div id="kendra-results-list"></div>
+
+              <!-- Quick Lucknow Location Filter Chips -->
+              <div id="kendra-chips" style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px;">
+                <button class="kendra-chip" data-loc="Lucknow" style="font-size:11.5px; font-weight:700; padding:4px 10px; border-radius:999px; border:1px solid #0b3b24; background:#0b3b24; color:#ffffff; cursor:pointer;">📍 All Lucknow</button>
+                <button class="kendra-chip" data-loc="Hazratganj" style="font-size:11.5px; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid #d1d5db; background:#f8fafc; color:#334155; cursor:pointer;">Hazratganj</button>
+                <button class="kendra-chip" data-loc="Gomti Nagar" style="font-size:11.5px; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid #d1d5db; background:#f8fafc; color:#334155; cursor:pointer;">Gomti Nagar</button>
+                <button class="kendra-chip" data-loc="Chowk" style="font-size:11.5px; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid #d1d5db; background:#f8fafc; color:#334155; cursor:pointer;">Chowk / KGMU</button>
+                <button class="kendra-chip" data-loc="Indira Nagar" style="font-size:11.5px; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid #d1d5db; background:#f8fafc; color:#334155; cursor:pointer;">Indira Nagar</button>
+                <button class="kendra-chip" data-loc="Aliganj" style="font-size:11.5px; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid #d1d5db; background:#f8fafc; color:#334155; cursor:pointer;">Aliganj</button>
+                <button class="kendra-chip" data-loc="Alambagh" style="font-size:11.5px; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid #d1d5db; background:#f8fafc; color:#334155; cursor:pointer;">Alambagh</button>
+                <button class="kendra-chip" data-loc="Charbagh" style="font-size:11.5px; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid #d1d5db; background:#f8fafc; color:#334155; cursor:pointer;">Charbagh</button>
+                <button class="kendra-chip" data-loc="SGPGI" style="font-size:11.5px; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid #d1d5db; background:#f8fafc; color:#334155; cursor:pointer;">SGPGI</button>
+              </div>
+
+              <div id="kendra-results-list" style="overflow-y:auto; flex:1; padding-right:4px;"></div>
             </div>
           </div>
         \`);
@@ -857,8 +898,28 @@ export default function RootLayout({
         $('#close-kendra-btn').click(function() { modal.style.display = 'none'; });
 
         $('#kendra-search-input').on('input', function() {
-          fetchKendras({ q: $(this).val().trim() });
+          const val = $(this).val().trim();
+          updateChipStyles(val);
+          fetchKendras({ q: val });
         });
+
+        $(document).on('click', '.kendra-chip', function() {
+          const loc = $(this).data('loc');
+          $('#kendra-search-input').val(loc);
+          updateChipStyles(loc);
+          fetchKendras({ q: loc });
+        });
+
+        function updateChipStyles(activeVal) {
+          $('.kendra-chip').each(function() {
+            const loc = $(this).data('loc');
+            if (activeVal && activeVal.toLowerCase().includes(loc.toLowerCase())) {
+              $(this).css({ 'background': '#0b3b24', 'color': '#ffffff', 'border-color': '#0b3b24', 'font-weight': '700' });
+            } else {
+              $(this).css({ 'background': '#f8fafc', 'color': '#334155', 'border-color': '#d1d5db', 'font-weight': '600' });
+            }
+          });
+        }
 
         $('#btn-gps-locate').click(function() {
           if (navigator.geolocation) {
@@ -870,14 +931,23 @@ export default function RootLayout({
               },
               function() {
                 $('#btn-gps-locate').text('📍 GPS');
-                alert('GPS location permission denied. Please enter your city or pincode.');
+                alert('GPS location permission denied. Please enter Lucknow or your pincode.');
               }
             );
           }
         });
       }
 
-      fetchKendras({});
+      $('#kendra-search-input').val(q);
+      $('.kendra-chip').each(function() {
+        const loc = $(this).data('loc');
+        if (q && q.toLowerCase().includes(loc.toLowerCase())) {
+          $(this).css({ 'background': '#0b3b24', 'color': '#ffffff', 'border-color': '#0b3b24', 'font-weight': '700' });
+        } else {
+          $(this).css({ 'background': '#f8fafc', 'color': '#334155', 'border-color': '#d1d5db', 'font-weight': '600' });
+        }
+      });
+      fetchKendras({ q });
       modal.style.display = 'flex';
     };
 
@@ -890,25 +960,41 @@ export default function RootLayout({
         container.empty();
 
         if (!data.results || data.results.length === 0) {
-          container.html('<div style="color:#575279; font-size:13px; text-align:center; padding:20px;">No Kendras found for this query. Try a nearby city.</div>');
+          container.html('<div style="color:#575279; font-size:13px; text-align:center; padding:30px; background:#f8fafc; border-radius:12px;">No Jan Aushadhi Kendras found for this search. Try selecting <b>"📍 All Lucknow"</b> or a nearby locality.</div>');
           return;
         }
 
+        container.append(\`
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:12px; font-weight:700; color:#0b3b24; margin-bottom:10px; padding:0 2px;">
+            <span>Found \${data.total} PMBJP Kendra Stores</span>
+            <span>Government Verified 🇮🇳</span>
+          </div>
+        \`);
+
         data.results.forEach(k => {
           const distBadge = k.distance_km !== null
-            ? \`<span style="background:#EBF7EE; color:#1FAE6B; font-weight:800; font-size:11px; padding:2px 8px; border-radius:999px;">\${k.distance_km} km away</span>\`
+            ? \`<span style="background:#e8f5e9; color:#0b3b24; font-weight:800; font-size:11px; padding:3px 8px; border-radius:999px; border:1px solid #c8e6c9;">📍 \${k.distance_km} km away</span>\`
             : '';
 
+          const mapsUrl = \`https://www.google.com/maps/search/?api=1&query=\${encodeURIComponent(k.name + ' ' + k.address + ' ' + k.city + ' ' + k.pincode)}\`;
+
           container.append(\`
-            <div style="border:1.5px solid #E4E5DD; border-radius:12px; padding:14px; margin-bottom:10px;">
-              <div style="display:flex; justify-content:space-between; align-items:start; margin-bottom:4px;">
-                <div style="font-weight:700; font-size:15px; color:#1B0A66;">\${k.name}</div>
+            <div style="border:1.5px solid #E4E5DD; border-radius:14px; padding:16px; margin-bottom:12px; background:#ffffff; transition:all 0.2s ease; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; margin-bottom:6px;">
+                <div style="font-weight:700; font-size:15px; color:#0b3b24; line-height:1.3;">\${k.name}</div>
                 \${distBadge}
               </div>
-              <div style="font-size:13px; color:#575279; margin-bottom:6px;">\${k.address}, \${k.city}, \${k.state} - \${k.pincode}</div>
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#575279;">
-                <span>📞 \${k.phone}</span>
-                <span>⏰ \${k.timings}</span>
+              <div style="font-size:13px; color:#475569; margin-bottom:8px; line-height:1.4;">
+                \${k.address}, <b>\${k.city}</b>, \${k.state} - \${k.pincode}
+              </div>
+              <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; font-size:12px; color:#475569; border-top:1px dashed #e2e8f0; padding-top:10px;">
+                <div style="display:flex; gap:12px; align-items:center;">
+                  <a href="tel:\${k.phone}" style="color:#0b3b24; text-decoration:none; font-weight:700; display:inline-flex; align-items:center; gap:4px;">📞 \${k.phone}</a>
+                  <span>⏰ \${k.timings}</span>
+                </div>
+                <a href="\${mapsUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; font-size:12px; font-weight:700; color:#0b3b24; background:#e8f5e9; border:1px solid #c8e6c9; padding:4px 10px; border-radius:8px; text-decoration:none; transition:background 0.15s ease;">
+                  🗺️ Get Directions
+                </a>
               </div>
             </div>
           \`);
