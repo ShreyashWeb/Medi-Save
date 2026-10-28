@@ -116,6 +116,19 @@ input[type="file"]:focus-visible {
    ELEVENLABS VOICE ASSISTANT & ACCESSIBILITY STYLES
    ======================================================== */
 
+/* Permanently remove "Made in Webflow" badge */
+.w-webflow-badge,
+a[href*="webflow.com"],
+.w-badge {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
 .voice-search-btn {
   background: #EBF7EE;
   border: 1.5px solid #1FAE6B;
@@ -127,15 +140,23 @@ input[type="file"]:focus-visible {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 2px 8px rgba(31, 174, 107, 0.15);
   flex-shrink: 0;
+  transform-origin: center center;
+}
+
+#btn-mic-search {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 
 .voice-search-btn:hover {
   background: #1FAE6B;
   color: #FFFFFF;
-  transform: scale(1.05);
   box-shadow: 0 4px 14px rgba(31, 174, 107, 0.3);
 }
 
@@ -147,9 +168,9 @@ input[type="file"]:focus-visible {
 }
 
 @keyframes voice-pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
-  70% { transform: scale(1.12); box-shadow: 0 0 0 12px rgba(255, 59, 48, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 59, 48, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
 }
 
 /* Floating Voice Assistant FAB for Non-writers & Accessibility */
