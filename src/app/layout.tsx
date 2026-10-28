@@ -258,30 +258,32 @@ export default function RootLayout({
         // 1. Clean conversational prefixes and punctuation
         let cleaned = transcript
           .replace(/^[,\.\?!;:]+|[,\.\?!;:]+$/g, '')
-          .replace(/^(explain(\s+me)?(\s+about)?|tell\s+me\s+about|what\s+is(\s+the\s+price\s+of)?|price\s+of|cost\s+of|search\s+for|find\s+me|find|show\s+me|dawa\s+for|dawai\s+for|medicine\s+for|give\s+me|i\s+need|i\s+want)\s+/i, '')
+          .replace(/\b(what\s+is\s+the\s+price\s+of|what\s+is\s+a|what\s+is|what\s+are|what's|whats|explain\s+about|explain\s+me|explain|tell\s+me\s+about|tell\s+me|price\s+of|cost\s+of|rate\s+of|search\s+for|search|find\s+me|find|show\s+me|dawa\s+for|dawai\s+for|medicine\s+for|give\s+me|i\s+need|i\s+want)\b/gi, '')
+          .replace(/\b(kya\s+hai|batao|bataiye|ka\s+rate|ka\s+price|ke\s+bare\s+me|tablet|pill|medicine)\b/gi, '')
+          .replace(/\s+/g, ' ')
           .trim();
 
-        // 2. Phonetic & common speech-to-text corrections for Indian medicines
-        const lower = cleaned.toLowerCase();
-        let searchQuery = cleaned;
+        // 2. Phonetic & conversational intent corrections for Indian medicines
+        const lower = (cleaned || transcript).toLowerCase();
+        let searchQuery = cleaned || transcript;
 
-        if (/^(the\s+)?(doll?ar|dolor|dolo|dollo)(\s+650)?$/i.test(lower) || lower.includes('dollar') || lower.includes('dolor')) {
+        if (lower.includes('dolo') || lower.includes('dollar') || lower.includes('dolor') || lower.includes('dollo')) {
           searchQuery = 'Dolo 650';
-        } else if (/^(crocin|crosin|crossin)/i.test(lower)) {
+        } else if (lower.includes('crocin') || lower.includes('crosin') || lower.includes('crossin')) {
           searchQuery = 'Crocin';
-        } else if (/^(calpol|call\s*pol)/i.test(lower)) {
+        } else if (lower.includes('calpol')) {
           searchQuery = 'Calpol';
-        } else if (/^(augmentin|oxmentin|agmentin)/i.test(lower)) {
+        } else if (lower.includes('augmentin') || lower.includes('oxmentin') || lower.includes('agmentin')) {
           searchQuery = 'Augmentin 625 Duo';
-        } else if (/^(pan(\s+|-)?d|pandy|pandey)/i.test(lower)) {
+        } else if (lower.includes('pan d') || lower.includes('pan-d') || lower.includes('pandy') || lower.includes('pandey')) {
           searchQuery = 'Pan-D';
-        } else if (/^(shelcal|shell(\s+)?cal)/i.test(lower)) {
+        } else if (lower.includes('shelcal')) {
           searchQuery = 'Shelcal 500';
-        } else if (/^(allegra|a\s+legra)/i.test(lower)) {
+        } else if (lower.includes('allegra')) {
           searchQuery = 'Allegra';
-        } else if (/^(combiflam|combi\s+flam)/i.test(lower)) {
+        } else if (lower.includes('combiflam')) {
           searchQuery = 'Combiflam';
-        } else if (/^(azithral|azithro|azithromycin|azee)/i.test(lower)) {
+        } else if (lower.includes('azithral') || lower.includes('azithro') || lower.includes('azithromycin') || lower.includes('azee')) {
           searchQuery = 'Azithral';
         } else if (lower.includes('sugar') || lower.includes('diabetes')) {
           searchQuery = 'Metformin';

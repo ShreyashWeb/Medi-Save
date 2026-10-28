@@ -38,11 +38,37 @@ export async function GET(req: NextRequest) {
   }
 
   const { brands, generics } = loadData();
-  const decision = findMatches(q, brands, generics, {
+  let decision = findMatches(q, brands, generics, {
     confidentThreshold: 0.70,
     candidateThreshold: 0.40,
     maxCandidates: limit,
   });
+
+  // If no direct matches, attempt fallback on extracted keyword tokens
+  if (decision.candidates.length === 0) {
+    const stopWords = new Set([
+      'what', 'is', 'the', 'price', 'of', 'tell', 'me', 'about', 'explain',
+      'cost', 'rate', 'a', 'an', 'for', 'medicine', 'tablet', 'pill', 'capsule',
+      'dawa', 'dawai', 'kya', 'hai', 'ka', 'ki', 'ke', 'batao', 'bataiye'
+    ]);
+    const cleanTokens = q
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter((w) => w && !stopWords.has(w));
+
+    if (cleanTokens.length > 0) {
+      const fallbackQuery = cleanTokens.join(' ');
+      const fallbackDecision = findMatches(fallbackQuery, brands, generics, {
+        confidentThreshold: 0.60,
+        candidateThreshold: 0.35,
+        maxCandidates: limit,
+      });
+      if (fallbackDecision.candidates.length > 0) {
+        decision = fallbackDecision;
+      }
+    }
+  }
 
   const genericMap = new Map<string | number, GenericItem>();
   for (const g of generics) {

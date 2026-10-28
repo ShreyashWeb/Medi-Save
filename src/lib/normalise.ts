@@ -49,7 +49,7 @@ export function normalise(text: string): string {
     }
   }
 
-  return clean
+  let normalised = clean
     .toLowerCase()
     // Normalize diacritics
     .normalize('NFD')
@@ -59,6 +59,19 @@ export function normalise(text: string): string {
     // Collapse multiple whitespace characters into single space
     .replace(/\s+/g, ' ')
     .trim();
+
+  // Strip conversational inquiry prefixes (e.g. "what is dolo", "tell me about paracetamol", "price of dolo")
+  normalised = normalised
+    .replace(/^(what\s+is\s+the\s+price\s+of|what\s+is\s+price\s+of|what\s+is\s+the\s+rate\s+of|what\s+is\s+a|what\s+is|what\s+are|what's|whats|explain\s+about|explain\s+me\s+about|explain\s+me|explain|tell\s+me\s+about|tell\s+me|price\s+of|cost\s+of|rate\s+of|search\s+for|search|find\s+me|find|show\s+me|give\s+me|i\s+need|i\s+want|looking\s+for|dawa\s+for|dawai\s+for|medicine\s+for)\s+/i, '')
+    .replace(/\s+(kya\s+hai|batao|bataiye|ka\s+rate|ka\s+price|ke\s+bare\s+me|ki\s+dawa|ki\s+dawai|tablet|pill|medicine)$/i, '')
+    .trim();
+
+  // Common voice phonetic corrections
+  if (normalised === 'dollar' || normalised === 'dolor' || normalised === 'dollo' || normalised.startsWith('dollar ') || normalised.startsWith('dolor ')) {
+    normalised = normalised.replace(/^(dollar|dolor|dollo)/, 'dolo');
+  }
+
+  return normalised;
 }
 
 export interface ParsedQuery {

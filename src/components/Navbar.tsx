@@ -61,8 +61,8 @@ export default function Navbar() {
         // Replace any old placeholder branding with MediSave
         const textElements = item.querySelectorAll<HTMLElement>(".faq-heading, p");
         textElements.forEach((el) => {
-          if (el.innerHTML.includes("BudgetRx")) {
-            el.innerHTML = el.innerHTML.replaceAll("BudgetRx", "MediSave");
+          if (el.innerHTML.includes("MediSave")) {
+            el.innerHTML = el.innerHTML.replaceAll("MediSave", "MediSave");
           }
         });
       });
