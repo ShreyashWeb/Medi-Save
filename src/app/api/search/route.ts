@@ -44,7 +44,49 @@ export async function GET(req: NextRequest) {
     maxCandidates: limit,
   });
 
-  // If no direct matches, attempt fallback on extracted keyword tokens
+  // If no direct matches, check clinical condition aliases (diabetes, fever, bp, acidity, etc.)
+  if (decision.candidates.length === 0) {
+    const CONDITION_ALIASES: Record<string, string> = {
+      diabetes: 'Glycomet 500',
+      diabates: 'Glycomet 500',
+      diabetic: 'Glycomet 500',
+      diabities: 'Glycomet 500',
+      sugar: 'Glycomet 500',
+      madhumeh: 'Glycomet 500',
+      metformin: 'Glycomet 500',
+      bp: 'Telma 40',
+      hypertension: 'Telma 40',
+      fever: 'Dolo 650',
+      bukhar: 'Dolo 650',
+      headache: 'Dolo 650',
+      acidity: 'Pan 40',
+      gas: 'Pan 40',
+      heartburn: 'Pan 40',
+      allergy: 'Allegra',
+      cough: 'Cetirizine',
+      sardi: 'Cetirizine',
+      pain: 'Combiflam',
+      calcium: 'Shelcal 500',
+      cholesterol: 'Atorva 20',
+    };
+
+    const qLower = q.toLowerCase();
+    for (const [cond, target] of Object.entries(CONDITION_ALIASES)) {
+      if (qLower.includes(cond)) {
+        const condDecision = findMatches(target, brands, generics, {
+          confidentThreshold: 0.60,
+          candidateThreshold: 0.35,
+          maxCandidates: limit,
+        });
+        if (condDecision.candidates.length > 0) {
+          decision = condDecision;
+          break;
+        }
+      }
+    }
+  }
+
+  // Fallback on extracted keyword tokens
   if (decision.candidates.length === 0) {
     const stopWords = new Set([
       'what', 'is', 'the', 'price', 'of', 'tell', 'me', 'about', 'explain',

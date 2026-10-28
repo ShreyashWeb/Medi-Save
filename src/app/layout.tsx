@@ -285,14 +285,14 @@ export default function RootLayout({
           searchQuery = 'Combiflam';
         } else if (lower.includes('azithral') || lower.includes('azithro') || lower.includes('azithromycin') || lower.includes('azee')) {
           searchQuery = 'Azithral';
-        } else if (lower.includes('sugar') || lower.includes('diabetes')) {
-          searchQuery = 'Metformin';
-        } else if (lower.includes('blood pressure') || lower.includes('bp') || lower.includes('high pressure')) {
-          searchQuery = 'Telmisartan';
+        } else if (lower.includes('sugar') || /diab[a-z]+/i.test(lower) || lower.includes('madhumeh') || lower.includes('metformin') || lower.includes('glycomet')) {
+          searchQuery = 'Glycomet 500';
+        } else if (lower.includes('blood pressure') || lower.includes('bp') || lower.includes('high pressure') || lower.includes('hypertension')) {
+          searchQuery = 'Telma 40';
         } else if (lower.includes('fever') || lower.includes('bukhar') || lower.includes('dard') || lower.includes('headache')) {
-          searchQuery = 'Paracetamol';
-        } else if (lower.includes('gas') || lower.includes('acidity') || lower.includes('pet')) {
-          searchQuery = 'Pantoprazole';
+          searchQuery = 'Dolo 650';
+        } else if (lower.includes('gas') || lower.includes('acidity') || lower.includes('pet') || lower.includes('heartburn')) {
+          searchQuery = 'Pan 40';
         } else if (lower.includes('allergy') || lower.includes('khujli') || lower.includes('cough') || lower.includes('sardi')) {
           searchQuery = 'Cetirizine';
         } else if (lower.includes('cholesterol') || lower.includes('heart')) {

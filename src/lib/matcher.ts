@@ -232,37 +232,64 @@ export function findMatches(
 
   const scored: MatchScore[] = [];
 
-  // 1. Search brand names
+  // 1. Search brand names, aliases, and active molecules
   for (const b of brands) {
-    const brandNorm = normalise(b.brand_name);
-    const { score, strengthMatched } = computeSimilarityScore(
-      parsed.normalised,
-      brandNorm,
-      parsed.strengthHint,
-      b.strengths
-    );
+    const candidatesToScore = [
+      { text: b.brand_name, matchedOn: b.brand_name },
+      ...(b.aliases || []).map((a) => ({ text: a, matchedOn: a })),
+      ...(b.molecules || []).map((m) => ({ text: m, matchedOn: m })),
+    ];
 
-    if (score >= config.candidateThreshold) {
+    let bestScore = 0;
+    let bestMatchedOn = b.brand_name;
+    let bestStrength = false;
+
+    for (const c of candidatesToScore) {
+      const cNorm = normalise(c.text);
+      const { score, strengthMatched } = computeSimilarityScore(
+        parsed.normalised,
+        cNorm,
+        parsed.strengthHint,
+        b.strengths
+      );
+      if (score > bestScore) {
+        bestScore = score;
+        bestMatchedOn = c.matchedOn;
+        bestStrength = strengthMatched;
+      }
+    }
+
+    if (bestScore >= config.candidateThreshold) {
       scored.push({
         item: b,
         type: 'brand',
         displayName: b.brand_name,
-        score,
-        matchedOn: b.brand_name,
-        strengthMatched,
+        score: bestScore,
+        matchedOn: bestMatchedOn,
+        strengthMatched: bestStrength,
       });
     }
   }
 
-  // 2. Search direct generic molecule names
+  // 2. Search direct generic molecule names and individual molecules
   for (const g of generics) {
     const genericNorm = normalise(g.raw_name);
-    const { score, strengthMatched } = computeSimilarityScore(
+    let { score, strengthMatched } = computeSimilarityScore(
       parsed.normalised,
       genericNorm,
       parsed.strengthHint,
       g.strengths
     );
+
+    // Also check individual active molecule names
+    for (const m of g.molecules || []) {
+      const mNorm = normalise(m);
+      const mScore = computeSimilarityScore(parsed.normalised, mNorm, parsed.strengthHint, g.strengths);
+      if (mScore.score > score) {
+        score = mScore.score;
+        strengthMatched = mScore.strengthMatched;
+      }
+    }
 
     if (score >= config.candidateThreshold) {
       scored.push({
