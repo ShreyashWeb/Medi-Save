@@ -405,30 +405,186 @@ a[href*="webflow.com"],
   color: #2FE694;
 }
 
-.btn-google-signup {
+.btn-nav-demo {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  background: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  color: #1F2937;
-  font-weight: 750;
-  font-size: 13.5px;
+  gap: 7px;
+  background: linear-gradient(135deg, #A6D63A 0%, #2FE694 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #041E11;
+  font-weight: 800;
+  font-size: 13px;
   padding: 8px 18px;
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 4px 16px rgba(46, 230, 148, 0.35);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-google-signup:hover {
+.btn-nav-demo:hover {
   transform: translateY(-1.5px);
-  box-shadow: 0 6px 20px rgba(46, 230, 148, 0.4);
-  background: #F9FAFB;
+  box-shadow: 0 6px 22px rgba(166, 214, 58, 0.5);
+  background: linear-gradient(135deg, #B5E845 0%, #3EF8A5 100%);
 }
 
-.btn-google-signup:active {
+.btn-nav-demo:active {
   transform: translateY(0);
+}
+
+/* --- FAQ SECTION & ACCORDION STYLES --- */
+.section_home-faq {
+  scroll-margin-top: 80px;
+}
+
+.c-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.c-accordion-item {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #E4E5DD !important;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 16px rgba(27, 10, 102, 0.04) !important;
+  overflow: hidden !important;
+  transition: all 0.25s ease !important;
+}
+
+.c-accordion-item:hover {
+  border-color: #1FAE6B !important;
+  box-shadow: 0 8px 24px rgba(31, 174, 107, 0.1) !important;
+}
+
+.c-accordion-item-q {
+  cursor: pointer !important;
+  padding: 20px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  user-select: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.c-accordion-item-q:hover {
+  background-color: #F8FAF9;
+}
+
+.faq-heading {
+  font-size: 17px !important;
+  font-weight: 750 !important;
+  color: #1B0A66 !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.c-accordion-item-a {
+  display: none;
+  padding: 0 24px 22px 24px !important;
+  color: #4B5563 !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  border-top: 1px solid #F0F2EB !important;
+  background: #FCFDFB;
+}
+
+.c-accordion-item.is-open .c-accordion-item-a,
+.c-accordion-item.open .c-accordion-item-a {
+  display: block !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: slideDownFaq 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.c-accordion-item.is-open ._w-accordion-item-a,
+.c-accordion-item.is-open p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.c-accordion-item.is-open .c-accordion-item-q {
+  background-color: #F3FAF5;
+}
+
+.c-accordion-item-q-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.c-accordion-item.is-open .c-accordion-item-q-icon {
+  transform: rotate(45deg);
+}
+
+@keyframes slideDownFaq {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- DEMO CREDENTIALS BANNER & MODAL --- */
+.demo-creds-box {
+  background: linear-gradient(135deg, rgba(166, 214, 58, 0.12) 0%, rgba(46, 230, 148, 0.12) 100%);
+  border: 1.5px dashed #1FAE6B;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.demo-creds-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #0E4826;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+}
+
+.demo-creds-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #1F2937;
+  margin-bottom: 5px;
+}
+
+.demo-creds-badge {
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-family: monospace;
+  font-weight: 700;
+  color: #111827;
+}
+
+.btn-fill-demo {
+  background: #1B0A66;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-fill-demo:hover {
+  background: #2D1499;
 }
 
 .user-nav-chip {
