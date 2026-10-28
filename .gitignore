@@ -11,3 +11,4 @@ __pycache__/
 coverage/
 data/raw/indian_medicine_data.csv
 scratch/
+*.tsbuildinfo
