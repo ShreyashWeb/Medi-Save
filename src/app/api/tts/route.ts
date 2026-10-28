@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Default ElevenLabs multilingual voice (e.g. "Rachel" or "George" - supports eleven_multilingual_v2)
-const DEFAULT_VOICE_ID = process.env.ELEVENLABS_VOICE_ID || "21m00Tcm4TlvDq8ikWAM";
+// Default ElevenLabs multilingual voice (e.g. "Sarah" - works on free and paid tiers with eleven_multilingual_v2)
+const DEFAULT_VOICE_ID = process.env.ELEVENLABS_VOICE_ID || "EXAVITQu4vr4xnSDxMaL";
 
 export async function POST(req: NextRequest) {
   try {
