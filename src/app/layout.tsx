@@ -306,17 +306,29 @@ export default function RootLayout({
           searchInput.focus({ preventScroll: true });
         }
 
+        function formatPriceSpeech(amount) {
+          if (amount == null || isNaN(amount)) return '';
+          const num = parseFloat(amount);
+          const rupees = Math.floor(num);
+          const paise = Math.round((num - rupees) * 100);
+          if (paise > 0) {
+            return rupees + ' rupees and ' + paise + ' paise';
+          }
+          return rupees + ' rupees';
+        }
+
         // Announce top matching medicine aloud using Voice AI
         try {
           const res = await fetch('/api/search?q=' + encodeURIComponent(searchQuery) + '&limit=1');
           const data = await res.json();
           if (data.results && data.results.length > 0) {
             const topDrug = data.results[0];
+            const priceSpeech = formatPriceSpeech(topDrug.generic_price);
             let announcement = '';
             if (topDrug.saving_pct) {
-              announcement = \`Found generic alternative for \${topDrug.brand_name}. Official Jan Aushadhi price is \${topDrug.generic_price} rupees, saving you \${topDrug.saving_pct} percent.\`;
+              announcement = \`Found generic alternative for \${topDrug.brand_name}. Official Jan Aushadhi price is \${priceSpeech}, saving you \${topDrug.saving_pct} percent.\`;
             } else {
-              announcement = \`Found \${topDrug.brand_name} at Jan Aushadhi price of \${topDrug.generic_price} rupees.\`;
+              announcement = \`Found \${topDrug.brand_name} at Jan Aushadhi price of \${priceSpeech}.\`;
             }
             window.speakText(announcement);
           } else {

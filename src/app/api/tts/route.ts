@@ -3,6 +3,19 @@ import { NextRequest, NextResponse } from "next/server";
 // Default ElevenLabs multilingual voice (e.g. "Sarah" - works on free and paid tiers with eleven_multilingual_v2)
 const DEFAULT_VOICE_ID = process.env.ELEVENLABS_VOICE_ID || "EXAVITQu4vr4xnSDxMaL";
 
+// Pre-process Indian currency numbers for natural pronunciation (e.g. 6.56 -> 6 rupees and 56 paise)
+function cleanTextForSpeech(input: string): string {
+  return input
+    .replace(/₹?\s*(\d+)\.(\d{1,2})\s*(?:rupees|rs\b|inr\b)?/gi, (_m, r, p) => {
+      const paise = p.length === 1 ? p + "0" : p;
+      return ` ${r} rupees and ${paise} paise`;
+    })
+    .replace(/₹\s*(\d+)/g, " $1 rupees")
+    .replace(/[₹]/g, " rupees ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { text, voiceId } = await req.json();
@@ -11,6 +24,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing or invalid text parameter" }, { status: 400 });
     }
 
+    const processedText = cleanTextForSpeech(text);
     const apiKey = process.env.ELEVENLABS_API_KEY;
 
     // If no ElevenLabs API key is configured, return fallback signal so client uses Web Speech API
@@ -31,7 +45,7 @@ export async function POST(req: NextRequest) {
         "xi-api-key": apiKey,
       },
       body: JSON.stringify({
-        text: text.slice(0, 500), // Protect credits by capping output
+        text: processedText.slice(0, 500), // Protect credits by capping output
         model_id: "eleven_multilingual_v2",
         voice_settings: {
           stability: 0.5,
