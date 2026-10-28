@@ -231,4 +231,265 @@ a[href*="webflow.com"],
   background: #1B0A66;
   color: #A6D63A;
   border-color: #A6D63A;
+}
+
+/* ========================================================
+/* Hide old Webflow navbar */
+.nav.w-nav,
+[data-animation="default"].nav.w-nav {
+  display: none !important;
+}
+
+.medisave-header-nav {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background: linear-gradient(180deg, #041E11 0%, #082918 100%);
+  border-bottom: 1.5px solid rgba(46, 230, 148, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  width: 100%;
+}
+
+.medisave-nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.medisave-logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0A3720 0%, #135532 100%);
+  border: 1.5px solid #2FE694;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(46, 230, 148, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.medisave-brand-link:hover .medisave-logo-icon {
+  transform: scale(1.05);
+  box-shadow: 0 0 24px rgba(46, 230, 148, 0.55);
+}
+
+/* --- COOL & WOW UNIQUE BADGE --- */
+.medisave-wow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(14, 46, 28, 0.85);
+  border: 1.5px solid rgba(46, 230, 148, 0.45);
+  border-radius: 999px;
+  padding: 6px 14px;
+  box-shadow: 0 0 18px rgba(46, 230, 148, 0.2), inset 0 0 12px rgba(46, 230, 148, 0.08);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.medisave-wow-badge:hover {
+  border-color: #A6D63A;
+  box-shadow: 0 0 24px rgba(166, 214, 58, 0.45), inset 0 0 16px rgba(46, 230, 148, 0.2);
+  transform: translateY(-1px);
+}
+
+.live-radar-beacon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+}
+
+.radar-core {
+  width: 7px;
+  height: 7px;
+  background: #A6D63A;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #A6D63A;
+}
+
+.radar-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1.5px solid #2FE694;
+  animation: live-radar 2s infinite ease-out;
+}
+
+@keyframes live-radar {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+.badge-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: #A6D63A;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.badge-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.badge-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.2px;
+}
+
+/* --- CENTER LINKS --- */
+.medisave-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.medisave-nav-link {
+  color: #E2F0E8;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.medisave-nav-link:hover,
+.medisave-nav-link.active {
+  color: #2FE694;
+  background: rgba(46, 230, 148, 0.12);
+}
+
+/* --- RIGHT ACTIONS: LOGIN & GOOGLE SIGNUP --- */
+.medisave-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-nav-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(46, 230, 148, 0.4);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-nav-login:hover {
+  background: rgba(46, 230, 148, 0.15);
+  border-color: #2FE694;
+  color: #2FE694;
+}
+
+.btn-google-signup {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: #1F2937;
+  font-weight: 750;
+  font-size: 13.5px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-google-signup:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(46, 230, 148, 0.4);
+  background: #F9FAFB;
+}
+
+.btn-google-signup:active {
+  transform: translateY(0);
+}
+
+.user-nav-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(14, 46, 28, 0.85);
+  border: 1.5px solid #2FE694;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.user-avatar-circle {
+  width: 26px;
+  height: 26px;
+  background: #2FE694;
+  color: #051F12;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.btn-signout-chip {
+  background: none;
+  border: none;
+  color: #A6D63A;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 0 0 6px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-signout-chip:hover {
+  color: #FF3B30;
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .medisave-nav-links {
+    display: none;
+  }
+  .badge-tag {
+    display: none;
+  }
+  .badge-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .medisave-wow-badge {
+    display: none;
+  }
+  .medisave-nav-container {
+    padding: 10px 16px;
+  }
 }

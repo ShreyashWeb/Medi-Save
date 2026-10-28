@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -973,7 +974,10 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
