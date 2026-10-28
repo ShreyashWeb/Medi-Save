@@ -11,6 +11,13 @@
  * - Supports Google AI Studio (for cloud deployment on Render/Vercel) and Ollama (for local laptop demo).
  */
 
+import dns from 'dns';
+try {
+  dns.setDefaultResultOrder('ipv4first');
+} catch {
+  // Ignore in browser/edge environments
+}
+
 export interface OcrConfig {
   baseUrl?: string;
   apiKey?: string;
@@ -31,7 +38,7 @@ const DEFAULT_CONFIG: Required<OcrConfig> = {
   apiKey: process.env.OLLAMA_API_KEY || '',
   geminiApiKey: process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GEMINI_API_KEY || '',
   model: process.env.OLLAMA_MODEL || 'gemma',
-  timeoutMs: 60000,
+  timeoutMs: 15000,
 };
 
 const OCR_PROMPT = `List only the medicine names printed in this image, as JSON: {"names": ["..."]}. Do not add doses, uses, or advice. If nothing is readable return {"names": []}.`;
@@ -172,9 +179,6 @@ function detectMimeType(base64: string): string {
 
 /**
  * Extract medicine names via Google AI Studio Vision API.
- */
-/**
- * Extract medicine names via Google AI Studio Vision API.
  * Uses automatic model fallback if one model is experiencing temporary high demand (HTTP 503).
  */
 async function extractViaGoogleAI(
@@ -184,8 +188,8 @@ async function extractViaGoogleAI(
 ): Promise<OcrResult> {
   const modelsToTry = [
     'gemma-4-26b-a4b-it',
-    'gemma-4-31b-it',
-    'gemini-3.5-flash-lite',
+    'gemini-3.8-flash',
+    'gemini-3.5-flash',
     'gemini-flash-latest',
   ];
 
@@ -218,7 +222,7 @@ async function extractViaGoogleAI(
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
-        signal: AbortSignal.timeout(45000),
+        signal: AbortSignal.timeout(12000),
       });
 
       if (response.ok) {
@@ -232,7 +236,7 @@ async function extractViaGoogleAI(
         };
       }
 
-      // If 503 (high demand) or 404, try the next model
+      // If 503 (high demand), 404, or 429, quickly try the next model
       const errText = await response.text();
       lastError = `HTTP ${response.status}: ${errText.substring(0, 100)}`;
       if (response.status === 503 || response.status === 404 || response.status === 429) {

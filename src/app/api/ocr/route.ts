@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
+import dns from 'dns';
+try {
+  dns.setDefaultResultOrder('ipv4first');
+} catch {}
 import { extractMedicineNamesFromPhoto, checkOcrAvailability } from '../../../lib/ocr';
 
 /**
@@ -8,10 +12,11 @@ import { extractMedicineNamesFromPhoto, checkOcrAvailability } from '../../../li
 export async function GET() {
   try {
     const available = await checkOcrAvailability();
+    const hasGoogleKey = !!(process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GEMINI_API_KEY);
     return NextResponse.json({
       available,
-      model: process.env.GOOGLE_AI_STUDIO_API_KEY ? 'gemma-4-26b-a4b-it' : 'ollama-gemma',
-      provider: process.env.GOOGLE_AI_STUDIO_API_KEY ? 'Google AI Studio' : 'Ollama Local',
+      model: hasGoogleKey ? 'gemma-4-26b-a4b-it' : 'ollama-gemma',
+      provider: hasGoogleKey ? 'Google AI Studio (Gemma 4)' : 'Ollama Local',
     });
   } catch {
     return NextResponse.json({ available: false }, { status: 200 });
